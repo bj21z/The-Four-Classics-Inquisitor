@@ -22,7 +22,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -47,7 +48,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -72,7 +74,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -97,7 +100,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -122,7 +126,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -147,7 +152,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -172,7 +178,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -197,7 +204,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -222,7 +230,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -247,7 +256,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -272,7 +282,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -297,7 +308,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -322,7 +334,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -347,7 +360,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -372,7 +386,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -397,7 +412,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -422,7 +438,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -447,7 +464,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -472,7 +490,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -497,7 +516,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -522,7 +542,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -547,7 +568,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -572,7 +594,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -597,7 +620,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -622,7 +646,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -647,7 +672,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -672,7 +698,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -697,7 +724,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -722,7 +750,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -747,7 +776,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -772,7 +802,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -797,7 +828,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -822,7 +854,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -847,7 +880,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -872,7 +906,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -897,7 +932,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -922,7 +958,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -947,7 +984,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -972,7 +1010,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -997,7 +1036,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -1022,7 +1062,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -1047,7 +1088,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -1072,7 +1114,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -1097,7 +1140,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -1122,7 +1166,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -1147,7 +1192,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -1172,7 +1218,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -1197,7 +1244,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -1222,7 +1270,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -1247,6 +1296,7 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   }
 ]
