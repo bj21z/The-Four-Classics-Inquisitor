@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t d">
+<title id="t">桃园结义</title><desc id="d">桃花树下三人盟誓</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efe2c8"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter></defs>
+<rect width="400" height="360" rx="28" fill="url(#g)"/>
+<circle cx="52" cy="52" r="24" fill="#7a2b22" opacity=".9"/><path d="M25 320Q110 280 190 315T375 315" fill="none" stroke="#c99b4b" stroke-width="8" opacity=".45"/>
+<g filter="url(#s)"><circle cx="120" cy="135" r="35" fill="#e99a9e"/><circle cx="200" cy="115" r="38" fill="#e99a9e"/><circle cx="280" cy="140" r="35" fill="#e99a9e"/><path d="M110 280Q120 175 130 280M190 280Q200 165 210 280M270 280Q280 175 290 280" stroke="#473427" stroke-width="10"/></g>
+<path d="M36 44h328M36 316h328" stroke="#7a2b22" stroke-width="3" opacity=".25"/>
+</svg>

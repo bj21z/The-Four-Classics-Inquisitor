@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t d">
+<title id="t">花和尚大闹五台山</title><desc id="d">醉和尚在寺院挥舞禅杖</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7e1cf"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter></defs>
+<rect width="400" height="360" rx="28" fill="url(#g)"/>
+<circle cx="52" cy="52" r="24" fill="#284f3f" opacity=".9"/><path d="M25 320Q110 280 190 315T375 315" fill="none" stroke="#9a6d3a" stroke-width="8" opacity=".45"/>
+<g filter="url(#s)"><path d="M70 175h260L285 110H115z" fill="#8a5638"/><rect x="100" y="175" width="200" height="125" fill="#caa56c"/><path d="M150 120l100 180" stroke="#76552f" stroke-width="15"/></g>
+<path d="M36 44h328M36 316h328" stroke="#284f3f" stroke-width="3" opacity=".25"/>
+</svg>

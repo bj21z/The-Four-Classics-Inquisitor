@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t d">
+<title id="t">三顾茅庐</title><desc id="d">雪中访草庐的三人</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efe2c8"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter></defs>
+<rect width="400" height="360" rx="28" fill="url(#g)"/>
+<circle cx="52" cy="52" r="24" fill="#7a2b22" opacity=".9"/><path d="M25 320Q110 280 190 315T375 315" fill="none" stroke="#c99b4b" stroke-width="8" opacity=".45"/>
+<g filter="url(#s)"><path d="M80 205L200 105l120 100" fill="#d5bb7f" stroke="#473427" stroke-width="8"/><rect x="105" y="205" width="190" height="90" fill="#c69b63"/><path d="M75 300h250" stroke="#fff" stroke-width="14"/></g>
+<path d="M36 44h328M36 316h328" stroke="#7a2b22" stroke-width="3" opacity=".25"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t d">
+<title id="t">女儿国留婚</title><desc id="d">女王、御辇与取经僧人</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf4e6"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter></defs>
+<rect width="400" height="360" rx="28" fill="url(#g)"/>
+<circle cx="52" cy="52" r="24" fill="#1b6f76" opacity=".9"/><path d="M25 320Q110 280 190 315T375 315" fill="none" stroke="#d69b3b" stroke-width="8" opacity=".45"/>
+<g filter="url(#s)"><path d="M120 270Q200 145 280 270z" fill="#c85f62"/><path d="M160 125l40-50 40 50" fill="#d9b24a" stroke="#473427" stroke-width="6"/></g>
+<path d="M36 44h328M36 316h328" stroke="#1b6f76" stroke-width="3" opacity=".25"/>
+</svg>

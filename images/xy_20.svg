@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t d">
+<title id="t">通天河遇险</title><desc id="d">冰裂河面、白马与取经队伍</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf4e6"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter></defs>
+<rect width="400" height="360" rx="28" fill="url(#g)"/>
+<circle cx="52" cy="52" r="24" fill="#1b6f76" opacity=".9"/><path d="M25 320Q110 280 190 315T375 315" fill="none" stroke="#d69b3b" stroke-width="8" opacity=".45"/>
+<g filter="url(#s)"><path d="M55 250Q120 220 190 250T345 250M55 285Q120 255 190 285T345 285" fill="none" stroke="#4c96aa" stroke-width="12"/><path d="M165 140h70l30 65H135z" fill="#eee2c0"/></g>
+<path d="M36 44h328M36 316h328" stroke="#1b6f76" stroke-width="3" opacity=".25"/>
+</svg>
