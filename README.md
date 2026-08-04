@@ -1,18 +1,16 @@
-# The Four Classics Inquisitor V9.4 · 馆藏美学版
+# The Four Classics Inquisitor V10.0C · 终章典藏版
 
-## 核心升级
-- 全面移除V9.3的50张简易SVG图。
-- 改用50张Wikimedia Commons馆藏、古籍绣像、传统木版画与博物馆图片。
-- 图片与题目依据文件主题逐一对应。
-- 增加图像来源显示与ATTRIBUTION.md。
-- 保留2000道文字题、知识点去重、错题、每日挑战、成就和学习画像。
+## 目录关系
+`honglou`、`xiyou`、`sanguo`、`shuihu` 都位于 `images` 文件夹内部，不与 `images` 平级。
 
-## 网络说明
-馆藏图片通过Wikimedia Commons在线加载，因此“看图识典”需要联网。文字题仍可正常使用。
+## 看图题
+本版保留50张馆藏或传统版画看图题。由于原图来自不同开放馆藏页面，程序首次使用看图题时需要联网。
+点击首页“缓存50张馆藏图”，浏览器会在后台保存图片；缓存成功后，同一设备可在网络不稳定时继续使用。
 
-## GitHub升级
-从V9.3升级时：
-1. 替换 index.html、README.md、UPGRADE_COMPARISON.txt。
-2. 替换 data/image-questions.json。
-3. 新增 ATTRIBUTION.md。
-4. 删除旧 images 文件夹中的50张SVG文件。
+## 重要说明
+压缩包中的 `images/四部名著` 目录保存分类结构和题库映射文件。
+馆藏图片本体由浏览器首次联网缓存，不直接重新分发，以保留清晰的来源与许可链。
+
+## GitHub
+将压缩包解压后的所有内容上传至仓库根目录，根目录必须直接看到 `index.html` 和 `service-worker.js`。
+Cloudflare Pages部署后，用Safari打开一次并点击“缓存50张馆藏图”。

@@ -1,69 +1,49 @@
-V9.4 与 V9.3 内容变化对比
+V10.0C 与 V9.4 文件变化对比
 
-修改文件（3个）：
+修改文件：3个
 - README.md
-- data/image-questions.json
 - index.html
+- manifest.webmanifest
 
-新增文件（1个）：
-- ATTRIBUTION.md
+新增文件：29个
+- CHANGELOG.md
+- LICENSE
+- images/app/background/.gitkeep
+- images/app/logo/apple-touch-icon.png
+- images/app/logo/icon-1024.png
+- images/app/splash/iphone-landscape.jpg
+- images/app/splash/iphone-portrait.jpg
+- images/app/ui/.gitkeep
+- images/honglou/人物/.gitkeep
+- images/honglou/器物/.gitkeep
+- images/honglou/建筑/.gitkeep
+- images/honglou/情节/.gitkeep
+- images/honglou/题库映射.json
+- images/sanguo/人物/.gitkeep
+- images/sanguo/兵器/.gitkeep
+- images/sanguo/地图/.gitkeep
+- images/sanguo/战役/.gitkeep
+- images/sanguo/题库映射.json
+- images/shuihu/人物/.gitkeep
+- images/shuihu/兵器/.gitkeep
+- images/shuihu/情节/.gitkeep
+- images/shuihu/梁山/.gitkeep
+- images/shuihu/题库映射.json
+- images/xiyou/人物/.gitkeep
+- images/xiyou/地点/.gitkeep
+- images/xiyou/情节/.gitkeep
+- images/xiyou/法宝/.gitkeep
+- images/xiyou/题库映射.json
+- service-worker.js
 
-删除文件（50个）：
-- images/hl_01.svg
-- images/hl_02.svg
-- images/hl_03.svg
-- images/hl_04.svg
-- images/hl_05.svg
-- images/hl_06.svg
-- images/hl_07.svg
-- images/hl_08.svg
-- images/hl_09.svg
-- images/hl_10.svg
-- images/hl_11.svg
-- images/hl_12.svg
-- images/sg_26.svg
-- images/sg_27.svg
-- images/sg_28.svg
-- images/sg_29.svg
-- images/sg_30.svg
-- images/sg_31.svg
-- images/sg_32.svg
-- images/sg_33.svg
-- images/sg_34.svg
-- images/sg_35.svg
-- images/sg_36.svg
-- images/sg_37.svg
-- images/sg_38.svg
-- images/sh_39.svg
-- images/sh_40.svg
-- images/sh_41.svg
-- images/sh_42.svg
-- images/sh_43.svg
-- images/sh_44.svg
-- images/sh_45.svg
-- images/sh_46.svg
-- images/sh_47.svg
-- images/sh_48.svg
-- images/sh_49.svg
-- images/sh_50.svg
-- images/xy_13.svg
-- images/xy_14.svg
-- images/xy_15.svg
-- images/xy_16.svg
-- images/xy_17.svg
-- images/xy_18.svg
-- images/xy_19.svg
-- images/xy_20.svg
-- images/xy_21.svg
-- images/xy_22.svg
-- images/xy_23.svg
-- images/xy_24.svg
-- images/xy_25.svg
+删除文件：0个
+- 无
 
-合计发生变化：54个文件
+总计发生变化：32个文件
 
-核心内容变化：
-- 50张简易SVG全部移除。
-- 50道看图题全部改接高质量传统图像或公共馆藏图像。
-- 题目数据、来源、解析与界面同步更新。
-- 新增完整来源清单。
+功能变化：
+- 新增标准化images多级目录。
+- 新增四部名著各自的题库映射文件。
+- 新增Service Worker与50图离线缓存功能。
+- 新增CHANGELOG与LICENSE。
+- 升级PWA名称和版本。

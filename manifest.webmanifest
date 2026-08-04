@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答",
+  "name": "四大名著·文枢问答 V10.0C",
   "short_name": "文枢问答",
-  "description": "四大名著2000题智能学习与闯关系统",
+  "description": "2000道文字题与50道馆藏看图题，支持智能去重与离线缓存。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
