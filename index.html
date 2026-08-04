@@ -2,584 +2,667 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>四大名著 · 文枢问答</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>文枢问答 2.0 · 四大名著</title>
   <style>
-    /* 全局 reset & 设计基调 —— 书卷气 + 现代精致 */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', 'Source Han Serif SC', serif;
     }
-
     body {
-      background: #f5efe8;  /* 宣纸底色 */
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Serif SC', 'Source Han Serif SC', serif;
+      background: #f3ede7;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      background-image: radial-gradient(circle at 10% 20%, rgba(200, 180, 160, 0.08) 0%, transparent 60%),
-                        radial-gradient(circle at 90% 80%, rgba(160, 130, 100, 0.06) 0%, transparent 50%);
+      padding: 16px;
+      background-image: radial-gradient(circle at 20% 30%, rgba(190, 165, 140, 0.05) 0%, transparent 60%);
     }
-
-    /* 主卡片 —— 极简留白，层次光影 */
-    .app-container {
-      max-width: 640px;
+    .app {
+      max-width: 720px;
       width: 100%;
-      background: rgba(255, 252, 245, 0.85);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      border-radius: 48px 48px 40px 40px;
-      box-shadow: 0 20px 60px rgba(100, 70, 40, 0.12), 
-                  0 8px 24px rgba(0, 0, 0, 0.03),
-                  inset 0 1px 0 rgba(255, 247, 235, 0.6);
+      background: rgba(255, 251, 245, 0.88);
+      backdrop-filter: blur(3px);
+      border-radius: 56px 56px 40px 40px;
+      box-shadow: 0 24px 60px rgba(80, 55, 35, 0.10), 0 6px 20px rgba(0,0,0,0.02);
       padding: 28px 24px 32px;
-      transition: all 0.2s ease;
-      border: 1px solid rgba(220, 200, 180, 0.3);
+      border: 1px solid rgba(220, 200, 180, 0.25);
+      transition: all 0.2s;
     }
-
-    /* 头部 —— 名著印章 */
+    /* header */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 24px;
       flex-wrap: wrap;
-      border-bottom: 1px solid rgba(190, 165, 140, 0.2);
-      padding-bottom: 18px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid rgba(180, 160, 140, 0.15);
+      padding-bottom: 14px;
     }
-
-    .title-group {
-      display: flex;
-      flex-direction: column;
-    }
-
+    .title-group { display: flex; flex-direction: column; }
     .main-title {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 600;
+      color: #2f2219;
       letter-spacing: 2px;
-      color: #3e2e22;
-      line-height: 1.2;
     }
-
     .main-title small {
       font-size: 16px;
       font-weight: 400;
       color: #8b7a68;
-      letter-spacing: 4px;
-      margin-left: 8px;
+      letter-spacing: 3px;
+      margin-left: 6px;
     }
-
     .sub-title {
       font-size: 14px;
       color: #9b8a78;
       letter-spacing: 1px;
-      margin-top: 4px;
-      font-weight: 300;
+      margin-top: 2px;
     }
-
-    .book-badge {
-      background: #dacfc4;
-      color: #3e2e22;
-      padding: 6px 18px;
+    .user-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .user-badge {
+      background: #e6dbcf;
+      padding: 5px 18px;
       border-radius: 40px;
       font-size: 15px;
       font-weight: 500;
-      letter-spacing: 1px;
-      background: #e6dbcf;
-      box-shadow: inset 0 1px 2px rgba(255, 245, 230, 0.6), 0 2px 4px rgba(90, 60, 30, 0.06);
-      backdrop-filter: blur(2px);
-      border: 1px solid rgba(220, 195, 170, 0.3);
+      color: #3e2e22;
+      border: 1px solid rgba(200, 175, 150, 0.2);
+      box-shadow: inset 0 1px 3px rgba(255, 240, 220, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-
-    /* 进度 & 题号 */
+    .user-badge span { font-weight: 300; color: #5f4d3a; }
+    .btn-roll {
+      background: rgba(200, 180, 160, 0.2);
+      border: none;
+      border-radius: 40px;
+      padding: 5px 12px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.15s;
+      border: 1px solid rgba(180, 160, 140, 0.2);
+      background: #f3ede7;
+    }
+    .btn-roll:active { transform: scale(0.92); }
+    /* book intro */
+    .book-intro {
+      background: rgba(240, 230, 218, 0.3);
+      border-radius: 28px;
+      padding: 16px 20px;
+      margin: 6px 0 18px;
+      border-left: 4px solid #b8a084;
+      backdrop-filter: blur(2px);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .book-intro-text {
+      font-size: 15px;
+      color: #3f3227;
+      line-height: 1.5;
+      flex: 1;
+      min-width: 180px;
+    }
+    .book-intro-text strong { color: #5f4a34; font-weight: 600; }
+    .book-intro-badge {
+      background: #dacfc4;
+      padding: 4px 16px;
+      border-radius: 40px;
+      font-size: 14px;
+      color: #2f2219;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-left: 10px;
+      background: #e2d4c8;
+    }
+    /* progress */
     .progress-area {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
-      font-size: 15px;
-      color: #5f4d3a;
-      background: rgba(235, 222, 208, 0.3);
-      padding: 6px 16px 6px 20px;
+      gap: 12px;
+      margin-bottom: 16px;
+      background: rgba(235, 222, 208, 0.2);
+      padding: 6px 16px 6px 18px;
       border-radius: 60px;
-      backdrop-filter: blur(2px);
-      border: 1px solid rgba(200, 180, 160, 0.15);
+      border: 1px solid rgba(200, 180, 160, 0.12);
+      flex-wrap: wrap;
     }
-
-    .question-counter {
-      font-weight: 450;
-      letter-spacing: 0.5px;
-    }
-    .question-counter span {
-      font-weight: 600;
-      color: #2f2219;
-    }
-
-    .progress-bar-track {
-      width: 100px;
+    .q-counter { font-size: 15px; color: #5f4d3a; }
+    .q-counter span { font-weight: 600; color: #2f2219; }
+    .progress-track {
+      flex: 1;
+      min-width: 60px;
       height: 5px;
       background: #ddd0c0;
       border-radius: 12px;
       overflow: hidden;
-      margin-left: 12px;
-      flex-shrink: 0;
     }
-    .progress-bar-fill {
+    .progress-fill {
       height: 100%;
       width: 0%;
       background: #ad8b70;
       border-radius: 12px;
-      transition: width 0.3s ease;
+      transition: width 0.3s;
     }
-
-    /* 问题卡片 */
+    .book-status {
+      font-size: 13px;
+      color: #8b7a68;
+      background: rgba(200, 180, 160, 0.15);
+      padding: 2px 14px;
+      border-radius: 30px;
+      white-space: nowrap;
+    }
+    /* question */
     .question-card {
-      background: rgba(250, 244, 236, 0.6);
+      background: rgba(250, 244, 236, 0.4);
       border-radius: 32px;
-      padding: 24px 22px 18px;
-      margin: 12px 0 20px;
-      border: 1px solid rgba(215, 195, 175, 0.2);
+      padding: 22px 20px 16px;
+      margin: 8px 0 18px;
+      border: 1px solid rgba(210, 190, 170, 0.15);
       backdrop-filter: blur(2px);
-      box-shadow: 0 6px 18px rgba(80, 60, 40, 0.04);
     }
-
-    .question-text {
+    .q-text {
       font-size: 20px;
       font-weight: 500;
       line-height: 1.6;
       color: #2f2219;
-      letter-spacing: 0.3px;
-      padding-bottom: 6px;
       border-bottom: 1px dashed rgba(180, 160, 140, 0.2);
-      margin-bottom: 18px;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
     }
-
-    /* 选项列表 */
-    .options-grid {
+    .options {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 11px;
     }
-
-    .option-item {
+    .opt {
       display: flex;
       align-items: center;
-      background: rgba(255, 248, 240, 0.5);
-      border: 1.5px solid rgba(200, 180, 162, 0.25);
+      background: rgba(255, 248, 240, 0.4);
+      border: 1.5px solid rgba(200, 180, 162, 0.2);
       border-radius: 60px;
       padding: 12px 18px;
-      transition: all 0.15s ease;
       cursor: pointer;
+      transition: 0.12s;
       backdrop-filter: blur(2px);
-      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
     }
-
-    .option-item:hover:not(.disabled-option) {
-      background: rgba(235, 218, 200, 0.4);
-      border-color: #b89f88;
-      transform: scale(1.01);
-    }
-
-    .option-item.selected {
-      background: #e5d5c4;
-      border-color: #a5836a;
-      box-shadow: 0 2px 8px rgba(130, 90, 60, 0.08);
-    }
-
-    .option-item.correct-reveal {
-      background: #c8d9c0;
-      border-color: #6f8f6a;
-    }
-
-    .option-item.wrong-reveal {
-      background: #e7cfc9;
-      border-color: #b57a6e;
-    }
-
-    .option-item.disabled-option {
-      cursor: default;
-      opacity: 0.8;
-    }
-
-    .option-label {
-      font-weight: 500;
-      color: #5f4d3a;
-      min-width: 28px;
-      font-size: 16px;
-    }
-
-    .option-text {
-      font-size: 17px;
-      font-weight: 400;
-      color: #2f2219;
-      margin-left: 6px;
-      line-height: 1.4;
-    }
-
-    /* 底部操作 */
+    .opt:hover:not(.disabled) { background: rgba(235, 218, 200, 0.3); border-color: #b89f88; transform: scale(1.01); }
+    .opt.selected { background: #e5d5c4; border-color: #a5836a; }
+    .opt.correct { background: #c8d9c0; border-color: #6f8f6a; }
+    .opt.wrong { background: #e7cfc9; border-color: #b57a6e; }
+    .opt.disabled { cursor: default; opacity: 0.8; }
+    .opt-label { font-weight: 500; color: #5f4d3a; min-width: 28px; }
+    .opt-text { font-size: 17px; color: #2f2219; margin-left: 4px; }
+    /* actions */
     .action-bar {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
-      flex-wrap: wrap;
       gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
     }
-
     .btn {
-      background: transparent;
       border: 1px solid #cbb8a8;
-      padding: 12px 24px;
+      padding: 12px 22px;
       border-radius: 60px;
       font-size: 16px;
+      background: rgba(250, 242, 232, 0.5);
+      backdrop-filter: blur(2px);
+      cursor: pointer;
+      transition: 0.12s;
+      flex: 1 1 auto;
+      min-width: 90px;
       font-weight: 480;
       color: #3e2e22;
-      background: rgba(250, 242, 232, 0.6);
-      backdrop-filter: blur(2px);
-      transition: all 0.15s;
-      cursor: pointer;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
-      letter-spacing: 0.4px;
-      flex: 1 1 auto;
-      min-width: 100px;
     }
-
     .btn-primary {
       background: #b8a084;
       border-color: #a5886e;
       color: #fcf6ed;
-      box-shadow: 0 4px 12px rgba(130, 90, 60, 0.12);
+      box-shadow: 0 4px 12px rgba(130, 90, 60, 0.10);
     }
-
-    .btn-primary:active:not(:disabled) {
-      background: #a2876c;
-      transform: scale(0.97);
-    }
-
-    .btn:active:not(:disabled) {
-      transform: scale(0.97);
-    }
-    .btn:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-
-    .btn-secondary {
-      border-color: #d2c0b0;
-    }
-
-    .btn-icon {
-      font-size: 20px;
-      line-height: 1;
-    }
-
-    /* 结果卡片 */
+    .btn-primary:active:not(:disabled) { background: #a2876c; transform: scale(0.97); }
+    .btn:active:not(:disabled) { transform: scale(0.97); }
+    .btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .btn-secondary { border-color: #d2c0b0; }
+    /* result / ranking */
     .result-panel {
-      background: rgba(245, 236, 224, 0.5);
+      background: rgba(245, 236, 224, 0.4);
       border-radius: 40px;
-      padding: 28px 22px 30px;
+      padding: 24px 20px 28px;
       margin-top: 12px;
-      text-align: center;
       backdrop-filter: blur(2px);
+      border: 1px solid rgba(200, 180, 160, 0.12);
+    }
+    .result-title { font-size: 22px; font-weight: 500; color: #2f2219; text-align: center; }
+    .result-score {
+      font-size: 44px;
+      font-weight: 300;
+      text-align: center;
+      color: #3e2e22;
+      margin: 8px 0;
+    }
+    .result-score strong { font-weight: 600; color: #1f140e; }
+    .result-sub { text-align: center; font-size: 18px; color: #6d5b48; }
+    .ranking-box {
+      margin-top: 20px;
+      background: rgba(250, 242, 232, 0.3);
+      border-radius: 28px;
+      padding: 14px 18px;
       border: 1px solid rgba(200, 180, 160, 0.15);
     }
-
-    .result-score {
-      font-size: 48px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      color: #3e2e22;
-      line-height: 1.2;
-    }
-    .result-score strong {
-      font-weight: 600;
-      color: #2f1f12;
-    }
-    .result-label {
-      font-size: 18px;
-      color: #6d5b48;
-      margin: 6px 0 12px;
-    }
-
-    .result-stats {
+    .ranking-title { font-weight: 500; color: #4d3d2e; margin-bottom: 8px; display: flex; gap: 12px; align-items: center; }
+    .ranking-list { display: flex; flex-direction: column; gap: 6px; max-height: 180px; overflow-y: auto; }
+    .rank-item {
       display: flex;
-      justify-content: center;
-      gap: 28px;
-      margin: 20px 0 18px;
-      font-size: 15px;
-      color: #5b4a38;
-    }
-    .result-stats span {
-      background: rgba(220, 200, 180, 0.2);
-      padding: 4px 16px;
+      justify-content: space-between;
+      padding: 6px 12px;
+      background: rgba(255, 248, 240, 0.3);
       border-radius: 40px;
+      font-size: 15px;
+      color: #3f3227;
+      border-bottom: 1px solid rgba(200, 180, 160, 0.05);
     }
-
+    .rank-pos { font-weight: 500; color: #7a6754; }
+    .rank-name { font-weight: 500; }
+    .rank-score { font-weight: 400; }
     .btn-restart {
       background: #dacfc4;
       border-color: #b8a490;
-      padding: 12px 44px;
+      padding: 12px 40px;
+      margin-top: 16px;
+      width: 100%;
       font-weight: 500;
-      margin-top: 8px;
     }
-
-    /* 响应式微调 */
-    @media (max-width: 500px) {
-      .app-container { padding: 20px 16px; border-radius: 32px; }
-      .main-title { font-size: 22px; }
-      .question-text { font-size: 18px; }
-      .option-text { font-size: 15px; }
-      .btn { font-size: 14px; padding: 10px 16px; min-width: 70px; }
-      .progress-area { flex-wrap: wrap; gap: 4px; }
-      .progress-bar-track { width: 70px; }
-    }
-
-    /* 工具类 */
     .hidden { display: none !important; }
-    .flex-center { display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .mt-1 { margin-top: 6px; }
-    .w-full { width: 100%; }
+    .flex-center { display: flex; align-items: center; gap: 6px; }
+    .mt-2 { margin-top: 12px; }
+    .gap-2 { gap: 8px; }
 
-    /* 独特风格 — 微水墨点缀 */
-    .decor-dot {
-      background: radial-gradient(circle, #b8a084 10%, transparent 70%);
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      display: inline-block;
-      opacity: 0.2;
-      margin: 0 6px;
+    @media (max-width: 500px) {
+      .app { padding: 18px 14px; border-radius: 32px; }
+      .main-title { font-size: 22px; }
+      .q-text { font-size: 18px; }
+      .opt-text { font-size: 15px; }
+      .btn { font-size: 14px; padding: 10px 14px; }
     }
   </style>
 </head>
 <body>
-<div class="app-container" id="app">
-  <!-- 头部 -->
+<div class="app" id="app">
+  <!-- header -->
   <div class="header">
     <div class="title-group">
-      <div class="main-title">
-        文枢问答 <small>· 四大名著</small>
-      </div>
-      <div class="sub-title">择卷而问 · 十题见真</div>
+      <div class="main-title">文枢问答 <small>2.0</small></div>
+      <div class="sub-title">四部经典 · 三十卷 · 十题问道</div>
     </div>
-    <div class="book-badge" id="currentBookBadge">红楼梦</div>
+    <div class="user-area">
+      <div class="user-badge">🎓 <span id="userNameDisplay">翰林学士</span></div>
+      <button class="btn-roll" id="rollNameBtn" title="掷骰起雅号">🎲</button>
+    </div>
   </div>
 
-  <!-- 进度 -->
+  <!-- 名著引领介绍 -->
+  <div class="book-intro" id="bookIntroArea">
+    <div class="book-intro-text" id="bookIntroText">
+      <strong>📖 红楼梦</strong> · 中国古典文学巅峰，人情世态之镜。
+    </div>
+    <div class="book-intro-badge" id="bookIntroBadge">卷·壹</div>
+  </div>
+
+  <!-- progress -->
   <div class="progress-area">
-    <div class="question-counter" id="questionCounter">第 <span id="currentQNum">1</span> / 10 题</div>
-    <div class="progress-bar-track">
-      <div class="progress-bar-fill" id="progressFill" style="width: 0%;"></div>
-    </div>
+    <div class="q-counter">第 <span id="qNum">1</span> / 10 题</div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="book-status" id="bookStatus">红楼梦 · 0/10</div>
   </div>
 
-  <!-- 主区域：问题+选项 -->
+  <!-- quiz area -->
   <div id="quizArea">
     <div class="question-card">
-      <div class="question-text" id="questionText">加载题目中...</div>
-      <div class="options-grid" id="optionsContainer"></div>
+      <div class="q-text" id="qText">加载题目...</div>
+      <div class="options" id="optionsContainer"></div>
     </div>
-
     <div class="action-bar">
-      <button class="btn btn-secondary" id="resetBookBtn" title="切换名著">📚 换卷</button>
+      <button class="btn btn-secondary" id="switchBookBtn">📚 换卷</button>
       <button class="btn btn-primary" id="nextBtn" disabled>下一题 →</button>
     </div>
   </div>
 
-  <!-- 结果区域 (默认隐藏) -->
+  <!-- result + ranking -->
   <div id="resultArea" class="result-panel hidden">
+    <div class="result-title" id="resultTitle">🏮 卷终</div>
     <div class="result-score"><strong id="finalScore">0</strong> / 10</div>
-    <div class="result-label" id="resultMessage">文思泉涌</div>
-    <div class="result-stats">
-      <span id="correctCountDisplay">✅ 0</span>
-      <span id="wrongCountDisplay">❌ 0</span>
+    <div class="result-sub" id="resultMessage">文思泉涌</div>
+    <div class="result-sub" style="font-size:14px; margin-top:4px;" id="resultBookLabel">红楼梦</div>
+    <!-- 称号 -->
+    <div style="text-align:center; font-size:20px; font-weight:400; margin:10px 0 4px; color:#4d3d2e;" id="titleAward">🏅 翰林学士</div>
+    <!-- 排行榜 -->
+    <div class="ranking-box">
+      <div class="ranking-title">🏆 文枢榜 <span style="font-size:13px; font-weight:300; color:#8b7a68;">（历史留存）</span></div>
+      <div class="ranking-list" id="rankingList">
+        <div class="rank-item"><span class="rank-pos">#1</span><span class="rank-name">——</span><span class="rank-score">0</span></div>
+      </div>
     </div>
-    <button class="btn btn-restart" id="restartFromResultBtn">🔄 再答一卷</button>
+    <button class="btn btn-restart" id="restartBtn">🔄 再答一卷</button>
   </div>
 
-  <!-- 底部装饰 -->
-  <div style="margin-top: 18px; display: flex; justify-content: center; gap: 4px; opacity: 0.2; font-size: 12px; letter-spacing: 2px;">
-    <span>·</span> 文枢 · 匠心 <span>·</span>
-  </div>
+  <!-- 底部 -->
+  <div style="margin-top:16px; text-align:center; font-size:12px; color:#b8a898; letter-spacing:2px;">· 文枢 · 匠心 ·</div>
 </div>
 
 <script>
-  (function() {
-    "use strict";
-
-    // ---------- 题库 ----------
-    const BOOKS = {
-      '红楼梦': {
-        id: 'honglou',
-        questions: [
-          { q: '“满纸荒唐言，一把辛酸泪”出自哪部作品？', options: ['《红楼梦》', '《西游记》', '《三国演义》', '《水浒传》'], answer: 0 },
-          { q: '林黛玉的别号是？', options: ['蘅芜君', '潇湘妃子', '蕉下客', '枕霞旧友'], answer: 1 },
-          { q: '贾宝玉的通灵宝玉上刻着什么字？', options: ['莫失莫忘，仙寿恒昌', '不离不弃，芳龄永继', '一除邪祟，二疗冤疾', '知祸福，辨善恶'], answer: 0 },
-          { q: '“花谢花飞花满天，红消香断有谁怜”出自哪首诗？', options: ['《秋窗风雨夕》', '《葬花吟》', '《桃花行》', '《芙蓉女儿诔》'], answer: 1 },
-          { q: '下列哪位不是金陵十二钗正册人物？', options: ['史湘云', '妙玉', '香菱', '秦可卿'], answer: 2 },
-          { q: '贾府四春中，擅长绘画的是？', options: ['元春', '迎春', '探春', '惜春'], answer: 3 },
-          { q: '“金玉良缘”指的是？', options: ['贾宝玉与林黛玉', '贾宝玉与薛宝钗', '贾琏与王熙凤', '贾芸与小红'], answer: 1 },
-          { q: '刘姥姥几进荣国府？', options: ['一次', '两次', '三次', '四次'], answer: 2 },
-          { q: '“寒塘渡鹤影，冷月葬花魂”是谁联句？', options: ['黛玉与湘云', '宝钗与黛玉', '湘云与妙玉', '探春与宝琴'], answer: 0 },
-          { q: '《红楼梦》中，贾府最终的结局是？', options: ['重振家业', '被抄家败落', '举家迁往金陵', '归隐山林'], answer: 1 }
-        ]
-      },
-      '西游记': {
-        id: 'xiyou',
-        questions: [
-          { q: '孙悟空被压在五行山下多少年？', options: ['三百年', '五百年', '六百年', '一千年'], answer: 1 },
-          { q: '唐僧取经所骑的白龙马，原是什么身份？', options: ['东海龙王三太子', '西海龙王三太子', '南海龙王三太子', '北海龙王三太子'], answer: 1 },
-          { q: '猪八戒的兵器叫什么？', options: ['月牙铲', '降妖宝杖', '九齿钉耙', '方天画戟'], answer: 2 },
-          { q: '以下哪个不是孙悟空的称号？', options: ['齐天大圣', '斗战胜佛', '美猴王', '金蝉子'], answer: 3 },
-          { q: '火焰山是哪个妖怪的地盘？', options: ['红孩儿', '牛魔王', '铁扇公主', '玉面公主'], answer: 2 },
-          { q: '“三打白骨精”中，白骨精三次变化分别是什么？', options: ['少女、老妇、老翁', '少女、老翁、孩童', '老妇、老翁、孩童', '少女、孩童、老翁'], answer: 0 },
-          { q: '沙和尚原是天庭的什么神将？', options: ['卷帘大将', '天蓬元帅', '托塔天王', '哪吒'], answer: 0 },
-          { q: '唐僧的九环锡杖有什么作用？', options: ['降妖伏魔', '持身护体', '开启法门', '增加寿命'], answer: 1 },
-          { q: '黄袍怪的妻子是？', options: ['百花羞', '玉面公主', '高翠兰', '铁扇公主'], answer: 0 },
-          { q: '取经途中，孙悟空曾向哪个菩萨求助收服红孩儿？', options: ['观音菩萨', '文殊菩萨', '普贤菩萨', '地藏菩萨'], answer: 0 }
-        ]
-      },
-      '三国演义': {
-        id: 'sanguo',
-        questions: [
-          { q: '“宁教我负天下人，休教天下人负我”是谁说的？', options: ['曹操', '刘备', '孙权', '董卓'], answer: 0 },
-          { q: '关羽的武器叫什么？', options: ['丈八蛇矛', '青釭剑', '青龙偃月刀', '方天画戟'], answer: 2 },
-          { q: '“三顾茅庐”请的是谁？', options: ['诸葛亮', '庞统', '司马懿', '周瑜'], answer: 0 },
-          { q: '赤壁之战中，谁献了连环计？', options: ['周瑜', '黄盖', '庞统', '诸葛亮'], answer: 2 },
-          { q: '刘备在长坂坡被谁所救？', options: ['张飞', '赵云', '关羽', '马超'], answer: 1 },
-          { q: '“既生瑜，何生亮”中的“亮”指谁？', options: ['诸葛亮', '刘备', '关羽', '张飞'], answer: 0 },
-          { q: '下列哪位不是五虎上将？', options: ['赵云', '马超', '黄忠', '魏延'], answer: 3 },
-          { q: '曹操在官渡之战中大败了哪位军阀？', options: ['袁绍', '袁术', '吕布', '刘表'], answer: 0 },
-          { q: '诸葛亮北伐时，谁因失街亭而被斩？', options: ['马谡', '王平', '李严', '魏延'], answer: 0 },
-          { q: '三国中，谁被誉为“小霸王”？', options: ['孙权', '孙策', '孙坚', '刘备'], answer: 1 }
-        ]
-      },
-      '水浒传': {
-        id: 'shuihu',
-        questions: [
-          { q: '“林冲雪夜上梁山”中，林冲被迫害前担任什么职位？', options: ['八十万禁军教头', '提辖', '都头', '押司'], answer: 0 },
-          { q: '武松的兵器是？', options: ['戒刀', '双鞭', '朴刀', '禅杖'], answer: 0 },
-          { q: '宋江的绰号是？', options: ['及时雨', '玉麒麟', '智多星', '豹子头'], answer: 0 },
-          { q: '“智取生辰纲”的核心策划者是谁？', options: ['晁盖', '吴用', '公孙胜', '刘唐'], answer: 1 },
-          { q: '鲁智深倒拔垂杨柳，他当时在什么寺庙？', options: ['五台山', '相国寺', '少林寺', '灵隐寺'], answer: 1 },
-          { q: '下列哪位好汉被称为“鼓上蚤”？', options: ['时迁', '张清', '乐和', '白胜'], answer: 0 },
-          { q: '李逵的兵器是？', options: ['双板斧', '单鞭', '长枪', '大刀'], answer: 0 },
-          { q: '花荣的绰号是？', options: ['小李广', '金枪手', '插翅虎', '病关索'], answer: 0 },
-          { q: '征方腊后，武松的结局是？', options: ['在六和寺出家', '被封官还乡', '战死', '归隐山林'], answer: 0 },
-          { q: '“梁山泊”在哪个省？', options: ['山东', '河北', '河南', '江苏'], answer: 0 }
-        ]
-      }
+  (function(){
+    // ---------- 巨型题库：每部30题 ----------
+    const FULL_QUESTIONS = {
+      '红楼梦': [
+        { q: '“满纸荒唐言，一把辛酸泪”出自？', opts: ['《红楼梦》','《西游记》','《三国演义》','《水浒传》'], ans: 0 },
+        { q: '林黛玉别号？', opts: ['蘅芜君','潇湘妃子','蕉下客','枕霞旧友'], ans: 1 },
+        { q: '通灵宝玉刻字？', opts: ['莫失莫忘，仙寿恒昌','不离不弃，芳龄永继','一除邪祟','知祸福'], ans: 0 },
+        { q: '“花谢花飞花满天”出自？', opts: ['秋窗风雨夕','葬花吟','桃花行','芙蓉女儿诔'], ans: 1 },
+        { q: '非金陵十二钗正册？', opts: ['史湘云','妙玉','香菱','秦可卿'], ans: 2 },
+        { q: '四春中善画者？', opts: ['元春','迎春','探春','惜春'], ans: 3 },
+        { q: '“金玉良缘”指？', opts: ['宝玉黛玉','宝玉宝钗','贾琏熙凤','贾芸小红'], ans: 1 },
+        { q: '刘姥姥几进荣国府？', opts: ['一次','两次','三次','四次'], ans: 2 },
+        { q: '“寒塘渡鹤影”联句者？', opts: ['黛玉湘云','宝钗黛玉','湘云妙玉','探春宝琴'], ans: 0 },
+        { q: '贾府最终结局？', opts: ['重振家业','被抄家败落','迁金陵','归隐'], ans: 1 },
+        { q: '“世事洞明皆学问”下句？', opts: ['人情练达即文章','人间正道是沧桑','处处留心皆学问','文章千古事'], ans: 0 },
+        { q: '袭人原名？', opts: ['珍珠','鹦哥','紫鹃','晴雯'], ans: 0 },
+        { q: '贾母最疼爱的孙子？', opts: ['贾宝玉','贾琏','贾环','贾兰'], ans: 0 },
+        { q: '“护官符”中“阿房宫，三百里，住不下”哪个家族？', opts: ['贾','史','王','薛'], ans: 3 },
+        { q: '红楼梦中“槛外人”指？', opts: ['妙玉','惜春','邢岫烟','李纨'], ans: 0 },
+        { q: '尤三姐自刎之剑？', opts: ['鸳鸯剑','青锋剑','龙泉剑','雌雄剑'], ans: 0 },
+        { q: '“甄士隐”谐音？', opts: ['真事隐','真是隐','真士隐','甄氏隐'], ans: 0 },
+        { q: '薛宝钗所服“冷香丸”取自？', opts: ['百花之蕊','四时之水','八节之露','霜雪之寒'], ans: 0 },
+        { q: '探春远嫁之地？', opts: ['南安','北静','西海','东平'], ans: 0 },
+        { q: '“好了歌”作者？', opts: ['甄士隐','贾雨村','跛足道人','癞头和尚'], ans: 2 },
+        { q: '红楼梦中最长的一首诗？', opts: ['葬花吟','秋窗风雨夕','芙蓉女儿诔','桃花行'], ans: 2 },
+        { q: '晴雯被逐后住哪里？', opts: ['多浑虫家','柳嫂子家','李嬷嬷家','王夫人处'], ans: 0 },
+        { q: '贾府四春中年龄最小？', opts: ['惜春','探春','迎春','元春'], ans: 0 },
+        { q: '“铁槛寺”寓意？', opts: ['权势','富贵','空门','轮回'], ans: 0 },
+        { q: '宝玉给黛玉的字？', opts: ['颦颦','潇湘','蘅芜','枕霞'], ans: 0 },
+        { q: '贾政妾室赵姨娘之子？', opts: ['贾环','贾珠','贾琏','贾宝玉'], ans: 0 },
+        { q: '“大观园”题额者？', opts: ['贾宝玉','贾政','元春','贾妃'], ans: 2 },
+        { q: '红楼梦引子“开辟鸿蒙，谁为情种”出自？', opts: ['红楼梦曲','好了歌','葬花吟','芙蓉诔'], ans: 0 },
+        { q: '秦可卿卧房陈设多有香艳典故，其镜是？', opts: ['武则天镜','赵飞燕镜','杨贵妃镜','寿昌公主镜'], ans: 0 },
+        { q: '贾琏偷娶尤二姐，安置于何处？', opts: ['小花枝巷','大观园','宁国府','荣国府'], ans: 0 }
+      ],
+      '西游记': [
+        { q: '孙悟空压五行山多少年？', opts: ['三百年','五百年','六百年','一千年'], ans: 1 },
+        { q: '白龙马原身份？', opts: ['东海三太子','西海三太子','南海三太子','北海三太子'], ans: 1 },
+        { q: '猪八戒兵器？', opts: ['月牙铲','降妖宝杖','九齿钉耙','方天画戟'], ans: 2 },
+        { q: '非孙悟空称号？', opts: ['齐天大圣','斗战胜佛','美猴王','金蝉子'], ans: 3 },
+        { q: '火焰山主人？', opts: ['红孩儿','牛魔王','铁扇公主','玉面公主'], ans: 2 },
+        { q: '白骨精三次变化？', opts: ['少女老妇老翁','少女老翁孩童','老妇老翁孩童','少女孩童老翁'], ans: 0 },
+        { q: '沙僧原为？', opts: ['卷帘大将','天蓬元帅','托塔天王','哪吒'], ans: 0 },
+        { q: '九环锡杖作用？', opts: ['降妖伏魔','持身护体','开启法门','增加寿命'], ans: 1 },
+        { q: '黄袍怪之妻？', opts: ['百花羞','玉面公主','高翠兰','铁扇公主'], ans: 0 },
+        { q: '助收红孩儿菩萨？', opts: ['观音','文殊','普贤','地藏'], ans: 0 },
+        { q: '孙悟空从何处得金箍棒？', opts: ['东海龙宫','南海龙宫','西海龙宫','北海龙宫'], ans: 0 },
+        { q: '唐僧前世？', opts: ['金蝉子','如来二徒','文殊弟子','普贤弟子'], ans: 0 },
+        { q: '黄风怪神通？', opts: ['三昧神风','火焰','毒烟','冰雹'], ans: 0 },
+        { q: '乌鸡国假国王为？', opts: ['青毛狮子','白象','大鹏','黄狮'], ans: 0 },
+        { q: '比丘国国丈要求用小儿心肝做药引，实际是？', opts: ['白鹿精','白狐精','白兔精','白蛇精'], ans: 0 },
+        { q: '通天河灵感大王是？', opts: ['金鱼精','鲤鱼精','鼋精','蛟精'], ans: 0 },
+        { q: '金兜山独角兕大王用何法宝？', opts: ['金刚琢','紫金铃','芭蕉扇','阴阳二气瓶'], ans: 0 },
+        { q: '天竺国假公主为？', opts: ['玉兔精','白兔精','金兔精','银兔精'], ans: 0 },
+        { q: '狮驼岭三魔老大？', opts: ['青狮','白象','大鹏','黄狮'], ans: 0 },
+        { q: '孙悟空在炼丹炉中炼就？', opts: ['火眼金睛','金刚不坏','七十二变','筋斗云'], ans: 0 },
+        { q: '二郎神兵器？', opts: ['三尖两刃刀','方天画戟','丈八矛','青龙刀'], ans: 0 },
+        { q: '车迟国虎力大仙与孙悟空比什么？', opts: ['砍头','剖腹','下油锅','求雨'], ans: 0 },
+        { q: '盘丝洞蜘蛛精共有几个？', opts: ['七个','六个','八个','九个'], ans: 0 },
+        { q: '黄花观蜈蚣精被谁收服？', opts: ['毗蓝婆菩萨','观音','文殊','普贤'], ans: 0 },
+        { q: '唐僧取经共经历多少难？', opts: ['八十一','七十二','九十九','一百'], ans: 0 },
+        { q: '孙悟空称呼菩提祖师为？', opts: ['师父','师尊','祖师','真人'], ans: 0 },
+        { q: '镇元大仙的人参果树被谁推倒？', opts: ['孙悟空','猪八戒','沙僧','白龙马'], ans: 0 },
+        { q: '荆棘岭上，与唐僧谈诗的是？', opts: ['树精藤怪','山妖','狐精','鹿精'], ans: 0 },
+        { q: '小雷音寺的黄眉怪法宝？', opts: ['人种袋','金铙','紫金铃','金刚琢'], ans: 0 },
+        { q: '取经回国后，经书被谁弄湿？', opts: ['白龙马','通天河鼋','孙悟空','猪八戒'], ans: 1 }
+      ],
+      '三国演义': [
+        { q: '“宁教我负天下人”谁言？', opts: ['曹操','刘备','孙权','董卓'], ans: 0 },
+        { q: '关羽兵器？', opts: ['丈八蛇矛','青釭剑','青龙偃月刀','方天画戟'], ans: 2 },
+        { q: '三顾茅庐请谁？', opts: ['诸葛亮','庞统','司马懿','周瑜'], ans: 0 },
+        { q: '赤壁连环计献者？', opts: ['周瑜','黄盖','庞统','诸葛亮'], ans: 2 },
+        { q: '长坂坡救刘备者？', opts: ['张飞','赵云','关羽','马超'], ans: 1 },
+        { q: '“既生瑜，何生亮”中“亮”指？', opts: ['诸葛亮','刘备','关羽','张飞'], ans: 0 },
+        { q: '非五虎上将？', opts: ['赵云','马超','黄忠','魏延'], ans: 3 },
+        { q: '官渡之战曹操败谁？', opts: ['袁绍','袁术','吕布','刘表'], ans: 0 },
+        { q: '失街亭被斩者？', opts: ['马谡','王平','李严','魏延'], ans: 0 },
+        { q: '“小霸王”指？', opts: ['孙权','孙策','孙坚','刘备'], ans: 1 },
+        { q: '诸葛亮初出茅庐第一功？', opts: ['火烧博望','火烧新野','草船借箭','借东风'], ans: 0 },
+        { q: '曹操称“吾之子房”者？', opts: ['荀彧','郭嘉','贾诩','程昱'], ans: 0 },
+        { q: '吕布被谁所杀？', opts: ['曹操','刘备','关羽','张飞'], ans: 0 },
+        { q: '刘备三顾茅庐时，诸葛亮在何处？', opts: ['隆中','南阳','襄阳','荆州'], ans: 0 },
+        { q: '赤壁之战中黄盖献何计？', opts: ['苦肉计','连环计','反间计','诈降计'], ans: 0 },
+        { q: '司马懿字？', opts: ['仲达','元直','孝直','文和'], ans: 0 },
+        { q: '关羽过五关斩六将，最终与谁相会？', opts: ['刘备','张飞','赵云','诸葛亮'], ans: 0 },
+        { q: '诸葛亮挥泪斩马谡，因何？', opts: ['失街亭','粮草不济','不听号令','谋反'], ans: 0 },
+        { q: '曹操北征乌桓时，谁为向导？', opts: ['田畴','郭嘉','荀攸','许攸'], ans: 0 },
+        { q: '夷陵之战，蜀军大败于谁？', opts: ['陆逊','吕蒙','朱然','韩当'], ans: 0 },
+        { q: '周瑜被诸葛亮气死前，大叫“既生瑜，何生亮”后，还说了？', opts: ['天不助我','亮之才远胜我','吾命休矣','悔不早除之'], ans: 0 },
+        { q: '刘备白帝城托孤给谁？', opts: ['诸葛亮','李严','赵云','魏延'], ans: 0 },
+        { q: '诸葛亮六出祁山，最终病逝于？', opts: ['五丈原','上方谷','祁山','定军山'], ans: 0 },
+        { q: '曹魏“五子良将”不包括？', opts: ['张辽','徐晃','张郃','夏侯惇'], ans: 3 },
+        { q: '孙权向曹操称臣，曹操说“生子当如”？', opts: ['孙仲谋','刘玄德','曹子桓','司马懿'], ans: 0 },
+        { q: '诸葛亮舌战群儒，发生在？', opts: ['江东','荆州','益州','汉中'], ans: 0 },
+        { q: '“乐不思蜀”指谁？', opts: ['刘禅','孙皓','曹奂','司马炎'], ans: 0 },
+        { q: '关羽水淹七军，擒获谁？', opts: ['于禁','庞德','曹仁','徐晃'], ans: 0 },
+        { q: '张飞义释严颜，严颜是？', opts: ['巴郡太守','汉中太守','益州牧','荆州牧'], ans: 0 },
+        { q: '刘备在得到谁的建议后入蜀？', opts: ['庞统','诸葛亮','法正','张松'], ans: 3 }
+      ],
+      '水浒传': [
+        { q: '林冲雪夜上梁山前职务？', opts: ['八十万禁军教头','提辖','都头','押司'], ans: 0 },
+        { q: '武松兵器？', opts: ['戒刀','双鞭','朴刀','禅杖'], ans: 0 },
+        { q: '宋江绰号？', opts: ['及时雨','玉麒麟','智多星','豹子头'], ans: 0 },
+        { q: '智取生辰纲策划者？', opts: ['晁盖','吴用','公孙胜','刘唐'], ans: 1 },
+        { q: '鲁智深倒拔垂杨柳所在寺？', opts: ['五台山','相国寺','少林寺','灵隐寺'], ans: 1 },
+        { q: '“鼓上蚤”指？', opts: ['时迁','张清','乐和','白胜'], ans: 0 },
+        { q: '李逵兵器？', opts: ['双板斧','单鞭','长枪','大刀'], ans: 0 },
+        { q: '花荣绰号？', opts: ['小李广','金枪手','插翅虎','病关索'], ans: 0 },
+        { q: '武松结局？', opts: ['六和寺出家','封官还乡','战死','归隐'], ans: 0 },
+        { q: '梁山泊位于？', opts: ['山东','河北','河南','江苏'], ans: 0 },
+        { q: '杨志卖刀时误杀谁？', opts: ['牛二','泼皮','无赖','地痞'], ans: 0 },
+        { q: '宋江浔阳楼题反诗，被谁告发？', opts: ['黄文炳','蔡九','戴宗','李逵'], ans: 0 },
+        { q: '李逵背母上山，母被谁所食？', opts: ['老虎','野狼','豹子','熊'], ans: 0 },
+        { q: '神行太保戴宗日行？', opts: ['八百里','六百里','七百里','五百里'], ans: 0 },
+        { q: '晁盖中箭身亡于？', opts: ['曾头市','祝家庄','高唐州','青州'], ans: 0 },
+        { q: '卢俊义被吴用骗上梁山，其家仆？', opts: ['燕青','李固','贾氏','时迁'], ans: 0 },
+        { q: '宋江三打祝家庄，最终谁助其破敌？', opts: ['孙立','花荣','林冲','武松'], ans: 0 },
+        { q: '梁山五虎将之首？', opts: ['关胜','林冲','秦明','呼延灼'], ans: 0 },
+        { q: '打虎将李忠卖什么为生？', opts: ['膏药','刀剑','布匹','药材'], ans: 0 },
+        { q: '鲁智深拳打镇关西，镇关西本名？', opts: ['郑屠','牛二','张三','李四'], ans: 0 },
+        { q: '智取生辰纲中，白胜卖酒扮演？', opts: ['酒贩','挑夫','小贩','农夫'], ans: 0 },
+        { q: '宋江担任押司时，主要职责？', opts: ['文书','治安','税赋','教化'], ans: 0 },
+        { q: '林冲风雪山神庙，杀死谁？', opts: ['陆谦','富安','差拨','管营'], ans: 0 },
+        { q: '武松醉打蒋门神，蒋门神为？', opts: ['恶霸','地头蛇','庄主','官差'], ans: 0 },
+        { q: '梁山好汉最后被招安后，主要征战？', opts: ['方腊','辽国','田虎','王庆'], ans: 0 },
+        { q: '征方腊后，燕青何处去？', opts: ['隐居','出海','回京','投师'], ans: 0 },
+        { q: '张顺被谁射死在涌金门？', opts: ['方天定','方貌','庞万春','厉天闰'], ans: 2 },
+        { q: '梁山三女将中，扈三娘绰号？', opts: ['一丈青','母大虫','母夜叉','花彪'], ans: 0 },
+        { q: '王进因避高俅，私走延安府，其父？', opts: ['王升','王进','王伦','王英'], ans: 0 },
+        { q: '征方腊时，谁失去了左臂？', opts: ['武松','鲁智深','杨志','李逵'], ans: 0 }
+      ]
     };
 
-    // ---------- 状态 ----------
-    const bookNames = Object.keys(BOOKS);
-    let currentBook = '红楼梦';
-    let currentQuestions = BOOKS[currentBook].questions;
-    let currentIndex = 0;                // 0-9
-    let selectedIndex = null;            // 当前选中选项索引
-    let isAnswered = false;              // 是否已作答当前题目
-    let score = 0;                      // 答对数量
-    let answeredStatus = [];            // 每道题是否答对 (boolean)
-    let quizFinished = false;
+    // ---------- 存储 ----------
+    const STORAGE_KEY = 'wenqu_ranking_v2';
+    let ranking = [];
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) ranking = JSON.parse(stored);
+    } catch(e) { ranking = []; }
 
-    // DOM 元素
-    const elBookBadge = document.getElementById('currentBookBadge');
-    const elQuestionCounter = document.getElementById('currentQNum');
+    // ---------- 状态 ----------
+    const BOOK_LIST = ['红楼梦','西游记','三国演义','水浒传'];
+    const BOOK_INTRO = {
+      '红楼梦':'中国古典文学巅峰，人情世态之镜。',
+      '西游记':'神魔奇幻之旅，信念与修行。',
+      '三国演义':'历史风云，智勇与权谋。',
+      '水浒传':'英雄聚义，忠义与抗争。'
+    };
+    const BOOK_BADGE = { '红楼梦':'卷·壹','西游记':'卷·贰','三国演义':'卷·叁','水浒传':'卷·肆' };
+
+    let currentBook = '红楼梦';
+    let currentPool = [];         // 当前名著30题
+    let currentRound = [];       // 本次10题
+    let currentIndex = 0;        // 0-9
+    let selectedIdx = null;
+    let isAnswered = false;
+    let score = 0;
+    let roundStatus = [];        // boolean 10
+    let quizFinished = false;
+    let userName = '翰林学士';
+
+    // DOM
+    const elUserName = document.getElementById('userNameDisplay');
+    const elIntroText = document.getElementById('bookIntroText');
+    const elIntroBadge = document.getElementById('bookIntroBadge');
+    const elQNum = document.getElementById('qNum');
     const elProgressFill = document.getElementById('progressFill');
-    const elQuestionText = document.getElementById('questionText');
-    const elOptionsContainer = document.getElementById('optionsContainer');
+    const elBookStatus = document.getElementById('bookStatus');
+    const elQText = document.getElementById('qText');
+    const elOptions = document.getElementById('optionsContainer');
     const elNextBtn = document.getElementById('nextBtn');
-    const elResetBookBtn = document.getElementById('resetBookBtn');
+    const elSwitchBtn = document.getElementById('switchBookBtn');
     const elQuizArea = document.getElementById('quizArea');
     const elResultArea = document.getElementById('resultArea');
     const elFinalScore = document.getElementById('finalScore');
     const elResultMessage = document.getElementById('resultMessage');
-    const elCorrectCountDisplay = document.getElementById('correctCountDisplay');
-    const elWrongCountDisplay = document.getElementById('wrongCountDisplay');
-    const elRestartFromResultBtn = document.getElementById('restartFromResultBtn');
+    const elResultBookLabel = document.getElementById('resultBookLabel');
+    const elTitleAward = document.getElementById('titleAward');
+    const elRankingList = document.getElementById('rankingList');
+    const elRestartBtn = document.getElementById('restartBtn');
+    const elRollBtn = document.getElementById('rollNameBtn');
 
-    // 辅助函数
-    function shuffleArray(arr) {
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+    // ---------- 工具 ----------
+    function shuffle(arr) {
+      for (let i = arr.length-1; i>0; i--) {
+        const j = Math.floor(Math.random()*(i+1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
       }
       return arr;
     }
 
-    // 初始化/重置当前名著状态 (保持题目顺序不变，但可打乱；这里保留原序，更显经典)
-    function resetBookState(bookName) {
+    function pickRandom(arr, n) {
+      const copy = [...arr];
+      shuffle(copy);
+      return copy.slice(0, n);
+    }
+
+    // 掷骰起名 (符合文枢气质)
+    function generateName() {
+      const prefix = ['文','墨','书','云','鹤','松','竹','琴','棋','诗','雅','怀','瑾','瑜','砚','笔','卷','典','玄','清','澹','逸','涵','淳','厚','博','智','慧','明','道'];
+      const suffix = ['士','君','客','翁','子','生','人','友','贤','才','杰','英','俊','彦','儒','仙','隐','逸','达','观'];
+      const p = prefix[Math.floor(Math.random()*prefix.length)];
+      const s = suffix[Math.floor(Math.random()*suffix.length)];
+      const p2 = prefix[Math.floor(Math.random()*prefix.length)];
+      return (Math.random()>0.5) ? p+p2+s : p+s;
+    }
+
+    function rollName() {
+      userName = generateName();
+      elUserName.textContent = userName;
+    }
+
+    // ---------- 排行榜 ----------
+    function saveRanking() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(ranking));
+      } catch(e) {}
+    }
+
+    function updateRanking(book, scoreVal, name) {
+      ranking.push({ book, score: scoreVal, name, time: Date.now() });
+      ranking.sort((a,b) => b.score - a.score || a.time - b.time);
+      if (ranking.length > 50) ranking = ranking.slice(0, 50);
+      saveRanking();
+    }
+
+    function renderRanking() {
+      if (ranking.length === 0) {
+        elRankingList.innerHTML = `<div class="rank-item"><span class="rank-pos">✨</span><span class="rank-name">尚无记录</span><span class="rank-score">—</span></div>`;
+        return;
+      }
+      let html = '';
+      ranking.slice(0, 10).forEach((item, idx) => {
+        const medal = idx===0?'🥇':idx===1?'🥈':idx===2?'🥉':`#${idx+1}`;
+        html += `<div class="rank-item"><span class="rank-pos">${medal}</span><span class="rank-name">${item.name||'佚名'}</span><span class="rank-score">${item.score}/10 · ${item.book}</span></div>`;
+      });
+      elRankingList.innerHTML = html;
+    }
+
+    // ---------- 核心 ----------
+    function initRound(bookName) {
       currentBook = bookName;
-      currentQuestions = BOOKS[bookName].questions;
+      currentPool = FULL_QUESTIONS[bookName] || FULL_QUESTIONS['红楼梦'];
+      currentRound = pickRandom(currentPool, 10);
       currentIndex = 0;
-      selectedIndex = null;
+      selectedIdx = null;
       isAnswered = false;
       score = 0;
-      answeredStatus = new Array(currentQuestions.length).fill(false);
+      roundStatus = new Array(10).fill(false);
       quizFinished = false;
-      elBookBadge.textContent = bookName;
-      renderQuestion();
+      // 更新intro
+      elIntroText.innerHTML = `<strong>📖 ${currentBook}</strong> · ${BOOK_INTRO[currentBook]}`;
+      elIntroBadge.textContent = BOOK_BADGE[currentBook];
+      elBookStatus.textContent = `${currentBook} · 0/10`;
       elResultArea.classList.add('hidden');
       elQuizArea.classList.remove('hidden');
       elNextBtn.disabled = true;
-      updateProgress();
+      renderQuestion();
     }
 
-    // 渲染当前题目
     function renderQuestion() {
       if (quizFinished) return;
-      const qData = currentQuestions[currentIndex];
-      if (!qData) return;
+      const qd = currentRound[currentIndex];
+      if (!qd) return;
+      elQText.textContent = qd.q;
+      elQNum.textContent = currentIndex+1;
+      // progress
+      const done = currentIndex + (isAnswered?1:0);
+      elProgressFill.style.width = (done/10*100)+'%';
+      elBookStatus.textContent = `${currentBook} · ${done}/10`;
 
-      elQuestionText.textContent = qData.q;
-      elQuestionCounter.textContent = currentIndex + 1;
-      updateProgress();
-
-      // 生成选项
-      const labels = ['A', 'B', 'C', 'D'];
+      const labels = ['A','B','C','D'];
       let html = '';
-      qData.options.forEach((opt, idx) => {
-        let classes = 'option-item';
+      qd.opts.forEach((opt, idx) => {
+        let cls = 'opt';
         if (isAnswered) {
-          classes += ' disabled-option';
-          if (idx === qData.answer) classes += ' correct-reveal';
-          else if (selectedIndex === idx && idx !== qData.answer) classes += ' wrong-reveal';
+          cls += ' disabled';
+          if (idx === qd.ans) cls += ' correct';
+          else if (selectedIdx === idx && idx !== qd.ans) cls += ' wrong';
         } else {
-          if (selectedIndex === idx) classes += ' selected';
+          if (selectedIdx === idx) cls += ' selected';
         }
-        html += `
-          <div class="${classes}" data-opt-index="${idx}">
-            <span class="option-label">${labels[idx]}.</span>
-            <span class="option-text">${opt}</span>
-          </div>
-        `;
+        html += `<div class="${cls}" data-opt-index="${idx}"><span class="opt-label">${labels[idx]}.</span><span class="opt-text">${opt}</span></div>`;
       });
-      elOptionsContainer.innerHTML = html;
+      elOptions.innerHTML = html;
 
-      // 绑定选项点击事件 (仅当未作答)
       if (!isAnswered) {
-        document.querySelectorAll('.option-item').forEach(el => {
+        document.querySelectorAll('.opt').forEach(el => {
           el.addEventListener('click', onOptionClick);
         });
       } else {
-        // 已作答，移除点击
-        document.querySelectorAll('.option-item').forEach(el => {
-          el.style.cursor = 'default';
-        });
+        document.querySelectorAll('.opt').forEach(el => { el.style.cursor = 'default'; });
       }
 
-      // 更新下一题按钮
       if (isAnswered) {
-        const isLast = currentIndex === currentQuestions.length - 1;
-        elNextBtn.textContent = isLast ? '📖 览卷终' : '下一题 →';
+        const isLast = currentIndex === 9;
+        elNextBtn.textContent = isLast ? '📖 卷终' : '下一题 →';
         elNextBtn.disabled = false;
       } else {
         elNextBtn.textContent = '下一题 →';
@@ -587,38 +670,26 @@
       }
     }
 
-    // 选项点击处理
     function onOptionClick(e) {
       if (isAnswered) return;
-      const target = e.currentTarget;
-      const idx = parseInt(target.dataset.optIndex, 10);
+      const idx = parseInt(e.currentTarget.dataset.optIndex, 10);
       if (isNaN(idx)) return;
-
-      // 清除之前选中样式
-      document.querySelectorAll('.option-item').forEach(el => el.classList.remove('selected'));
-      target.classList.add('selected');
-      selectedIndex = idx;
-      // 启用下一题
+      document.querySelectorAll('.opt').forEach(el => el.classList.remove('selected'));
+      e.currentTarget.classList.add('selected');
+      selectedIdx = idx;
       elNextBtn.disabled = false;
     }
 
-    // 下一题或完成
     function handleNext() {
       if (quizFinished) return;
+      if (!isAnswered && selectedIdx === null) return;
 
-      // 如果未作答且没有选中，不能继续
-      if (!isAnswered && selectedIndex === null) {
-        // 轻提示，但不强制
-        return;
-      }
-
-      // 若已作答，直接跳转或结束
       if (isAnswered) {
-        if (currentIndex === currentQuestions.length - 1) {
-          finishQuiz();
+        if (currentIndex === 9) {
+          finishRound();
         } else {
           currentIndex++;
-          selectedIndex = null;
+          selectedIdx = null;
           isAnswered = false;
           renderQuestion();
           elNextBtn.disabled = true;
@@ -626,22 +697,19 @@
         return;
       }
 
-      // 未作答，有选中 -> 判定
-      const qData = currentQuestions[currentIndex];
-      const correct = selectedIndex === qData.answer;
+      // 作答
+      const qd = currentRound[currentIndex];
+      const correct = selectedIdx === qd.ans;
       if (correct) {
         score++;
-        answeredStatus[currentIndex] = true;
+        roundStatus[currentIndex] = true;
       } else {
-        answeredStatus[currentIndex] = false;
+        roundStatus[currentIndex] = false;
       }
       isAnswered = true;
-      // 显示正误样式
-      renderQuestion(); // 重新渲染展示正确/错误
-      // 若最后一题，完成时自动finish
-      if (currentIndex === currentQuestions.length - 1) {
-        // 启用下一题 (finish)
-        elNextBtn.textContent = '📖 览卷终';
+      renderQuestion();
+      if (currentIndex === 9) {
+        elNextBtn.textContent = '📖 卷终';
         elNextBtn.disabled = false;
       } else {
         elNextBtn.textContent = '下一题 →';
@@ -649,77 +717,72 @@
       }
     }
 
-    // 完成测验
-    function finishQuiz() {
+    function finishRound() {
       quizFinished = true;
       elQuizArea.classList.add('hidden');
       elResultArea.classList.remove('hidden');
-      const correctCount = score;
-      const wrongCount = currentQuestions.length - correctCount;
-      elFinalScore.textContent = correctCount;
-      elCorrectCountDisplay.textContent = `✅ ${correctCount}`;
-      elWrongCountDisplay.textContent = `❌ ${wrongCount}`;
+      elFinalScore.textContent = score;
+      elResultBookLabel.textContent = currentBook;
 
-      let msg = '';
-      if (correctCount === 10) msg = '🏆 登峰造极 · 文曲降世';
-      else if (correctCount >= 8) msg = '📚 博闻强识 · 大家风范';
-      else if (correctCount >= 6) msg = '✍️ 熟读经典 · 颇有见地';
-      else if (correctCount >= 4) msg = '📖 初窥门径 · 继续精进';
-      else msg = '🌱 书山有路 · 再读不迟';
-      elResultMessage.textContent = msg;
+      // 称号
+      let title = '';
+      if (score === 10) title = '🏆 文曲星下凡';
+      else if (score >= 8) title = '📚 博雅学士';
+      else if (score >= 6) title = '✍️ 敏思才俊';
+      else if (score >= 4) title = '📖 读书君子';
+      else title = '🌱 初涉文海';
+      elTitleAward.textContent = title;
+
+      // 评语
+      const msgs = {
+        10:'十题全对，一代文宗！',
+        9:'学富五车，才高八斗！',
+        8:'腹有诗书，气自华。',
+        7:'博观约取，厚积薄发。',
+        6:'开卷有益，继续精进。',
+        5:'勤能补拙，再读经典。',
+        4:'书山有路，步步为营。',
+        3:'学而不思则罔，思而不学则殆。',
+        2:'锲而不舍，金石可镂。',
+        1:'千里之行，始于足下。',
+        0:'知耻近乎勇，再起。'
+      };
+      const msgKey = Math.min(10, Math.max(0, score));
+      elResultMessage.textContent = msgs[msgKey] || '文心雕龙';
+
+      // 更新排行榜
+      updateRanking(currentBook, score, userName);
+      renderRanking();
     }
 
-    // 更新进度条
-    function updateProgress() {
-      const total = currentQuestions.length;
-      const done = currentIndex + (isAnswered ? 1 : 0);
-      const pct = Math.min(100, (done / total) * 100);
-      elProgressFill.style.width = pct + '%';
-    }
-
-    // 切换名著 (换卷)
+    // 换卷
     function switchBook() {
-      let idx = bookNames.indexOf(currentBook);
-      idx = (idx + 1) % bookNames.length;
-      resetBookState(bookNames[idx]);
-      // 重置状态
-      quizFinished = false;
-      elResultArea.classList.add('hidden');
-      elQuizArea.classList.remove('hidden');
-      elNextBtn.disabled = true;
+      let idx = BOOK_LIST.indexOf(currentBook);
+      idx = (idx+1) % BOOK_LIST.length;
+      initRound(BOOK_LIST[idx]);
     }
 
-    // 从结果页重新开始 (继续当前名著)
-    function restartCurrentBook() {
-      resetBookState(currentBook);
+    // 重新开始 (当前名著)
+    function restartCurrent() {
+      initRound(currentBook);
     }
 
-    // ---------- 事件绑定 ----------
-    elNextBtn.addEventListener('click', handleNext);
+    // ---------- 初始化 ----------
+    function init() {
+      // 用户名
+      rollName();
+      // 初始卷
+      initRound('红楼梦');
+      renderRanking();
 
-    elResetBookBtn.addEventListener('click', function() {
-      if (quizFinished) {
-        // 若在结果页，点击换卷直接切换
-        switchBook();
-      } else {
-        switchBook();
-      }
-    });
+      // 事件
+      elNextBtn.addEventListener('click', handleNext);
+      elSwitchBtn.addEventListener('click', switchBook);
+      elRestartBtn.addEventListener('click', restartCurrent);
+      elRollBtn.addEventListener('click', rollName);
+    }
 
-    elRestartFromResultBtn.addEventListener('click', function() {
-      restartCurrentBook();
-    });
-
-    // 初始化
-    resetBookState('红楼梦');
-
-    // 键盘/辅助 (可选项)
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && !elNextBtn.disabled) {
-        elNextBtn.click();
-      }
-    });
-
+    init();
   })();
 </script>
 </body>
