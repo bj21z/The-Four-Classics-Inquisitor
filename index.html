@@ -1,789 +1,488 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>文枢问答 2.0 · 四大名著</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', 'Source Han Serif SC', serif;
-    }
-    body {
-      background: #f3ede7;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 16px;
-      background-image: radial-gradient(circle at 20% 30%, rgba(190, 165, 140, 0.05) 0%, transparent 60%);
-    }
-    .app {
-      max-width: 720px;
-      width: 100%;
-      background: rgba(255, 251, 245, 0.88);
-      backdrop-filter: blur(3px);
-      border-radius: 56px 56px 40px 40px;
-      box-shadow: 0 24px 60px rgba(80, 55, 35, 0.10), 0 6px 20px rgba(0,0,0,0.02);
-      padding: 28px 24px 32px;
-      border: 1px solid rgba(220, 200, 180, 0.25);
-      transition: all 0.2s;
-    }
-    /* header */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-      border-bottom: 1px solid rgba(180, 160, 140, 0.15);
-      padding-bottom: 14px;
-    }
-    .title-group { display: flex; flex-direction: column; }
-    .main-title {
-      font-size: 28px;
-      font-weight: 600;
-      color: #2f2219;
-      letter-spacing: 2px;
-    }
-    .main-title small {
-      font-size: 16px;
-      font-weight: 400;
-      color: #8b7a68;
-      letter-spacing: 3px;
-      margin-left: 6px;
-    }
-    .sub-title {
-      font-size: 14px;
-      color: #9b8a78;
-      letter-spacing: 1px;
-      margin-top: 2px;
-    }
-    .user-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .user-badge {
-      background: #e6dbcf;
-      padding: 5px 18px;
-      border-radius: 40px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #3e2e22;
-      border: 1px solid rgba(200, 175, 150, 0.2);
-      box-shadow: inset 0 1px 3px rgba(255, 240, 220, 0.6);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .user-badge span { font-weight: 300; color: #5f4d3a; }
-    .btn-roll {
-      background: rgba(200, 180, 160, 0.2);
-      border: none;
-      border-radius: 40px;
-      padding: 5px 12px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.15s;
-      border: 1px solid rgba(180, 160, 140, 0.2);
-      background: #f3ede7;
-    }
-    .btn-roll:active { transform: scale(0.92); }
-    /* book intro */
-    .book-intro {
-      background: rgba(240, 230, 218, 0.3);
-      border-radius: 28px;
-      padding: 16px 20px;
-      margin: 6px 0 18px;
-      border-left: 4px solid #b8a084;
-      backdrop-filter: blur(2px);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .book-intro-text {
-      font-size: 15px;
-      color: #3f3227;
-      line-height: 1.5;
-      flex: 1;
-      min-width: 180px;
-    }
-    .book-intro-text strong { color: #5f4a34; font-weight: 600; }
-    .book-intro-badge {
-      background: #dacfc4;
-      padding: 4px 16px;
-      border-radius: 40px;
-      font-size: 14px;
-      color: #2f2219;
-      font-weight: 500;
-      white-space: nowrap;
-      margin-left: 10px;
-      background: #e2d4c8;
-    }
-    /* progress */
-    .progress-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      background: rgba(235, 222, 208, 0.2);
-      padding: 6px 16px 6px 18px;
-      border-radius: 60px;
-      border: 1px solid rgba(200, 180, 160, 0.12);
-      flex-wrap: wrap;
-    }
-    .q-counter { font-size: 15px; color: #5f4d3a; }
-    .q-counter span { font-weight: 600; color: #2f2219; }
-    .progress-track {
-      flex: 1;
-      min-width: 60px;
-      height: 5px;
-      background: #ddd0c0;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: #ad8b70;
-      border-radius: 12px;
-      transition: width 0.3s;
-    }
-    .book-status {
-      font-size: 13px;
-      color: #8b7a68;
-      background: rgba(200, 180, 160, 0.15);
-      padding: 2px 14px;
-      border-radius: 30px;
-      white-space: nowrap;
-    }
-    /* question */
-    .question-card {
-      background: rgba(250, 244, 236, 0.4);
-      border-radius: 32px;
-      padding: 22px 20px 16px;
-      margin: 8px 0 18px;
-      border: 1px solid rgba(210, 190, 170, 0.15);
-      backdrop-filter: blur(2px);
-    }
-    .q-text {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 1.6;
-      color: #2f2219;
-      border-bottom: 1px dashed rgba(180, 160, 140, 0.2);
-      padding-bottom: 12px;
-      margin-bottom: 16px;
-    }
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
-    }
-    .opt {
-      display: flex;
-      align-items: center;
-      background: rgba(255, 248, 240, 0.4);
-      border: 1.5px solid rgba(200, 180, 162, 0.2);
-      border-radius: 60px;
-      padding: 12px 18px;
-      cursor: pointer;
-      transition: 0.12s;
-      backdrop-filter: blur(2px);
-    }
-    .opt:hover:not(.disabled) { background: rgba(235, 218, 200, 0.3); border-color: #b89f88; transform: scale(1.01); }
-    .opt.selected { background: #e5d5c4; border-color: #a5836a; }
-    .opt.correct { background: #c8d9c0; border-color: #6f8f6a; }
-    .opt.wrong { background: #e7cfc9; border-color: #b57a6e; }
-    .opt.disabled { cursor: default; opacity: 0.8; }
-    .opt-label { font-weight: 500; color: #5f4d3a; min-width: 28px; }
-    .opt-text { font-size: 17px; color: #2f2219; margin-left: 4px; }
-    /* actions */
-    .action-bar {
-      display: flex;
-      gap: 12px;
-      margin-top: 10px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      border: 1px solid #cbb8a8;
-      padding: 12px 22px;
-      border-radius: 60px;
-      font-size: 16px;
-      background: rgba(250, 242, 232, 0.5);
-      backdrop-filter: blur(2px);
-      cursor: pointer;
-      transition: 0.12s;
-      flex: 1 1 auto;
-      min-width: 90px;
-      font-weight: 480;
-      color: #3e2e22;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-    .btn-primary {
-      background: #b8a084;
-      border-color: #a5886e;
-      color: #fcf6ed;
-      box-shadow: 0 4px 12px rgba(130, 90, 60, 0.10);
-    }
-    .btn-primary:active:not(:disabled) { background: #a2876c; transform: scale(0.97); }
-    .btn:active:not(:disabled) { transform: scale(0.97); }
-    .btn:disabled { opacity: 0.35; cursor: not-allowed; }
-    .btn-secondary { border-color: #d2c0b0; }
-    /* result / ranking */
-    .result-panel {
-      background: rgba(245, 236, 224, 0.4);
-      border-radius: 40px;
-      padding: 24px 20px 28px;
-      margin-top: 12px;
-      backdrop-filter: blur(2px);
-      border: 1px solid rgba(200, 180, 160, 0.12);
-    }
-    .result-title { font-size: 22px; font-weight: 500; color: #2f2219; text-align: center; }
-    .result-score {
-      font-size: 44px;
-      font-weight: 300;
-      text-align: center;
-      color: #3e2e22;
-      margin: 8px 0;
-    }
-    .result-score strong { font-weight: 600; color: #1f140e; }
-    .result-sub { text-align: center; font-size: 18px; color: #6d5b48; }
-    .ranking-box {
-      margin-top: 20px;
-      background: rgba(250, 242, 232, 0.3);
-      border-radius: 28px;
-      padding: 14px 18px;
-      border: 1px solid rgba(200, 180, 160, 0.15);
-    }
-    .ranking-title { font-weight: 500; color: #4d3d2e; margin-bottom: 8px; display: flex; gap: 12px; align-items: center; }
-    .ranking-list { display: flex; flex-direction: column; gap: 6px; max-height: 180px; overflow-y: auto; }
-    .rank-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 6px 12px;
-      background: rgba(255, 248, 240, 0.3);
-      border-radius: 40px;
-      font-size: 15px;
-      color: #3f3227;
-      border-bottom: 1px solid rgba(200, 180, 160, 0.05);
-    }
-    .rank-pos { font-weight: 500; color: #7a6754; }
-    .rank-name { font-weight: 500; }
-    .rank-score { font-weight: 400; }
-    .btn-restart {
-      background: #dacfc4;
-      border-color: #b8a490;
-      padding: 12px 40px;
-      margin-top: 16px;
-      width: 100%;
-      font-weight: 500;
-    }
-    .hidden { display: none !important; }
-    .flex-center { display: flex; align-items: center; gap: 6px; }
-    .mt-2 { margin-top: 12px; }
-    .gap-2 { gap: 8px; }
-
-    @media (max-width: 500px) {
-      .app { padding: 18px 14px; border-radius: 32px; }
-      .main-title { font-size: 22px; }
-      .q-text { font-size: 18px; }
-      .opt-text { font-size: 15px; }
-      .btn { font-size: 14px; padding: 10px 14px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#17130f">
+<title>文枢问答 3.0 · 四大名著</title>
+<style>
+:root{
+  --bg:#efe7dc;--paper:#fffaf2;--paper2:#f7eee2;--ink:#251b14;--muted:#7b6958;
+  --gold:#a77d45;--gold2:#d9bc8b;--line:rgba(91,66,45,.13);--ok:#5f8666;--bad:#b2675d;
+  --shadow:0 24px 80px rgba(62,39,22,.15);--radius:30px
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+   radial-gradient(circle at 8% 8%,rgba(255,255,255,.75),transparent 30%),
+   radial-gradient(circle at 92% 30%,rgba(179,135,78,.11),transparent 28%),
+   linear-gradient(145deg,#eee5da,#f7f0e7);
+  padding:clamp(10px,3vw,28px)
+}
+button{font:inherit}
+button,.option,.book-card,.mode-card{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.app{width:min(980px,100%);margin:auto}
+.topbar{
+  position:sticky;top:8px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:13px 16px;border:1px solid rgba(255,255,255,.5);border-radius:24px;
+  background:rgba(255,250,242,.78);backdrop-filter:blur(18px);box-shadow:0 10px 32px rgba(50,32,20,.09)
+}
+.brand{display:flex;align-items:center;gap:12px}
+.seal{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#5d2a23,#8f4034);color:#fff4e4;
+ display:grid;place-items:center;font-family:serif;font-weight:800;box-shadow:inset 0 0 0 2px rgba(255,255,255,.16)}
+.brand h1{font:700 clamp(18px,4vw,25px)/1.1 "Noto Serif SC","Songti SC",serif;letter-spacing:2px}
+.brand p{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:1px}
+.top-actions{display:flex;gap:8px}
+.icon-btn,.plain-btn,.primary-btn{
+ border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.58);color:var(--ink);cursor:pointer;
+ transition:.18s ease;display:inline-flex;align-items:center;justify-content:center;gap:7px
+}
+.icon-btn{width:42px;height:42px;font-size:18px}
+.icon-btn:active,.plain-btn:active,.primary-btn:active{transform:scale(.96)}
+.screen{display:none;animation:fade .25s ease}
+.screen.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.hero{
+ margin-top:18px;padding:clamp(24px,6vw,56px);border-radius:40px;overflow:hidden;position:relative;
+ background:linear-gradient(135deg,rgba(31,24,19,.97),rgba(69,48,30,.94));color:#fff8ee;box-shadow:var(--shadow)
+}
+.hero:before{content:"文";position:absolute;right:-15px;bottom:-72px;font:900 260px/1 serif;color:rgba(255,255,255,.035)}
+.hero-kicker{color:#e5c796;font-size:13px;letter-spacing:3px}
+.hero h2{font:750 clamp(34px,8vw,68px)/1.08 "Noto Serif SC","Songti SC",serif;margin:15px 0 12px;letter-spacing:4px}
+.hero p{max-width:640px;color:#e4d8ca;line-height:1.9;font-size:15px}
+.hero-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.primary-btn,.plain-btn{padding:12px 18px;font-weight:650}
+.primary-btn{border-color:#d9bc8b;background:linear-gradient(135deg,#d7b87e,#a97c43);color:#21160e;box-shadow:0 8px 26px rgba(184,139,77,.25)}
+.hero .plain-btn{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.16)}
+.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.stat{background:rgba(255,250,242,.76);border:1px solid rgba(255,255,255,.55);border-radius:22px;padding:16px;text-align:center;box-shadow:0 9px 26px rgba(58,38,24,.06)}
+.stat strong{font-size:25px;font-family:Georgia,serif}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin:25px 3px 12px}
+.section-title h3{font:700 23px "Noto Serif SC","Songti SC",serif;letter-spacing:1px}
+.section-title p{font-size:12px;color:var(--muted)}
+.books{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.book-card{
+ min-height:190px;border:1px solid var(--line);border-radius:28px;padding:19px;text-align:left;cursor:pointer;position:relative;overflow:hidden;
+ background:rgba(255,250,242,.78);box-shadow:0 12px 32px rgba(67,43,25,.07);transition:.22s ease
+}
+.book-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(67,43,25,.12)}
+.book-card.selected{outline:2px solid var(--gold);background:linear-gradient(150deg,#fffaf2,#efe0c8)}
+.book-card .num{font:700 12px Georgia;color:var(--gold);letter-spacing:2px}
+.book-card h4{font:700 24px "Noto Serif SC","Songti SC",serif;margin:24px 0 8px}
+.book-card p{font-size:13px;color:var(--muted);line-height:1.7}
+.book-card .mark{position:absolute;right:15px;bottom:8px;font:700 54px serif;color:rgba(109,71,39,.08)}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mode-card{
+ border:1px solid var(--line);border-radius:24px;padding:16px;background:rgba(255,250,242,.72);cursor:pointer;text-align:left;transition:.18s
+}
+.mode-card.selected{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold);background:#fff7ea}
+.mode-card b{display:block;margin-bottom:6px}.mode-card span{font-size:12px;color:var(--muted);line-height:1.55}
+.start-panel{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:14px;padding:15px;border-radius:24px;background:rgba(255,250,242,.68);border:1px solid var(--line)}
+.name-wrap{display:flex;align-items:center;gap:8px;flex:1}
+.name-input{width:100%;border:1px solid var(--line);border-radius:15px;padding:11px 13px;background:rgba(255,255,255,.62);outline:none;color:var(--ink)}
+.quiz-shell{margin-top:18px}
+.quiz-head{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-bottom:12px}
+.progress-wrap{background:rgba(255,250,242,.78);border:1px solid var(--line);border-radius:21px;padding:12px 15px}
+.progress-meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px;margin-bottom:8px}
+.track{height:7px;background:#e3d7c8;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#8e6539,#d8b97f);transition:.3s}
+.timer{min-width:74px;text-align:center;padding:12px;border-radius:20px;background:#2d2118;color:#fff5e7;font:700 18px Georgia}
+.timer.danger{animation:pulse .7s infinite;color:#ffd1ca}
+@keyframes pulse{50%{transform:scale(1.04)}}
+.question-card{
+ position:relative;overflow:hidden;background:rgba(255,250,242,.88);border:1px solid rgba(255,255,255,.65);border-radius:34px;
+ box-shadow:var(--shadow);padding:clamp(20px,5vw,38px)
+}
+.question-card:before{content:attr(data-watermark);position:absolute;right:-15px;top:-28px;font:800 150px serif;color:rgba(98,63,34,.035)}
+.q-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.tag{font-size:11px;padding:5px 10px;border-radius:99px;background:#eee0cf;color:#6b5139}
+.q-text{font:650 clamp(19px,4vw,27px)/1.65 "Noto Serif SC","Songti SC",serif;position:relative}
+.options{display:grid;gap:11px;margin-top:24px}
+.option{
+ width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--line);border-radius:20px;
+ padding:14px 15px;background:rgba(255,255,255,.58);cursor:pointer;color:var(--ink);transition:.16s
+}
+.option:hover:not(:disabled){transform:translateX(3px);border-color:#b28b5d;background:#fff8ed}
+.option:disabled{cursor:default}
+.option .letter{width:32px;height:32px;flex:0 0 32px;border-radius:11px;background:#eee1d2;display:grid;place-items:center;font:700 13px Georgia}
+.option.correct{background:#e3efe2;border-color:#79a17d}.option.correct .letter{background:#79a17d;color:white}
+.option.wrong{background:#f4e1dd;border-color:#bd7a70}.option.wrong .letter{background:#bd7a70;color:white}
+.explain{
+ display:none;margin-top:18px;padding:15px 16px;border-radius:20px;background:#f3eadf;border-left:4px solid var(--gold);
+ color:#5b4939;line-height:1.75;font-size:14px
+}
+.explain.show{display:block;animation:fade .2s}
+.quiz-actions{display:flex;gap:10px;margin-top:13px}.quiz-actions button{flex:1}
+.result-card{margin-top:18px;border-radius:38px;background:linear-gradient(145deg,#211810,#4f3826);color:#fff8ee;overflow:hidden;box-shadow:var(--shadow);padding:clamp(25px,6vw,50px)}
+.result-top{text-align:center}.result-top .small{color:#d7c4ae;font-size:13px;letter-spacing:2px}
+.score-ring{
+ width:160px;height:160px;border-radius:50%;margin:20px auto;display:grid;place-items:center;
+ background:conic-gradient(#d7b77e var(--scoredeg),rgba(255,255,255,.1) 0);position:relative
+}
+.score-ring:before{content:"";position:absolute;inset:12px;border-radius:50%;background:#2c2017}
+.score-ring strong{position:relative;font:800 48px Georgia}.score-ring span{font-size:15px;color:#d8c8b8}
+.result-title{font:700 28px "Noto Serif SC","Songti SC",serif}.result-msg{color:#ddcfbf;margin-top:8px}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}
+.result-mini{padding:14px;border-radius:20px;background:rgba(255,255,255,.08);text-align:center}.result-mini b{font-size:21px}.result-mini span{display:block;color:#cbbbaa;font-size:11px;margin-top:4px}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.result-actions button{flex:1}
+.panel{
+ margin-top:18px;background:rgba(255,250,242,.82);border:1px solid rgba(255,255,255,.6);border-radius:30px;padding:20px;box-shadow:0 14px 40px rgba(56,35,20,.08)
+}
+.panel h3{font:700 21px "Noto Serif SC","Songti SC",serif;margin-bottom:12px}
+.history-list,.wrong-list{display:grid;gap:9px}.history-item,.wrong-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px;border-radius:16px;background:#f5ecdf;font-size:13px}
+.empty{text-align:center;padding:35px 10px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:26px;z-index:100;transform:translate(-50%,20px);opacity:0;background:#211810;color:#fff;padding:11px 16px;border-radius:14px;transition:.22s;pointer-events:none;font-size:13px}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.modal{position:fixed;inset:0;z-index:90;background:rgba(24,17,12,.52);display:none;place-items:center;padding:16px;backdrop-filter:blur(8px)}
+.modal.show{display:grid}.modal-card{width:min(620px,100%);max-height:85vh;overflow:auto;background:var(--paper);border-radius:28px;padding:22px;box-shadow:var(--shadow)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.modal-head h3{font:700 21px serif}
+.setting-row{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.switch{width:50px;height:29px;border-radius:99px;background:#d7cbbb;padding:3px;cursor:pointer;border:0}.switch i{display:block;width:23px;height:23px;border-radius:50%;background:white;transition:.2s}.switch.on{background:#997044}.switch.on i{transform:translateX(21px)}
+.footer{text-align:center;color:#a08d7a;font-size:11px;letter-spacing:2px;padding:25px 0 10px}
+@media(max-width:760px){.books{grid-template-columns:repeat(2,1fr)}.modes{grid-template-columns:1fr}.stats-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){
+ body{padding:8px}.topbar{top:5px;border-radius:19px}.brand p{display:none}.hero{border-radius:28px}.hero h2{font-size:40px}
+ .book-card{min-height:155px;padding:15px}.book-card h4{font-size:21px;margin-top:18px}.start-panel{align-items:stretch;flex-direction:column}
+ .question-card{border-radius:26px;padding:19px 15px}.option{padding:12px}.result-grid{grid-template-columns:1fr 1fr}.result-mini:last-child{grid-column:1/-1}
+}
+</style>
 </head>
 <body>
-<div class="app" id="app">
-  <!-- header -->
-  <div class="header">
-    <div class="title-group">
-      <div class="main-title">文枢问答 <small>2.0</small></div>
-      <div class="sub-title">四部经典 · 三十卷 · 十题问道</div>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="seal">文枢</div><div><h1>文枢问答 3.0</h1><p>四大名著 · 沉浸式国学挑战</p></div></div>
+    <div class="top-actions">
+      <button class="icon-btn" id="homeBtn" title="首页">⌂</button>
+      <button class="icon-btn" id="statsBtn" title="学情">◫</button>
+      <button class="icon-btn" id="settingsBtn" title="设置">⚙</button>
     </div>
-    <div class="user-area">
-      <div class="user-badge">🎓 <span id="userNameDisplay">翰林学士</span></div>
-      <button class="btn-roll" id="rollNameBtn" title="掷骰起雅号">🎲</button>
-    </div>
-  </div>
+  </header>
 
-  <!-- 名著引领介绍 -->
-  <div class="book-intro" id="bookIntroArea">
-    <div class="book-intro-text" id="bookIntroText">
-      <strong>📖 红楼梦</strong> · 中国古典文学巅峰，人情世态之镜。
-    </div>
-    <div class="book-intro-badge" id="bookIntroBadge">卷·壹</div>
-  </div>
-
-  <!-- progress -->
-  <div class="progress-area">
-    <div class="q-counter">第 <span id="qNum">1</span> / 10 题</div>
-    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-    <div class="book-status" id="bookStatus">红楼梦 · 0/10</div>
-  </div>
-
-  <!-- quiz area -->
-  <div id="quizArea">
-    <div class="question-card">
-      <div class="q-text" id="qText">加载题目...</div>
-      <div class="options" id="optionsContainer"></div>
-    </div>
-    <div class="action-bar">
-      <button class="btn btn-secondary" id="switchBookBtn">📚 换卷</button>
-      <button class="btn btn-primary" id="nextBtn" disabled>下一题 →</button>
-    </div>
-  </div>
-
-  <!-- result + ranking -->
-  <div id="resultArea" class="result-panel hidden">
-    <div class="result-title" id="resultTitle">🏮 卷终</div>
-    <div class="result-score"><strong id="finalScore">0</strong> / 10</div>
-    <div class="result-sub" id="resultMessage">文思泉涌</div>
-    <div class="result-sub" style="font-size:14px; margin-top:4px;" id="resultBookLabel">红楼梦</div>
-    <!-- 称号 -->
-    <div style="text-align:center; font-size:20px; font-weight:400; margin:10px 0 4px; color:#4d3d2e;" id="titleAward">🏅 翰林学士</div>
-    <!-- 排行榜 -->
-    <div class="ranking-box">
-      <div class="ranking-title">🏆 文枢榜 <span style="font-size:13px; font-weight:300; color:#8b7a68;">（历史留存）</span></div>
-      <div class="ranking-list" id="rankingList">
-        <div class="rank-item"><span class="rank-pos">#1</span><span class="rank-name">——</span><span class="rank-score">0</span></div>
+  <main>
+    <section class="screen active" id="homeScreen">
+      <div class="hero">
+        <div class="hero-kicker">WENSHU CLASSICS LAB</div>
+        <h2>一卷在手<br>万象入心</h2>
+        <p>从“做对题”升级为“读懂经典”：随机题组、即时精讲、错题复练、限时挑战、学习统计与本地隐私存储，全部集成在一个无需安装的网页中。</p>
+        <div class="hero-row">
+          <button class="primary-btn" id="heroStart">开始今日挑战</button>
+          <button class="plain-btn" id="wrongHeroBtn">复习错题</button>
+        </div>
       </div>
-    </div>
-    <button class="btn btn-restart" id="restartBtn">🔄 再答一卷</button>
-  </div>
 
-  <!-- 底部 -->
-  <div style="margin-top:16px; text-align:center; font-size:12px; color:#b8a898; letter-spacing:2px;">· 文枢 · 匠心 ·</div>
+      <div class="stats-strip">
+        <div class="stat"><strong id="homeRounds">0</strong><span>完成卷数</span></div>
+        <div class="stat"><strong id="homeAccuracy">0%</strong><span>总正确率</span></div>
+        <div class="stat"><strong id="homeStreak">0</strong><span>连续答对</span></div>
+        <div class="stat"><strong id="homeWrong">0</strong><span>待复习错题</span></div>
+      </div>
+
+      <div class="section-title"><div><h3>选择典籍</h3><p>每部均含知识点标签与解析</p></div><p id="bankCount">题库载入中</p></div>
+      <div class="books" id="bookCards"></div>
+
+      <div class="section-title"><div><h3>选择模式</h3><p>根据时间与目标自由切换</p></div></div>
+      <div class="modes" id="modeCards"></div>
+
+      <div class="start-panel">
+        <div class="name-wrap">
+          <input class="name-input" id="nameInput" maxlength="12" placeholder="输入雅号">
+          <button class="icon-btn" id="rollBtn" title="随机雅号">🎲</button>
+        </div>
+        <button class="primary-btn" id="startBtn">执卷开答 →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="quizScreen">
+      <div class="quiz-shell">
+        <div class="quiz-head">
+          <div class="progress-wrap">
+            <div class="progress-meta"><span id="quizMeta">红楼梦 · 标准卷</span><span id="qCounter">1 / 10</span></div>
+            <div class="track"><div class="fill" id="progressFill"></div></div>
+          </div>
+          <div class="timer" id="timer">∞</div>
+        </div>
+        <div class="question-card" id="questionCard" data-watermark="文">
+          <div class="q-tags" id="qTags"></div>
+          <div class="q-text" id="qText"></div>
+          <div class="options" id="options"></div>
+          <div class="explain" id="explain"></div>
+        </div>
+        <div class="quiz-actions">
+          <button class="plain-btn" id="quitBtn">暂退本卷</button>
+          <button class="primary-btn" id="nextBtn" disabled>确认答案</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="resultScreen">
+      <div class="result-card">
+        <div class="result-top">
+          <div class="small" id="resultBook">红楼梦 · 卷终</div>
+          <div class="score-ring" id="scoreRing" style="--scoredeg:0deg"><div><strong id="scoreText">0</strong><span>/10</span></div></div>
+          <div class="result-title" id="awardTitle">初涉文海</div>
+          <div class="result-msg" id="resultMsg">每一次重读，都是新的相逢。</div>
+        </div>
+        <div class="result-grid">
+          <div class="result-mini"><b id="resultAccuracy">0%</b><span>本卷正确率</span></div>
+          <div class="result-mini"><b id="resultBestStreak">0</b><span>最佳连对</span></div>
+          <div class="result-mini"><b id="resultTime">0:00</b><span>完成用时</span></div>
+        </div>
+        <div class="result-actions">
+          <button class="plain-btn" id="reviewBtn">查看本卷</button>
+          <button class="plain-btn" id="shareBtn">复制成绩</button>
+          <button class="primary-btn" id="againBtn">再答一卷</button>
+        </div>
+      </div>
+      <div class="panel" id="reviewPanel" style="display:none"><h3>本卷回顾</h3><div class="wrong-list" id="reviewList"></div></div>
+    </section>
+
+    <section class="screen" id="statsScreen">
+      <div class="panel">
+        <h3>学情总览</h3>
+        <div class="stats-strip">
+          <div class="stat"><strong id="sRounds">0</strong><span>完成卷数</span></div>
+          <div class="stat"><strong id="sQuestions">0</strong><span>累计答题</span></div>
+          <div class="stat"><strong id="sAccuracy">0%</strong><span>累计正确率</span></div>
+          <div class="stat"><strong id="sWrong">0</strong><span>错题数量</span></div>
+        </div>
+      </div>
+      <div class="panel"><h3>最近记录</h3><div class="history-list" id="historyList"></div></div>
+      <div class="panel"><h3>错题书斋</h3><div class="wrong-list" id="wrongList"></div><div class="result-actions"><button class="primary-btn" id="practiceWrongBtn">开始错题复练</button><button class="plain-btn" id="clearWrongBtn">清空错题</button></div></div>
+    </section>
+  </main>
+
+  <div class="footer">文枢 · 匠心 · 本地存储 · V3.0</div>
 </div>
 
+<div class="modal" id="settingsModal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>偏好设置</h3><button class="icon-btn" id="closeSettings">×</button></div>
+    <div class="setting-row"><div><b>答题音效</b><div style="font-size:12px;color:var(--muted);margin-top:3px">使用浏览器合成轻提示音</div></div><button class="switch" id="soundSwitch"><i></i></button></div>
+    <div class="setting-row"><div><b>自动显示解析</b><div style="font-size:12px;color:var(--muted);margin-top:3px">提交答案后展示知识精讲</div></div><button class="switch on" id="explainSwitch"><i></i></button></div>
+    <div class="setting-row"><div><b>数据备份</b><div style="font-size:12px;color:var(--muted);margin-top:3px">导出或恢复本机学习记录</div></div><div style="display:flex;gap:7px"><button class="plain-btn" id="exportBtn">导出</button><button class="plain-btn" id="importBtn">导入</button><input type="file" id="importFile" accept="application/json" hidden></div></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
 <script>
-  (function(){
-    // ---------- 巨型题库：每部30题 ----------
-    const FULL_QUESTIONS = {
-      '红楼梦': [
-        { q: '“满纸荒唐言，一把辛酸泪”出自？', opts: ['《红楼梦》','《西游记》','《三国演义》','《水浒传》'], ans: 0 },
-        { q: '林黛玉别号？', opts: ['蘅芜君','潇湘妃子','蕉下客','枕霞旧友'], ans: 1 },
-        { q: '通灵宝玉刻字？', opts: ['莫失莫忘，仙寿恒昌','不离不弃，芳龄永继','一除邪祟','知祸福'], ans: 0 },
-        { q: '“花谢花飞花满天”出自？', opts: ['秋窗风雨夕','葬花吟','桃花行','芙蓉女儿诔'], ans: 1 },
-        { q: '非金陵十二钗正册？', opts: ['史湘云','妙玉','香菱','秦可卿'], ans: 2 },
-        { q: '四春中善画者？', opts: ['元春','迎春','探春','惜春'], ans: 3 },
-        { q: '“金玉良缘”指？', opts: ['宝玉黛玉','宝玉宝钗','贾琏熙凤','贾芸小红'], ans: 1 },
-        { q: '刘姥姥几进荣国府？', opts: ['一次','两次','三次','四次'], ans: 2 },
-        { q: '“寒塘渡鹤影”联句者？', opts: ['黛玉湘云','宝钗黛玉','湘云妙玉','探春宝琴'], ans: 0 },
-        { q: '贾府最终结局？', opts: ['重振家业','被抄家败落','迁金陵','归隐'], ans: 1 },
-        { q: '“世事洞明皆学问”下句？', opts: ['人情练达即文章','人间正道是沧桑','处处留心皆学问','文章千古事'], ans: 0 },
-        { q: '袭人原名？', opts: ['珍珠','鹦哥','紫鹃','晴雯'], ans: 0 },
-        { q: '贾母最疼爱的孙子？', opts: ['贾宝玉','贾琏','贾环','贾兰'], ans: 0 },
-        { q: '“护官符”中“阿房宫，三百里，住不下”哪个家族？', opts: ['贾','史','王','薛'], ans: 3 },
-        { q: '红楼梦中“槛外人”指？', opts: ['妙玉','惜春','邢岫烟','李纨'], ans: 0 },
-        { q: '尤三姐自刎之剑？', opts: ['鸳鸯剑','青锋剑','龙泉剑','雌雄剑'], ans: 0 },
-        { q: '“甄士隐”谐音？', opts: ['真事隐','真是隐','真士隐','甄氏隐'], ans: 0 },
-        { q: '薛宝钗所服“冷香丸”取自？', opts: ['百花之蕊','四时之水','八节之露','霜雪之寒'], ans: 0 },
-        { q: '探春远嫁之地？', opts: ['南安','北静','西海','东平'], ans: 0 },
-        { q: '“好了歌”作者？', opts: ['甄士隐','贾雨村','跛足道人','癞头和尚'], ans: 2 },
-        { q: '红楼梦中最长的一首诗？', opts: ['葬花吟','秋窗风雨夕','芙蓉女儿诔','桃花行'], ans: 2 },
-        { q: '晴雯被逐后住哪里？', opts: ['多浑虫家','柳嫂子家','李嬷嬷家','王夫人处'], ans: 0 },
-        { q: '贾府四春中年龄最小？', opts: ['惜春','探春','迎春','元春'], ans: 0 },
-        { q: '“铁槛寺”寓意？', opts: ['权势','富贵','空门','轮回'], ans: 0 },
-        { q: '宝玉给黛玉的字？', opts: ['颦颦','潇湘','蘅芜','枕霞'], ans: 0 },
-        { q: '贾政妾室赵姨娘之子？', opts: ['贾环','贾珠','贾琏','贾宝玉'], ans: 0 },
-        { q: '“大观园”题额者？', opts: ['贾宝玉','贾政','元春','贾妃'], ans: 2 },
-        { q: '红楼梦引子“开辟鸿蒙，谁为情种”出自？', opts: ['红楼梦曲','好了歌','葬花吟','芙蓉诔'], ans: 0 },
-        { q: '秦可卿卧房陈设多有香艳典故，其镜是？', opts: ['武则天镜','赵飞燕镜','杨贵妃镜','寿昌公主镜'], ans: 0 },
-        { q: '贾琏偷娶尤二姐，安置于何处？', opts: ['小花枝巷','大观园','宁国府','荣国府'], ans: 0 }
-      ],
-      '西游记': [
-        { q: '孙悟空压五行山多少年？', opts: ['三百年','五百年','六百年','一千年'], ans: 1 },
-        { q: '白龙马原身份？', opts: ['东海三太子','西海三太子','南海三太子','北海三太子'], ans: 1 },
-        { q: '猪八戒兵器？', opts: ['月牙铲','降妖宝杖','九齿钉耙','方天画戟'], ans: 2 },
-        { q: '非孙悟空称号？', opts: ['齐天大圣','斗战胜佛','美猴王','金蝉子'], ans: 3 },
-        { q: '火焰山主人？', opts: ['红孩儿','牛魔王','铁扇公主','玉面公主'], ans: 2 },
-        { q: '白骨精三次变化？', opts: ['少女老妇老翁','少女老翁孩童','老妇老翁孩童','少女孩童老翁'], ans: 0 },
-        { q: '沙僧原为？', opts: ['卷帘大将','天蓬元帅','托塔天王','哪吒'], ans: 0 },
-        { q: '九环锡杖作用？', opts: ['降妖伏魔','持身护体','开启法门','增加寿命'], ans: 1 },
-        { q: '黄袍怪之妻？', opts: ['百花羞','玉面公主','高翠兰','铁扇公主'], ans: 0 },
-        { q: '助收红孩儿菩萨？', opts: ['观音','文殊','普贤','地藏'], ans: 0 },
-        { q: '孙悟空从何处得金箍棒？', opts: ['东海龙宫','南海龙宫','西海龙宫','北海龙宫'], ans: 0 },
-        { q: '唐僧前世？', opts: ['金蝉子','如来二徒','文殊弟子','普贤弟子'], ans: 0 },
-        { q: '黄风怪神通？', opts: ['三昧神风','火焰','毒烟','冰雹'], ans: 0 },
-        { q: '乌鸡国假国王为？', opts: ['青毛狮子','白象','大鹏','黄狮'], ans: 0 },
-        { q: '比丘国国丈要求用小儿心肝做药引，实际是？', opts: ['白鹿精','白狐精','白兔精','白蛇精'], ans: 0 },
-        { q: '通天河灵感大王是？', opts: ['金鱼精','鲤鱼精','鼋精','蛟精'], ans: 0 },
-        { q: '金兜山独角兕大王用何法宝？', opts: ['金刚琢','紫金铃','芭蕉扇','阴阳二气瓶'], ans: 0 },
-        { q: '天竺国假公主为？', opts: ['玉兔精','白兔精','金兔精','银兔精'], ans: 0 },
-        { q: '狮驼岭三魔老大？', opts: ['青狮','白象','大鹏','黄狮'], ans: 0 },
-        { q: '孙悟空在炼丹炉中炼就？', opts: ['火眼金睛','金刚不坏','七十二变','筋斗云'], ans: 0 },
-        { q: '二郎神兵器？', opts: ['三尖两刃刀','方天画戟','丈八矛','青龙刀'], ans: 0 },
-        { q: '车迟国虎力大仙与孙悟空比什么？', opts: ['砍头','剖腹','下油锅','求雨'], ans: 0 },
-        { q: '盘丝洞蜘蛛精共有几个？', opts: ['七个','六个','八个','九个'], ans: 0 },
-        { q: '黄花观蜈蚣精被谁收服？', opts: ['毗蓝婆菩萨','观音','文殊','普贤'], ans: 0 },
-        { q: '唐僧取经共经历多少难？', opts: ['八十一','七十二','九十九','一百'], ans: 0 },
-        { q: '孙悟空称呼菩提祖师为？', opts: ['师父','师尊','祖师','真人'], ans: 0 },
-        { q: '镇元大仙的人参果树被谁推倒？', opts: ['孙悟空','猪八戒','沙僧','白龙马'], ans: 0 },
-        { q: '荆棘岭上，与唐僧谈诗的是？', opts: ['树精藤怪','山妖','狐精','鹿精'], ans: 0 },
-        { q: '小雷音寺的黄眉怪法宝？', opts: ['人种袋','金铙','紫金铃','金刚琢'], ans: 0 },
-        { q: '取经回国后，经书被谁弄湿？', opts: ['白龙马','通天河鼋','孙悟空','猪八戒'], ans: 1 }
-      ],
-      '三国演义': [
-        { q: '“宁教我负天下人”谁言？', opts: ['曹操','刘备','孙权','董卓'], ans: 0 },
-        { q: '关羽兵器？', opts: ['丈八蛇矛','青釭剑','青龙偃月刀','方天画戟'], ans: 2 },
-        { q: '三顾茅庐请谁？', opts: ['诸葛亮','庞统','司马懿','周瑜'], ans: 0 },
-        { q: '赤壁连环计献者？', opts: ['周瑜','黄盖','庞统','诸葛亮'], ans: 2 },
-        { q: '长坂坡救刘备者？', opts: ['张飞','赵云','关羽','马超'], ans: 1 },
-        { q: '“既生瑜，何生亮”中“亮”指？', opts: ['诸葛亮','刘备','关羽','张飞'], ans: 0 },
-        { q: '非五虎上将？', opts: ['赵云','马超','黄忠','魏延'], ans: 3 },
-        { q: '官渡之战曹操败谁？', opts: ['袁绍','袁术','吕布','刘表'], ans: 0 },
-        { q: '失街亭被斩者？', opts: ['马谡','王平','李严','魏延'], ans: 0 },
-        { q: '“小霸王”指？', opts: ['孙权','孙策','孙坚','刘备'], ans: 1 },
-        { q: '诸葛亮初出茅庐第一功？', opts: ['火烧博望','火烧新野','草船借箭','借东风'], ans: 0 },
-        { q: '曹操称“吾之子房”者？', opts: ['荀彧','郭嘉','贾诩','程昱'], ans: 0 },
-        { q: '吕布被谁所杀？', opts: ['曹操','刘备','关羽','张飞'], ans: 0 },
-        { q: '刘备三顾茅庐时，诸葛亮在何处？', opts: ['隆中','南阳','襄阳','荆州'], ans: 0 },
-        { q: '赤壁之战中黄盖献何计？', opts: ['苦肉计','连环计','反间计','诈降计'], ans: 0 },
-        { q: '司马懿字？', opts: ['仲达','元直','孝直','文和'], ans: 0 },
-        { q: '关羽过五关斩六将，最终与谁相会？', opts: ['刘备','张飞','赵云','诸葛亮'], ans: 0 },
-        { q: '诸葛亮挥泪斩马谡，因何？', opts: ['失街亭','粮草不济','不听号令','谋反'], ans: 0 },
-        { q: '曹操北征乌桓时，谁为向导？', opts: ['田畴','郭嘉','荀攸','许攸'], ans: 0 },
-        { q: '夷陵之战，蜀军大败于谁？', opts: ['陆逊','吕蒙','朱然','韩当'], ans: 0 },
-        { q: '周瑜被诸葛亮气死前，大叫“既生瑜，何生亮”后，还说了？', opts: ['天不助我','亮之才远胜我','吾命休矣','悔不早除之'], ans: 0 },
-        { q: '刘备白帝城托孤给谁？', opts: ['诸葛亮','李严','赵云','魏延'], ans: 0 },
-        { q: '诸葛亮六出祁山，最终病逝于？', opts: ['五丈原','上方谷','祁山','定军山'], ans: 0 },
-        { q: '曹魏“五子良将”不包括？', opts: ['张辽','徐晃','张郃','夏侯惇'], ans: 3 },
-        { q: '孙权向曹操称臣，曹操说“生子当如”？', opts: ['孙仲谋','刘玄德','曹子桓','司马懿'], ans: 0 },
-        { q: '诸葛亮舌战群儒，发生在？', opts: ['江东','荆州','益州','汉中'], ans: 0 },
-        { q: '“乐不思蜀”指谁？', opts: ['刘禅','孙皓','曹奂','司马炎'], ans: 0 },
-        { q: '关羽水淹七军，擒获谁？', opts: ['于禁','庞德','曹仁','徐晃'], ans: 0 },
-        { q: '张飞义释严颜，严颜是？', opts: ['巴郡太守','汉中太守','益州牧','荆州牧'], ans: 0 },
-        { q: '刘备在得到谁的建议后入蜀？', opts: ['庞统','诸葛亮','法正','张松'], ans: 3 }
-      ],
-      '水浒传': [
-        { q: '林冲雪夜上梁山前职务？', opts: ['八十万禁军教头','提辖','都头','押司'], ans: 0 },
-        { q: '武松兵器？', opts: ['戒刀','双鞭','朴刀','禅杖'], ans: 0 },
-        { q: '宋江绰号？', opts: ['及时雨','玉麒麟','智多星','豹子头'], ans: 0 },
-        { q: '智取生辰纲策划者？', opts: ['晁盖','吴用','公孙胜','刘唐'], ans: 1 },
-        { q: '鲁智深倒拔垂杨柳所在寺？', opts: ['五台山','相国寺','少林寺','灵隐寺'], ans: 1 },
-        { q: '“鼓上蚤”指？', opts: ['时迁','张清','乐和','白胜'], ans: 0 },
-        { q: '李逵兵器？', opts: ['双板斧','单鞭','长枪','大刀'], ans: 0 },
-        { q: '花荣绰号？', opts: ['小李广','金枪手','插翅虎','病关索'], ans: 0 },
-        { q: '武松结局？', opts: ['六和寺出家','封官还乡','战死','归隐'], ans: 0 },
-        { q: '梁山泊位于？', opts: ['山东','河北','河南','江苏'], ans: 0 },
-        { q: '杨志卖刀时误杀谁？', opts: ['牛二','泼皮','无赖','地痞'], ans: 0 },
-        { q: '宋江浔阳楼题反诗，被谁告发？', opts: ['黄文炳','蔡九','戴宗','李逵'], ans: 0 },
-        { q: '李逵背母上山，母被谁所食？', opts: ['老虎','野狼','豹子','熊'], ans: 0 },
-        { q: '神行太保戴宗日行？', opts: ['八百里','六百里','七百里','五百里'], ans: 0 },
-        { q: '晁盖中箭身亡于？', opts: ['曾头市','祝家庄','高唐州','青州'], ans: 0 },
-        { q: '卢俊义被吴用骗上梁山，其家仆？', opts: ['燕青','李固','贾氏','时迁'], ans: 0 },
-        { q: '宋江三打祝家庄，最终谁助其破敌？', opts: ['孙立','花荣','林冲','武松'], ans: 0 },
-        { q: '梁山五虎将之首？', opts: ['关胜','林冲','秦明','呼延灼'], ans: 0 },
-        { q: '打虎将李忠卖什么为生？', opts: ['膏药','刀剑','布匹','药材'], ans: 0 },
-        { q: '鲁智深拳打镇关西，镇关西本名？', opts: ['郑屠','牛二','张三','李四'], ans: 0 },
-        { q: '智取生辰纲中，白胜卖酒扮演？', opts: ['酒贩','挑夫','小贩','农夫'], ans: 0 },
-        { q: '宋江担任押司时，主要职责？', opts: ['文书','治安','税赋','教化'], ans: 0 },
-        { q: '林冲风雪山神庙，杀死谁？', opts: ['陆谦','富安','差拨','管营'], ans: 0 },
-        { q: '武松醉打蒋门神，蒋门神为？', opts: ['恶霸','地头蛇','庄主','官差'], ans: 0 },
-        { q: '梁山好汉最后被招安后，主要征战？', opts: ['方腊','辽国','田虎','王庆'], ans: 0 },
-        { q: '征方腊后，燕青何处去？', opts: ['隐居','出海','回京','投师'], ans: 0 },
-        { q: '张顺被谁射死在涌金门？', opts: ['方天定','方貌','庞万春','厉天闰'], ans: 2 },
-        { q: '梁山三女将中，扈三娘绰号？', opts: ['一丈青','母大虫','母夜叉','花彪'], ans: 0 },
-        { q: '王进因避高俅，私走延安府，其父？', opts: ['王升','王进','王伦','王英'], ans: 0 },
-        { q: '征方腊时，谁失去了左臂？', opts: ['武松','鲁智深','杨志','李逵'], ans: 0 }
-      ]
-    };
+(()=>{
+"use strict";
+const DB={
+"红楼梦":[
+["“满纸荒唐言，一把辛酸泪”出自哪部作品？",["《红楼梦》","《西游记》","《三国演义》","《水浒传》"],0,"开篇题诗","此句见于《红楼梦》第一回，是作者自述创作甘苦的重要诗句。"],
+["林黛玉在海棠诗社中的别号是？",["蘅芜君","潇湘妃子","蕉下客","枕霞旧友"],1,"人物称号","黛玉居潇湘馆，因而号“潇湘妃子”。"],
+["“花谢花飞花满天”出自？",["《秋窗风雨夕》","《葬花吟》","《桃花行》","《芙蓉女儿诔》"],1,"诗词名篇","这是林黛玉《葬花吟》的开篇。"],
+["“金玉良缘”主要指？",["宝玉与黛玉","宝玉与宝钗","贾琏与熙凤","贾芸与小红"],1,"核心情节","“金”指宝钗的金锁，“玉”指宝玉的通灵宝玉。"],
+["四春中擅长绘画的是？",["元春","迎春","探春","惜春"],3,"人物才艺","惜春擅画，曾奉命绘制大观园图景。"],
+["“世事洞明皆学问”的下句是？",["人情练达即文章","文章千古事","处处留心皆学问","人间正道是沧桑"],0,"经典联语","完整联语为“世事洞明皆学问，人情练达即文章”。"],
+["袭人的原名是？",["珍珠","鹦哥","紫鹃","金钏"],0,"人物关系","袭人原名珍珠，后由宝玉据诗句改名。"],
+["“槛外人”是谁的自称？",["妙玉","惜春","李纨","邢岫烟"],0,"人物称号","妙玉自称“槛外人”，体现其孤高清冷。"],
+["“甄士隐”常被解释为何种谐音？",["真事隐","真是隐","甄氏隐","真实引"],0,"命名寓意","“甄士隐”谐音“真事隐”，“贾雨村”谐音“假语存”。"],
+["贾府四春中年龄最小的是？",["惜春","探春","迎春","元春"],0,"人物关系","四春依次为元、迎、探、惜，惜春最小。"],
+["宝玉给黛玉取的表字是？",["颦颦","蘅芜","枕霞","潇湘"],0,"人物细节","宝玉因黛玉眉尖若蹙，为她取字“颦颦”。"],
+["贾政的妾赵姨娘所生之子是？",["贾环","贾珠","贾琏","贾兰"],0,"家族关系","赵姨娘生探春与贾环。"],
+["《红楼梦》引子“开辟鸿蒙，谁为情种”出自？",["《红楼梦曲》","《好了歌》","《葬花吟》","《桃花行》"],0,"曲词","这是《红楼梦曲》引子的开头。"],
+["贾琏偷娶尤二姐后，将她安置在哪里？",["小花枝巷","大观园","宁国府","梨香院"],0,"情节地点","贾琏在小花枝巷另置房舍安顿尤二姐。"],
+["刘姥姥一共几进荣国府？",["一次","两次","三次","四次"],2,"情节结构","全书写到刘姥姥三进荣国府，贯穿贾府盛衰。"]
+],
+"西游记":[
+["孙悟空被压在五行山下多少年？",["三百年","五百年","六百年","一千年"],1,"经典情节","孙悟空大闹天宫后被如来压在五行山下五百年。"],
+["白龙马原来的身份是？",["东海三太子","西海三太子","南海三太子","北海三太子"],1,"人物身份","白龙马是西海龙王敖闰之子。"],
+["猪八戒使用的兵器是？",["月牙铲","降妖宝杖","九齿钉耙","方天画戟"],2,"兵器法宝","猪八戒的兵器是上宝沁金耙，俗称九齿钉耙。"],
+["下列哪一个不是孙悟空的称号？",["齐天大圣","斗战胜佛","美猴王","金蝉子"],3,"人物称号","金蝉子是唐僧的前世。"],
+["沙僧原来是天庭的？",["卷帘大将","天蓬元帅","托塔天王","巨灵神"],0,"人物身份","沙僧原为卷帘大将，因失手打碎琉璃盏被贬。"],
+["孙悟空从哪里取得金箍棒？",["东海龙宫","南海龙宫","西海龙宫","北海龙宫"],0,"经典情节","如意金箍棒原是东海龙宫的定海神珍铁。"],
+["唐僧的前世是？",["金蝉子","文殊弟子","普贤弟子","罗汉"],0,"人物身份","唐僧是如来佛祖二弟子金蝉子转世。"],
+["黄风怪最厉害的神通是？",["三昧神风","三昧真火","毒烟","冰雹"],0,"妖怪神通","黄风怪善吹三昧神风，需灵吉菩萨降伏。"],
+["通天河的灵感大王本是？",["金鱼精","鲤鱼精","鼋精","蛟精"],0,"妖怪来历","灵感大王原是观音莲花池中的金鱼。"],
+["独角兕大王最厉害的法宝是？",["金刚琢","紫金铃","芭蕉扇","阴阳二气瓶"],0,"法宝","金刚琢是太上老君之物，能套走多种兵器。"],
+["盘丝洞中有几只蜘蛛精？",["七只","六只","八只","九只"],0,"妖怪数量","盘丝洞中共有七个蜘蛛精。"],
+["唐僧取经共经历多少难？",["八十一难","七十二难","九十九难","一百难"],0,"全书结构","九九归真，因此安排八十一难。"],
+["人参果树是谁推倒的？",["孙悟空","猪八戒","沙僧","白龙马"],0,"经典情节","孙悟空因受气推倒人参果树，后请观音救活。"],
+["小雷音寺黄眉怪的重要法宝之一是？",["人种袋","紫金铃","金刚琢","芭蕉扇"],0,"法宝","黄眉怪使用金铙与人种袋困住取经团队。"],
+["取经回程中，经书因谁的缘故落水弄湿？",["白龙马","通天河老鼋","孙悟空","猪八戒"],1,"结尾情节","老鼋因唐僧未替它问寿数而将众人掀入水中。"]
+],
+"三国演义":[
+["“宁教我负天下人，休教天下人负我”是谁说的？",["曹操","刘备","孙权","董卓"],0,"人物语言","小说中此语由曹操说出，突出其多疑与权谋性格。"],
+["关羽的标志性兵器是？",["丈八蛇矛","青釭剑","青龙偃月刀","方天画戟"],2,"兵器","青龙偃月刀又称冷艳锯。"],
+["刘备三顾茅庐请的是谁？",["诸葛亮","庞统","司马懿","周瑜"],0,"经典情节","刘备三次拜访隆中，请诸葛亮出山。"],
+["赤壁之战中献连环计的是？",["周瑜","黄盖","庞统","鲁肃"],2,"计谋","庞统建议曹军将战船以铁索相连。"],
+["长坂坡单骑救阿斗的是？",["张飞","赵云","关羽","马超"],1,"经典情节","赵云在长坂坡七进七出，救出阿斗。"],
+["下列哪位不是蜀汉五虎上将？",["赵云","马超","黄忠","魏延"],3,"人物组合","小说中的五虎将为关羽、张飞、赵云、马超、黄忠。"],
+["官渡之战中曹操击败了谁？",["袁绍","袁术","吕布","刘表"],0,"战争","官渡之战奠定曹操统一北方的基础。"],
+["失街亭后被诸葛亮斩首的是？",["马谡","王平","李严","魏延"],0,"经典情节","马谡违背部署失守街亭，诸葛亮挥泪斩马谡。"],
+["“小霸王”指的是？",["孙权","孙策","孙坚","周瑜"],1,"人物称号","孙策勇武善战，被称为“小霸王”。"],
+["诸葛亮初出茅庐后的第一场著名胜仗是？",["火烧博望坡","火烧赤壁","草船借箭","七擒孟获"],0,"经典情节","小说写诸葛亮出山后设计火烧博望坡。"],
+["司马懿的字是？",["仲达","元直","孝直","文和"],0,"人物字号","司马懿字仲达。"],
+["夷陵之战中击败刘备的是？",["陆逊","吕蒙","周瑜","鲁肃"],0,"战争","陆逊火烧连营，使蜀军大败。"],
+["刘备白帝城托孤的主要对象是？",["诸葛亮","李严","赵云","魏延"],0,"经典情节","刘备临终将刘禅托付给诸葛亮。"],
+["诸葛亮最终病逝于？",["五丈原","上方谷","祁山","定军山"],0,"人物结局","诸葛亮第六次北伐时病逝五丈原。"],
+["“乐不思蜀”的主人公是？",["刘禅","孙皓","曹奂","司马炎"],0,"典故","蜀汉灭亡后，刘禅在洛阳以“此间乐，不思蜀”作答。"]
+],
+"水浒传":[
+["林冲上梁山前的职务是？",["八十万禁军教头","提辖","都头","押司"],0,"人物身份","林冲是东京八十万禁军枪棒教头。"],
+["宋江的主要绰号是？",["及时雨","玉麒麟","智多星","豹子头"],0,"人物称号","宋江乐于周济人，被称为“及时雨”。"],
+["智取生辰纲的主要策划者是？",["晁盖","吴用","公孙胜","刘唐"],1,"经典情节","“智多星”吴用设计智取生辰纲。"],
+["鲁智深倒拔垂杨柳发生在哪里？",["五台山","大相国寺","少林寺","灵隐寺"],1,"经典情节","鲁智深看守大相国寺菜园时倒拔垂杨柳。"],
+["“鼓上蚤”是谁？",["时迁","张清","乐和","白胜"],0,"人物称号","时迁轻功高、善偷盗，绰号鼓上蚤。"],
+["李逵的标志性兵器是？",["双板斧","单鞭","长枪","大刀"],0,"兵器","李逵惯使一双板斧。"],
+["花荣的绰号是？",["小李广","金枪手","插翅虎","病关索"],0,"人物称号","花荣箭术高超，被称为“小李广”。"],
+["武松最后在何处出家？",["六和寺","相国寺","五台山","少林寺"],0,"人物结局","征方腊后，武松在杭州六和寺出家。"],
+["杨志卖刀时误杀了谁？",["牛二","镇关西","蒋门神","西门庆"],0,"经典情节","泼皮牛二强行刁难，杨志怒杀牛二。"],
+["宋江在浔阳楼题反诗后，被谁告发？",["黄文炳","蔡九","戴宗","李逵"],0,"经典情节","黄文炳发现并告发宋江题写的反诗。"],
+["晁盖中箭身亡于？",["曾头市","祝家庄","高唐州","青州"],0,"人物结局","晁盖攻打曾头市时中毒箭身亡。"],
+["梁山五虎将之首是？",["关胜","林冲","秦明","呼延灼"],0,"人物排名","大刀关胜在梁山马军五虎将中居首。"],
+["鲁智深拳打镇关西，镇关西本名是？",["郑屠","牛二","张三","李四"],0,"经典情节","镇关西是卖肉的郑屠。"],
+["扈三娘的绰号是？",["一丈青","母大虫","母夜叉","花彪"],0,"人物称号","扈三娘武艺高强，绰号“一丈青”。"],
+["征方腊时失去左臂的是？",["武松","鲁智深","杨志","李逵"],0,"人物结局","武松征方腊时失去左臂，后在六和寺出家。"]
+]};
 
-    // ---------- 存储 ----------
-    const STORAGE_KEY = 'wenqu_ranking_v2';
-    let ranking = [];
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) ranking = JSON.parse(stored);
-    } catch(e) { ranking = []; }
+const BOOK_META={
+"红楼梦":["梦","人情世态之镜","#7b3f52"],
+"西游记":["游","神魔奇旅与修行","#8c6635"],
+"三国演义":["义","智勇权谋与天下","#74523e"],
+"水浒传":["侠","英雄聚义与抗争","#3f6558"]
+};
+const MODES={
+standard:{name:"标准卷",desc:"随机 10 题，不限时，适合日常学习",count:10,time:0},
+speed:{name:"风云急卷",desc:"随机 10 题，每题 20 秒，训练反应",count:10,time:20},
+deep:{name:"通读长卷",desc:"随机 15 题，不限时，系统检验掌握度",count:15,time:0}
+};
+const KEY="wenshu_v3_data";
+const defaultData={history:[],wrong:{},total:0,correct:0,bestStreak:0,settings:{sound:false,explain:true},name:"翰林学士"};
+let data=load();
+let selectedBook="红楼梦",selectedMode="standard",round=[],answers=[],index=0,chosen=null,revealed=false,score=0,streak=0,bestRoundStreak=0,startAt=0,timerId=null,timeLeft=0,isWrongMode=false;
 
-    // ---------- 状态 ----------
-    const BOOK_LIST = ['红楼梦','西游记','三国演义','水浒传'];
-    const BOOK_INTRO = {
-      '红楼梦':'中国古典文学巅峰，人情世态之镜。',
-      '西游记':'神魔奇幻之旅，信念与修行。',
-      '三国演义':'历史风云，智勇与权谋。',
-      '水浒传':'英雄聚义，忠义与抗争。'
-    };
-    const BOOK_BADGE = { '红楼梦':'卷·壹','西游记':'卷·贰','三国演义':'卷·叁','水浒传':'卷·肆' };
+const $=id=>document.getElementById(id);
+function load(){try{return Object.assign({},defaultData,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){return structuredClone(defaultData)}}
+function save(){localStorage.setItem(KEY,JSON.stringify(data))}
+function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function toast(t){$("toast").textContent=t;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1700)}
+function showScreen(id){document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));$(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function qId(book,q){return book+"|"+q[0]}
+function randomName(){const a=["墨","云","松","竹","清","雅","玄","澹","博","明","砚","书","怀","逸"],b=["轩","斋","客","士","君","生","子","翁","友","贤"];return a[Math.floor(Math.random()*a.length)]+a[Math.floor(Math.random()*a.length)]+b[Math.floor(Math.random()*b.length)]}
+function beep(ok){if(!data.settings.sound)return;try{const ac=new(window.AudioContext||window.webkitAudioContext)(),o=ac.createOscillator(),g=ac.createGain();o.connect(g);g.connect(ac.destination);o.frequency.value=ok?660:220;g.gain.setValueAtTime(.06,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.18);o.start();o.stop(ac.currentTime+.18)}catch(e){}}
 
-    let currentBook = '红楼梦';
-    let currentPool = [];         // 当前名著30题
-    let currentRound = [];       // 本次10题
-    let currentIndex = 0;        // 0-9
-    let selectedIdx = null;
-    let isAnswered = false;
-    let score = 0;
-    let roundStatus = [];        // boolean 10
-    let quizFinished = false;
-    let userName = '翰林学士';
+function renderHome(){
+ const totalBank=Object.values(DB).reduce((n,a)=>n+a.length,0);
+ $("bankCount").textContent=`共 ${totalBank} 道精校题`;
+ $("bookCards").innerHTML=Object.entries(BOOK_META).map(([b,m],i)=>`
+ <button class="book-card ${b===selectedBook?"selected":""}" data-book="${b}">
+  <div class="num">VOLUME 0${i+1}</div><h4>${b}</h4><p>${m[1]}<br>${DB[b].length} 道题 · 含解析</p><div class="mark">${m[0]}</div>
+ </button>`).join("");
+ document.querySelectorAll(".book-card").forEach(el=>el.onclick=()=>{selectedBook=el.dataset.book;renderHome()});
+ $("modeCards").innerHTML=Object.entries(MODES).map(([k,m])=>`
+ <button class="mode-card ${k===selectedMode?"selected":""}" data-mode="${k}"><b>${m.name}</b><span>${m.desc}</span></button>`).join("");
+ document.querySelectorAll(".mode-card").forEach(el=>el.onclick=()=>{selectedMode=el.dataset.mode;renderHome()});
+ $("nameInput").value=data.name||"翰林学士";
+ const rounds=data.history.length,acc=data.total?Math.round(data.correct/data.total*100):0;
+ $("homeRounds").textContent=rounds;$("homeAccuracy").textContent=acc+"%";$("homeStreak").textContent=data.bestStreak||0;$("homeWrong").textContent=Object.keys(data.wrong||{}).length;
+}
 
-    // DOM
-    const elUserName = document.getElementById('userNameDisplay');
-    const elIntroText = document.getElementById('bookIntroText');
-    const elIntroBadge = document.getElementById('bookIntroBadge');
-    const elQNum = document.getElementById('qNum');
-    const elProgressFill = document.getElementById('progressFill');
-    const elBookStatus = document.getElementById('bookStatus');
-    const elQText = document.getElementById('qText');
-    const elOptions = document.getElementById('optionsContainer');
-    const elNextBtn = document.getElementById('nextBtn');
-    const elSwitchBtn = document.getElementById('switchBookBtn');
-    const elQuizArea = document.getElementById('quizArea');
-    const elResultArea = document.getElementById('resultArea');
-    const elFinalScore = document.getElementById('finalScore');
-    const elResultMessage = document.getElementById('resultMessage');
-    const elResultBookLabel = document.getElementById('resultBookLabel');
-    const elTitleAward = document.getElementById('titleAward');
-    const elRankingList = document.getElementById('rankingList');
-    const elRestartBtn = document.getElementById('restartBtn');
-    const elRollBtn = document.getElementById('rollNameBtn');
+function beginRound(wrongMode=false){
+ isWrongMode=wrongMode;
+ data.name=$("nameInput").value.trim()||data.name||randomName();save();
+ let source;
+ if(wrongMode){
+  source=Object.values(data.wrong||{}).map(x=>x.qdata);
+  if(!source.length){toast("错题书斋目前是空的");return}
+  round=shuffle(source).slice(0,Math.min(15,source.length));
+ }else{
+  const mode=MODES[selectedMode],sourceBook=DB[selectedBook];
+  round=shuffle(sourceBook).slice(0,Math.min(mode.count,sourceBook.length));
+ }
+ answers=[];index=0;chosen=null;revealed=false;score=0;streak=0;bestRoundStreak=0;startAt=Date.now();
+ showScreen("quizScreen");renderQuestion();
+}
+function renderQuestion(){
+ clearInterval(timerId);timerId=null;
+ const q=round[index],book=isWrongMode?(q._book||selectedBook):selectedBook;
+ $("quizMeta").textContent=`${isWrongMode?"错题复练":book} · ${isWrongMode?"温故卷":MODES[selectedMode].name}`;
+ $("qCounter").textContent=`${index+1} / ${round.length}`;
+ $("progressFill").style.width=`${index/round.length*100}%`;
+ $("questionCard").dataset.watermark=BOOK_META[book]?.[0]||"文";
+ $("qTags").innerHTML=`<span class="tag">${book}</span><span class="tag">${q[3]}</span><span class="tag">${isWrongMode?"重点复习":"随机抽题"}</span>`;
+ $("qText").textContent=q[0];$("explain").className="explain";$("explain").innerHTML="";
+ const letters=["A","B","C","D"];
+ $("options").innerHTML=q[1].map((o,i)=>`<button class="option" data-i="${i}"><span class="letter">${letters[i]}</span><span>${escapeHtml(o)}</span></button>`).join("");
+ document.querySelectorAll(".option").forEach(btn=>btn.onclick=()=>choose(+btn.dataset.i));
+ $("nextBtn").disabled=true;$("nextBtn").textContent="确认答案";chosen=null;revealed=false;
+ const t=isWrongMode?0:MODES[selectedMode].time;
+ if(t){timeLeft=t;$("timer").textContent=timeLeft+"s";$("timer").classList.remove("danger");timerId=setInterval(()=>{timeLeft--;$("timer").textContent=timeLeft+"s";if(timeLeft<=5)$("timer").classList.add("danger");if(timeLeft<=0){clearInterval(timerId);chosen=-1;revealAnswer(true)}},1000)}
+ else{$("timer").textContent="∞";$("timer").classList.remove("danger")}
+}
+function choose(i){
+ if(revealed)return;chosen=i;
+ document.querySelectorAll(".option").forEach((x,j)=>{x.style.borderColor=j===i?"#a77d45":"";x.style.background=j===i?"#fff4df":""});
+ $("nextBtn").disabled=false;
+}
+function revealAnswer(timeout=false){
+ if(revealed)return;if(chosen===null&&!timeout)return;
+ clearInterval(timerId);revealed=true;
+ const q=round[index],correct=chosen===q[2],book=isWrongMode?(q._book||selectedBook):selectedBook;
+ document.querySelectorAll(".option").forEach((x,j)=>{x.disabled=true;x.style.borderColor="";x.style.background="";if(j===q[2])x.classList.add("correct");if(j===chosen&&j!==q[2])x.classList.add("wrong")});
+ if(correct){score++;streak++;bestRoundStreak=Math.max(bestRoundStreak,streak);delete data.wrong[qId(book,q)];beep(true)}
+ else{streak=0;const copy=[...q];copy._book=book;data.wrong[qId(book,q)]={book,qdata:copy,at:Date.now()};beep(false)}
+ data.total++;if(correct)data.correct++;data.bestStreak=Math.max(data.bestStreak||0,streak);
+ answers.push({q,book,chosen,correct});
+ if(data.settings.explain){$("explain").innerHTML=`<b>${correct?"答对了":"正确答案："+q[1][q[2]]}</b><br>${escapeHtml(q[4])}`;$("explain").classList.add("show")}
+ $("progressFill").style.width=`${(index+1)/round.length*100}%`;
+ $("nextBtn").disabled=false;$("nextBtn").textContent=index===round.length-1?"阅卷结算":"下一题 →";save()
+}
+function next(){
+ if(!revealed){revealAnswer();return}
+ if(index<round.length-1){index++;renderQuestion()}else finish()
+}
+function finish(){
+ clearInterval(timerId);
+ const sec=Math.round((Date.now()-startAt)/1000),pct=Math.round(score/round.length*100);
+ data.history.unshift({book:isWrongMode?"错题复练":selectedBook,mode:isWrongMode?"温故卷":MODES[selectedMode].name,score,total:round.length,pct,time:sec,date:Date.now(),name:data.name});
+ data.history=data.history.slice(0,30);save();
+ const award=pct===100?["文曲星下凡","十题皆明，已入化境。"]:pct>=80?["博雅学士","腹有诗书，见识不凡。"]:pct>=60?["敏思才俊","根基已成，再读更深。"]:pct>=40?["读书君子","已有所得，宜温故知新。"]:["初涉文海","经典常读常新，不妨再来。"];
+ $("resultBook").textContent=`${isWrongMode?"错题复练":selectedBook} · 卷终`;
+ $("scoreText").textContent=score;$("scoreText").nextElementSibling.textContent="/"+round.length;
+ $("scoreRing").style.setProperty("--scoredeg",`${pct*3.6}deg`);
+ $("awardTitle").textContent=award[0];$("resultMsg").textContent=award[1];
+ $("resultAccuracy").textContent=pct+"%";$("resultBestStreak").textContent=bestRoundStreak;$("resultTime").textContent=`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`;
+ $("reviewPanel").style.display="none";showScreen("resultScreen");renderHome()
+}
+function renderReview(){
+ $("reviewList").innerHTML=answers.map((a,i)=>`<div class="wrong-item"><div><b>${i+1}. ${escapeHtml(a.q[0])}</b><div style="color:var(--muted);margin-top:4px">${a.correct?"✓ 回答正确":"✗ 你的答案："+(a.chosen>=0?escapeHtml(a.q[1][a.chosen]):"超时")+"；正确："+escapeHtml(a.q[1][a.q[2]])}</div></div><span>${a.correct?"✅":"📌"}</span></div>`).join("");
+ $("reviewPanel").style.display=$("reviewPanel").style.display==="none"?"block":"none";
+}
+function renderStats(){
+ const acc=data.total?Math.round(data.correct/data.total*100):0;
+ $("sRounds").textContent=data.history.length;$("sQuestions").textContent=data.total;$("sAccuracy").textContent=acc+"%";$("sWrong").textContent=Object.keys(data.wrong||{}).length;
+ $("historyList").innerHTML=data.history.length?data.history.slice(0,12).map((h,i)=>`<div class="history-item"><div><b>${escapeHtml(h.book)}</b><div style="color:var(--muted);margin-top:3px">${new Date(h.date).toLocaleDateString()} · ${escapeHtml(h.mode)}</div></div><div><b>${h.score}/${h.total}</b><div style="color:var(--muted);font-size:11px">${h.pct}%</div></div></div>`).join(""):`<div class="empty">尚无答题记录</div>`;
+ const wrong=Object.values(data.wrong||{});
+ $("wrongList").innerHTML=wrong.length?wrong.slice(0,20).map(w=>`<div class="wrong-item"><div><b>${escapeHtml(w.qdata[0])}</b><div style="color:var(--muted);margin-top:4px">${w.book} · ${w.qdata[3]}</div></div><span>待复习</span></div>`).join(""):`<div class="empty">太棒了，错题书斋空空如也</div>`;
+}
+function shareResult(){
+ const h=data.history[0];if(!h)return;
+ const text=`《文枢问答 3.0》${h.book}：${h.score}/${h.total}，正确率 ${h.pct}%，称号“${$("awardTitle").textContent}”。`;
+ if(navigator.clipboard)navigator.clipboard.writeText(text).then(()=>toast("成绩文案已复制")).catch(()=>toast(text));else toast(text)
+}
+function toggleSetting(key,el){data.settings[key]=!data.settings[key];el.classList.toggle("on",data.settings[key]);save()}
+function openSettings(){$("soundSwitch").classList.toggle("on",!!data.settings.sound);$("explainSwitch").classList.toggle("on",!!data.settings.explain);$("settingsModal").classList.add("show")}
+function exportData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="文枢问答V3学习记录.json";a.click();URL.revokeObjectURL(a.href);toast("学习记录已导出")}
+function importData(file){const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);data=Object.assign({},defaultData,x);save();renderHome();renderStats();toast("学习记录已恢复")}catch(e){toast("文件格式不正确")}};r.readAsText(file)}
 
-    // ---------- 工具 ----------
-    function shuffle(arr) {
-      for (let i = arr.length-1; i>0; i--) {
-        const j = Math.floor(Math.random()*(i+1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    function pickRandom(arr, n) {
-      const copy = [...arr];
-      shuffle(copy);
-      return copy.slice(0, n);
-    }
-
-    // 掷骰起名 (符合文枢气质)
-    function generateName() {
-      const prefix = ['文','墨','书','云','鹤','松','竹','琴','棋','诗','雅','怀','瑾','瑜','砚','笔','卷','典','玄','清','澹','逸','涵','淳','厚','博','智','慧','明','道'];
-      const suffix = ['士','君','客','翁','子','生','人','友','贤','才','杰','英','俊','彦','儒','仙','隐','逸','达','观'];
-      const p = prefix[Math.floor(Math.random()*prefix.length)];
-      const s = suffix[Math.floor(Math.random()*suffix.length)];
-      const p2 = prefix[Math.floor(Math.random()*prefix.length)];
-      return (Math.random()>0.5) ? p+p2+s : p+s;
-    }
-
-    function rollName() {
-      userName = generateName();
-      elUserName.textContent = userName;
-    }
-
-    // ---------- 排行榜 ----------
-    function saveRanking() {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(ranking));
-      } catch(e) {}
-    }
-
-    function updateRanking(book, scoreVal, name) {
-      ranking.push({ book, score: scoreVal, name, time: Date.now() });
-      ranking.sort((a,b) => b.score - a.score || a.time - b.time);
-      if (ranking.length > 50) ranking = ranking.slice(0, 50);
-      saveRanking();
-    }
-
-    function renderRanking() {
-      if (ranking.length === 0) {
-        elRankingList.innerHTML = `<div class="rank-item"><span class="rank-pos">✨</span><span class="rank-name">尚无记录</span><span class="rank-score">—</span></div>`;
-        return;
-      }
-      let html = '';
-      ranking.slice(0, 10).forEach((item, idx) => {
-        const medal = idx===0?'🥇':idx===1?'🥈':idx===2?'🥉':`#${idx+1}`;
-        html += `<div class="rank-item"><span class="rank-pos">${medal}</span><span class="rank-name">${item.name||'佚名'}</span><span class="rank-score">${item.score}/10 · ${item.book}</span></div>`;
-      });
-      elRankingList.innerHTML = html;
-    }
-
-    // ---------- 核心 ----------
-    function initRound(bookName) {
-      currentBook = bookName;
-      currentPool = FULL_QUESTIONS[bookName] || FULL_QUESTIONS['红楼梦'];
-      currentRound = pickRandom(currentPool, 10);
-      currentIndex = 0;
-      selectedIdx = null;
-      isAnswered = false;
-      score = 0;
-      roundStatus = new Array(10).fill(false);
-      quizFinished = false;
-      // 更新intro
-      elIntroText.innerHTML = `<strong>📖 ${currentBook}</strong> · ${BOOK_INTRO[currentBook]}`;
-      elIntroBadge.textContent = BOOK_BADGE[currentBook];
-      elBookStatus.textContent = `${currentBook} · 0/10`;
-      elResultArea.classList.add('hidden');
-      elQuizArea.classList.remove('hidden');
-      elNextBtn.disabled = true;
-      renderQuestion();
-    }
-
-    function renderQuestion() {
-      if (quizFinished) return;
-      const qd = currentRound[currentIndex];
-      if (!qd) return;
-      elQText.textContent = qd.q;
-      elQNum.textContent = currentIndex+1;
-      // progress
-      const done = currentIndex + (isAnswered?1:0);
-      elProgressFill.style.width = (done/10*100)+'%';
-      elBookStatus.textContent = `${currentBook} · ${done}/10`;
-
-      const labels = ['A','B','C','D'];
-      let html = '';
-      qd.opts.forEach((opt, idx) => {
-        let cls = 'opt';
-        if (isAnswered) {
-          cls += ' disabled';
-          if (idx === qd.ans) cls += ' correct';
-          else if (selectedIdx === idx && idx !== qd.ans) cls += ' wrong';
-        } else {
-          if (selectedIdx === idx) cls += ' selected';
-        }
-        html += `<div class="${cls}" data-opt-index="${idx}"><span class="opt-label">${labels[idx]}.</span><span class="opt-text">${opt}</span></div>`;
-      });
-      elOptions.innerHTML = html;
-
-      if (!isAnswered) {
-        document.querySelectorAll('.opt').forEach(el => {
-          el.addEventListener('click', onOptionClick);
-        });
-      } else {
-        document.querySelectorAll('.opt').forEach(el => { el.style.cursor = 'default'; });
-      }
-
-      if (isAnswered) {
-        const isLast = currentIndex === 9;
-        elNextBtn.textContent = isLast ? '📖 卷终' : '下一题 →';
-        elNextBtn.disabled = false;
-      } else {
-        elNextBtn.textContent = '下一题 →';
-        elNextBtn.disabled = true;
-      }
-    }
-
-    function onOptionClick(e) {
-      if (isAnswered) return;
-      const idx = parseInt(e.currentTarget.dataset.optIndex, 10);
-      if (isNaN(idx)) return;
-      document.querySelectorAll('.opt').forEach(el => el.classList.remove('selected'));
-      e.currentTarget.classList.add('selected');
-      selectedIdx = idx;
-      elNextBtn.disabled = false;
-    }
-
-    function handleNext() {
-      if (quizFinished) return;
-      if (!isAnswered && selectedIdx === null) return;
-
-      if (isAnswered) {
-        if (currentIndex === 9) {
-          finishRound();
-        } else {
-          currentIndex++;
-          selectedIdx = null;
-          isAnswered = false;
-          renderQuestion();
-          elNextBtn.disabled = true;
-        }
-        return;
-      }
-
-      // 作答
-      const qd = currentRound[currentIndex];
-      const correct = selectedIdx === qd.ans;
-      if (correct) {
-        score++;
-        roundStatus[currentIndex] = true;
-      } else {
-        roundStatus[currentIndex] = false;
-      }
-      isAnswered = true;
-      renderQuestion();
-      if (currentIndex === 9) {
-        elNextBtn.textContent = '📖 卷终';
-        elNextBtn.disabled = false;
-      } else {
-        elNextBtn.textContent = '下一题 →';
-        elNextBtn.disabled = false;
-      }
-    }
-
-    function finishRound() {
-      quizFinished = true;
-      elQuizArea.classList.add('hidden');
-      elResultArea.classList.remove('hidden');
-      elFinalScore.textContent = score;
-      elResultBookLabel.textContent = currentBook;
-
-      // 称号
-      let title = '';
-      if (score === 10) title = '🏆 文曲星下凡';
-      else if (score >= 8) title = '📚 博雅学士';
-      else if (score >= 6) title = '✍️ 敏思才俊';
-      else if (score >= 4) title = '📖 读书君子';
-      else title = '🌱 初涉文海';
-      elTitleAward.textContent = title;
-
-      // 评语
-      const msgs = {
-        10:'十题全对，一代文宗！',
-        9:'学富五车，才高八斗！',
-        8:'腹有诗书，气自华。',
-        7:'博观约取，厚积薄发。',
-        6:'开卷有益，继续精进。',
-        5:'勤能补拙，再读经典。',
-        4:'书山有路，步步为营。',
-        3:'学而不思则罔，思而不学则殆。',
-        2:'锲而不舍，金石可镂。',
-        1:'千里之行，始于足下。',
-        0:'知耻近乎勇，再起。'
-      };
-      const msgKey = Math.min(10, Math.max(0, score));
-      elResultMessage.textContent = msgs[msgKey] || '文心雕龙';
-
-      // 更新排行榜
-      updateRanking(currentBook, score, userName);
-      renderRanking();
-    }
-
-    // 换卷
-    function switchBook() {
-      let idx = BOOK_LIST.indexOf(currentBook);
-      idx = (idx+1) % BOOK_LIST.length;
-      initRound(BOOK_LIST[idx]);
-    }
-
-    // 重新开始 (当前名著)
-    function restartCurrent() {
-      initRound(currentBook);
-    }
-
-    // ---------- 初始化 ----------
-    function init() {
-      // 用户名
-      rollName();
-      // 初始卷
-      initRound('红楼梦');
-      renderRanking();
-
-      // 事件
-      elNextBtn.addEventListener('click', handleNext);
-      elSwitchBtn.addEventListener('click', switchBook);
-      elRestartBtn.addEventListener('click', restartCurrent);
-      elRollBtn.addEventListener('click', rollName);
-    }
-
-    init();
-  })();
+$("heroStart").onclick=()=>beginRound(false);$("startBtn").onclick=()=>beginRound(false);$("wrongHeroBtn").onclick=()=>beginRound(true);
+$("rollBtn").onclick=()=>{$("nameInput").value=randomName()};$("nextBtn").onclick=next;
+$("quitBtn").onclick=()=>{clearInterval(timerId);showScreen("homeScreen")};
+$("reviewBtn").onclick=renderReview;$("shareBtn").onclick=shareResult;$("againBtn").onclick=()=>beginRound(isWrongMode);
+$("homeBtn").onclick=()=>{clearInterval(timerId);renderHome();showScreen("homeScreen")};
+$("statsBtn").onclick=()=>{renderStats();showScreen("statsScreen")};
+$("settingsBtn").onclick=openSettings;$("closeSettings").onclick=()=>$("settingsModal").classList.remove("show");
+$("settingsModal").onclick=e=>{if(e.target===$("settingsModal"))$("settingsModal").classList.remove("show")};
+$("soundSwitch").onclick=()=>toggleSetting("sound",$("soundSwitch"));$("explainSwitch").onclick=()=>toggleSetting("explain",$("explainSwitch"));
+$("practiceWrongBtn").onclick=()=>beginRound(true);
+$("clearWrongBtn").onclick=()=>{if(confirm("确定清空全部错题记录吗？")){data.wrong={};save();renderStats();renderHome();toast("错题已清空")}};
+$("exportBtn").onclick=exportData;$("importBtn").onclick=()=>$("importFile").click();$("importFile").onchange=e=>e.target.files[0]&&importData(e.target.files[0]);
+document.addEventListener("keydown",e=>{if(!$("quizScreen").classList.contains("active"))return;if(["1","2","3","4"].includes(e.key)&&!revealed)choose(+e.key-1);if(e.key==="Enter"&&!$("nextBtn").disabled)next()});
+renderHome();
+})();
 </script>
 </body>
 </html>
