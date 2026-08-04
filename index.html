@@ -3,486 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<meta name="theme-color" content="#17130f">
-<title>文枢问答 3.0 · 四大名著</title>
+<title>文枢问答 V3.1 · 智能学习版</title>
 <style>
-:root{
-  --bg:#efe7dc;--paper:#fffaf2;--paper2:#f7eee2;--ink:#251b14;--muted:#7b6958;
-  --gold:#a77d45;--gold2:#d9bc8b;--line:rgba(91,66,45,.13);--ok:#5f8666;--bad:#b2675d;
-  --shadow:0 24px 80px rgba(62,39,22,.15);--radius:30px
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  min-height:100vh;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-  background:
-   radial-gradient(circle at 8% 8%,rgba(255,255,255,.75),transparent 30%),
-   radial-gradient(circle at 92% 30%,rgba(179,135,78,.11),transparent 28%),
-   linear-gradient(145deg,#eee5da,#f7f0e7);
-  padding:clamp(10px,3vw,28px)
-}
-button{font:inherit}
-button,.option,.book-card,.mode-card{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-.app{width:min(980px,100%);margin:auto}
-.topbar{
-  position:sticky;top:8px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:13px 16px;border:1px solid rgba(255,255,255,.5);border-radius:24px;
-  background:rgba(255,250,242,.78);backdrop-filter:blur(18px);box-shadow:0 10px 32px rgba(50,32,20,.09)
-}
-.brand{display:flex;align-items:center;gap:12px}
-.seal{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#5d2a23,#8f4034);color:#fff4e4;
- display:grid;place-items:center;font-family:serif;font-weight:800;box-shadow:inset 0 0 0 2px rgba(255,255,255,.16)}
-.brand h1{font:700 clamp(18px,4vw,25px)/1.1 "Noto Serif SC","Songti SC",serif;letter-spacing:2px}
-.brand p{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:1px}
-.top-actions{display:flex;gap:8px}
-.icon-btn,.plain-btn,.primary-btn{
- border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.58);color:var(--ink);cursor:pointer;
- transition:.18s ease;display:inline-flex;align-items:center;justify-content:center;gap:7px
-}
-.icon-btn{width:42px;height:42px;font-size:18px}
-.icon-btn:active,.plain-btn:active,.primary-btn:active{transform:scale(.96)}
-.screen{display:none;animation:fade .25s ease}
-.screen.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.hero{
- margin-top:18px;padding:clamp(24px,6vw,56px);border-radius:40px;overflow:hidden;position:relative;
- background:linear-gradient(135deg,rgba(31,24,19,.97),rgba(69,48,30,.94));color:#fff8ee;box-shadow:var(--shadow)
-}
-.hero:before{content:"文";position:absolute;right:-15px;bottom:-72px;font:900 260px/1 serif;color:rgba(255,255,255,.035)}
-.hero-kicker{color:#e5c796;font-size:13px;letter-spacing:3px}
-.hero h2{font:750 clamp(34px,8vw,68px)/1.08 "Noto Serif SC","Songti SC",serif;margin:15px 0 12px;letter-spacing:4px}
-.hero p{max-width:640px;color:#e4d8ca;line-height:1.9;font-size:15px}
-.hero-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.primary-btn,.plain-btn{padding:12px 18px;font-weight:650}
-.primary-btn{border-color:#d9bc8b;background:linear-gradient(135deg,#d7b87e,#a97c43);color:#21160e;box-shadow:0 8px 26px rgba(184,139,77,.25)}
-.hero .plain-btn{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.16)}
-.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
-.stat{background:rgba(255,250,242,.76);border:1px solid rgba(255,255,255,.55);border-radius:22px;padding:16px;text-align:center;box-shadow:0 9px 26px rgba(58,38,24,.06)}
-.stat strong{font-size:25px;font-family:Georgia,serif}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
-.section-title{display:flex;justify-content:space-between;align-items:end;margin:25px 3px 12px}
-.section-title h3{font:700 23px "Noto Serif SC","Songti SC",serif;letter-spacing:1px}
-.section-title p{font-size:12px;color:var(--muted)}
-.books{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.book-card{
- min-height:190px;border:1px solid var(--line);border-radius:28px;padding:19px;text-align:left;cursor:pointer;position:relative;overflow:hidden;
- background:rgba(255,250,242,.78);box-shadow:0 12px 32px rgba(67,43,25,.07);transition:.22s ease
-}
-.book-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(67,43,25,.12)}
-.book-card.selected{outline:2px solid var(--gold);background:linear-gradient(150deg,#fffaf2,#efe0c8)}
-.book-card .num{font:700 12px Georgia;color:var(--gold);letter-spacing:2px}
-.book-card h4{font:700 24px "Noto Serif SC","Songti SC",serif;margin:24px 0 8px}
-.book-card p{font-size:13px;color:var(--muted);line-height:1.7}
-.book-card .mark{position:absolute;right:15px;bottom:8px;font:700 54px serif;color:rgba(109,71,39,.08)}
-.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.mode-card{
- border:1px solid var(--line);border-radius:24px;padding:16px;background:rgba(255,250,242,.72);cursor:pointer;text-align:left;transition:.18s
-}
-.mode-card.selected{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold);background:#fff7ea}
-.mode-card b{display:block;margin-bottom:6px}.mode-card span{font-size:12px;color:var(--muted);line-height:1.55}
-.start-panel{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:14px;padding:15px;border-radius:24px;background:rgba(255,250,242,.68);border:1px solid var(--line)}
-.name-wrap{display:flex;align-items:center;gap:8px;flex:1}
-.name-input{width:100%;border:1px solid var(--line);border-radius:15px;padding:11px 13px;background:rgba(255,255,255,.62);outline:none;color:var(--ink)}
-.quiz-shell{margin-top:18px}
-.quiz-head{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-bottom:12px}
-.progress-wrap{background:rgba(255,250,242,.78);border:1px solid var(--line);border-radius:21px;padding:12px 15px}
-.progress-meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px;margin-bottom:8px}
-.track{height:7px;background:#e3d7c8;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#8e6539,#d8b97f);transition:.3s}
-.timer{min-width:74px;text-align:center;padding:12px;border-radius:20px;background:#2d2118;color:#fff5e7;font:700 18px Georgia}
-.timer.danger{animation:pulse .7s infinite;color:#ffd1ca}
-@keyframes pulse{50%{transform:scale(1.04)}}
-.question-card{
- position:relative;overflow:hidden;background:rgba(255,250,242,.88);border:1px solid rgba(255,255,255,.65);border-radius:34px;
- box-shadow:var(--shadow);padding:clamp(20px,5vw,38px)
-}
-.question-card:before{content:attr(data-watermark);position:absolute;right:-15px;top:-28px;font:800 150px serif;color:rgba(98,63,34,.035)}
-.q-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.tag{font-size:11px;padding:5px 10px;border-radius:99px;background:#eee0cf;color:#6b5139}
-.q-text{font:650 clamp(19px,4vw,27px)/1.65 "Noto Serif SC","Songti SC",serif;position:relative}
-.options{display:grid;gap:11px;margin-top:24px}
-.option{
- width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--line);border-radius:20px;
- padding:14px 15px;background:rgba(255,255,255,.58);cursor:pointer;color:var(--ink);transition:.16s
-}
-.option:hover:not(:disabled){transform:translateX(3px);border-color:#b28b5d;background:#fff8ed}
-.option:disabled{cursor:default}
-.option .letter{width:32px;height:32px;flex:0 0 32px;border-radius:11px;background:#eee1d2;display:grid;place-items:center;font:700 13px Georgia}
-.option.correct{background:#e3efe2;border-color:#79a17d}.option.correct .letter{background:#79a17d;color:white}
-.option.wrong{background:#f4e1dd;border-color:#bd7a70}.option.wrong .letter{background:#bd7a70;color:white}
-.explain{
- display:none;margin-top:18px;padding:15px 16px;border-radius:20px;background:#f3eadf;border-left:4px solid var(--gold);
- color:#5b4939;line-height:1.75;font-size:14px
-}
-.explain.show{display:block;animation:fade .2s}
-.quiz-actions{display:flex;gap:10px;margin-top:13px}.quiz-actions button{flex:1}
-.result-card{margin-top:18px;border-radius:38px;background:linear-gradient(145deg,#211810,#4f3826);color:#fff8ee;overflow:hidden;box-shadow:var(--shadow);padding:clamp(25px,6vw,50px)}
-.result-top{text-align:center}.result-top .small{color:#d7c4ae;font-size:13px;letter-spacing:2px}
-.score-ring{
- width:160px;height:160px;border-radius:50%;margin:20px auto;display:grid;place-items:center;
- background:conic-gradient(#d7b77e var(--scoredeg),rgba(255,255,255,.1) 0);position:relative
-}
-.score-ring:before{content:"";position:absolute;inset:12px;border-radius:50%;background:#2c2017}
-.score-ring strong{position:relative;font:800 48px Georgia}.score-ring span{font-size:15px;color:#d8c8b8}
-.result-title{font:700 28px "Noto Serif SC","Songti SC",serif}.result-msg{color:#ddcfbf;margin-top:8px}
-.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}
-.result-mini{padding:14px;border-radius:20px;background:rgba(255,255,255,.08);text-align:center}.result-mini b{font-size:21px}.result-mini span{display:block;color:#cbbbaa;font-size:11px;margin-top:4px}
-.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.result-actions button{flex:1}
-.panel{
- margin-top:18px;background:rgba(255,250,242,.82);border:1px solid rgba(255,255,255,.6);border-radius:30px;padding:20px;box-shadow:0 14px 40px rgba(56,35,20,.08)
-}
-.panel h3{font:700 21px "Noto Serif SC","Songti SC",serif;margin-bottom:12px}
-.history-list,.wrong-list{display:grid;gap:9px}.history-item,.wrong-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px;border-radius:16px;background:#f5ecdf;font-size:13px}
-.empty{text-align:center;padding:35px 10px;color:var(--muted)}
-.toast{position:fixed;left:50%;bottom:26px;z-index:100;transform:translate(-50%,20px);opacity:0;background:#211810;color:#fff;padding:11px 16px;border-radius:14px;transition:.22s;pointer-events:none;font-size:13px}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-.modal{position:fixed;inset:0;z-index:90;background:rgba(24,17,12,.52);display:none;place-items:center;padding:16px;backdrop-filter:blur(8px)}
-.modal.show{display:grid}.modal-card{width:min(620px,100%);max-height:85vh;overflow:auto;background:var(--paper);border-radius:28px;padding:22px;box-shadow:var(--shadow)}
-.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.modal-head h3{font:700 21px serif}
-.setting-row{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
-.switch{width:50px;height:29px;border-radius:99px;background:#d7cbbb;padding:3px;cursor:pointer;border:0}.switch i{display:block;width:23px;height:23px;border-radius:50%;background:white;transition:.2s}.switch.on{background:#997044}.switch.on i{transform:translateX(21px)}
-.footer{text-align:center;color:#a08d7a;font-size:11px;letter-spacing:2px;padding:25px 0 10px}
-@media(max-width:760px){.books{grid-template-columns:repeat(2,1fr)}.modes{grid-template-columns:1fr}.stats-strip{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){
- body{padding:8px}.topbar{top:5px;border-radius:19px}.brand p{display:none}.hero{border-radius:28px}.hero h2{font-size:40px}
- .book-card{min-height:155px;padding:15px}.book-card h4{font-size:21px;margin-top:18px}.start-panel{align-items:stretch;flex-direction:column}
- .question-card{border-radius:26px;padding:19px 15px}.option{padding:12px}.result-grid{grid-template-columns:1fr 1fr}.result-mini:last-child{grid-column:1/-1}
-}
+:root{--paper:#fffaf2;--ink:#281d15;--muted:#7b6958;--gold:#a87c43;--line:rgba(80,56,38,.14);--ok:#648769;--bad:#b66a60;--shadow:0 22px 70px rgba(60,38,22,.14)}
+*{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;padding:10px;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:radial-gradient(circle at 8% 8%,rgba(255,255,255,.8),transparent 28%),radial-gradient(circle at 92% 25%,rgba(170,124,69,.13),transparent 30%),linear-gradient(145deg,#eee5da,#f8f1e8)}button,input{font:inherit}button{cursor:pointer}.app{width:min(980px,100%);margin:auto}.topbar{position:sticky;top:6px;z-index:30;display:flex;justify-content:space-between;align-items:center;gap:10px;background:rgba(255,250,242,.84);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.65);border-radius:23px;padding:12px 14px;box-shadow:0 10px 28px rgba(55,35,20,.08)}.brand{display:flex;align-items:center;gap:10px}.seal{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#5b2822,#914035);color:#fff5e7;display:grid;place-items:center;font:800 14px serif}.brand h1{font:750 clamp(18px,4vw,24px) "Songti SC",serif}.brand p{font-size:11px;color:var(--muted);margin-top:3px}.top-actions{display:flex;gap:7px}.icon-btn,.btn{border:1px solid var(--line);background:rgba(255,255,255,.62);color:var(--ink);border-radius:15px;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:.16s}.icon-btn{width:42px;height:42px;font-size:17px}.btn{padding:12px 17px;font-weight:650}.btn.primary{background:linear-gradient(135deg,#d9bd87,#a77c43);border-color:#c49a60;color:#20150d}.btn:active,.icon-btn:active{transform:scale(.96)}.screen{display:none;animation:fade .23s ease}.screen.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}.hero{margin-top:16px;border-radius:36px;padding:clamp(24px,6vw,52px);position:relative;overflow:hidden;background:linear-gradient(135deg,#211811,#563b27);color:#fff7ed;box-shadow:var(--shadow)}.hero:before{content:"学";position:absolute;right:-12px;bottom:-75px;font:900 240px serif;color:rgba(255,255,255,.035)}.hero-kicker{font-size:12px;letter-spacing:3px;color:#e3c593}.hero h2{font:760 clamp(34px,8vw,64px)/1.08 "Songti SC",serif;margin:15px 0 12px;letter-spacing:3px}.hero p{max-width:660px;color:#e4d5c5;line-height:1.9;font-size:14px}.quote{margin-top:16px;padding:16px 18px;border-radius:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.11);color:#f1dfc9}.quote b{display:block;font:650 18px "Songti SC",serif;margin-bottom:5px}.quote span{font-size:12px;color:#cfbca8}.hero-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.hero .btn:not(.primary){color:#fff;border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.08)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.stat{padding:15px 10px;text-align:center;border-radius:21px;background:rgba(255,250,242,.78);border:1px solid rgba(255,255,255,.62);box-shadow:0 8px 25px rgba(55,35,20,.055)}.stat strong{font:750 24px Georgia}.stat span{display:block;font-size:11px;color:var(--muted);margin-top:4px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:24px 3px 12px}.section-title h3{font:720 22px "Songti SC",serif}.section-title p{font-size:12px;color:var(--muted)}.books{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.book{position:relative;overflow:hidden;min-height:170px;text-align:left;padding:17px;border-radius:26px;border:1px solid var(--line);background:rgba(255,250,242,.8);box-shadow:0 11px 30px rgba(56,35,20,.065);transition:.18s}.book.selected{outline:2px solid var(--gold);background:linear-gradient(145deg,#fffaf2,#efe0c8)}.book .vol{font:700 11px Georgia;color:var(--gold);letter-spacing:2px}.book h4{font:720 23px "Songti SC",serif;margin:22px 0 7px}.book p{font-size:12px;color:var(--muted);line-height:1.6}.book .mark{position:absolute;right:12px;bottom:-3px;font:800 60px serif;color:rgba(89,56,31,.07)}.modes,.filters{display:grid;gap:10px}.modes{grid-template-columns:repeat(3,1fr)}.filters{grid-template-columns:repeat(3,1fr)}.choice{text-align:left;padding:14px;border-radius:20px;border:1px solid var(--line);background:rgba(255,250,242,.76);transition:.16s}.choice.selected{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold);background:#fff6e8}.choice b{display:block;margin-bottom:5px}.choice span{font-size:11px;color:var(--muted);line-height:1.5}.start-panel{margin-top:13px;padding:14px;border-radius:22px;background:rgba(255,250,242,.75);border:1px solid var(--line);display:flex;gap:10px;align-items:center}.name-input{flex:1;border:1px solid var(--line);border-radius:14px;background:white;padding:11px 12px;outline:none}.quiz-head{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin:15px 0 11px}.progress{background:rgba(255,250,242,.8);border:1px solid var(--line);border-radius:20px;padding:11px 14px}.progress-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-bottom:7px}.track{height:7px;border-radius:99px;background:#e3d6c7;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#8a6033,#d8bb83);transition:.3s}.timer{min-width:72px;text-align:center;padding:11px;border-radius:19px;background:#2b2018;color:#fff3e5;font:700 17px Georgia}.timer.danger{color:#ffd0c8;animation:pulse .7s infinite}@keyframes pulse{50%{transform:scale(1.05)}}.question{background:rgba(255,250,242,.9);border:1px solid rgba(255,255,255,.66);border-radius:31px;box-shadow:var(--shadow);padding:clamp(19px,5vw,35px);position:relative;overflow:hidden}.question:before{content:attr(data-mark);position:absolute;right:-12px;top:-35px;font:850 150px serif;color:rgba(91,57,29,.035)}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:13px}.tag{font-size:10px;padding:5px 9px;border-radius:99px;background:#eee0ce;color:#654b34}.qtext{position:relative;font:650 clamp(19px,4vw,27px)/1.6 "Songti SC",serif}.options{display:grid;gap:10px;margin-top:21px}.option{width:100%;display:flex;align-items:center;gap:11px;text-align:left;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.62);padding:13px 14px;color:var(--ink);transition:.15s}.option:hover:not(:disabled){transform:translateX(3px);border-color:#b58e60}.letter{width:31px;height:31px;flex:0 0 31px;border-radius:10px;background:#eee0d0;display:grid;place-items:center;font:700 12px Georgia}.option.correct{background:#e3eee2;border-color:#79a07d}.option.correct .letter{background:#79a07d;color:white}.option.wrong{background:#f4e1dd;border-color:#bd7a70}.option.wrong .letter{background:#bd7a70;color:white}.learning{display:none;margin-top:17px}.learning.show{display:block;animation:fade .2s}.answer-line{padding:13px 14px;border-radius:17px;background:#efe5d7;border-left:4px solid var(--gold);font-size:13px;line-height:1.7}.explain-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}.explain-card{padding:13px;border-radius:17px;background:#f7efe4;border:1px solid var(--line);font-size:12px;line-height:1.7}.explain-card b{display:block;margin-bottom:4px;color:#4d3826}.memory{margin-top:9px;padding:13px 14px;border-radius:17px;background:linear-gradient(135deg,#302319,#5b402a);color:#fff1df;font:600 14px/1.7 "Songti SC",serif}.quiz-actions{display:flex;gap:9px;margin-top:12px}.quiz-actions .btn{flex:1}.result-card{margin-top:16px;padding:clamp(24px,6vw,48px);border-radius:35px;background:linear-gradient(145deg,#211810,#513925);color:#fff8ee;box-shadow:var(--shadow)}.result-top{text-align:center}.small{font-size:12px;color:#d6c3ad;letter-spacing:2px}.score-ring{width:150px;height:150px;margin:18px auto;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#d5b579 var(--deg),rgba(255,255,255,.1) 0);position:relative}.score-ring:before{content:"";position:absolute;inset:11px;border-radius:50%;background:#2b2017}.score-ring div{position:relative}.score-ring strong{font:800 45px Georgia}.score-ring span{font-size:14px;color:#d8c8b8}.result-title{font:720 27px "Songti SC",serif}.result-msg{margin-top:7px;color:#d8c9b9}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:21px}.result-mini{padding:13px;border-radius:18px;background:rgba(255,255,255,.08);text-align:center}.result-mini b{font-size:20px}.result-mini span{display:block;font-size:10px;color:#cbbbaa;margin-top:4px}.panel{margin-top:16px;background:rgba(255,250,242,.84);border:1px solid rgba(255,255,255,.65);border-radius:28px;padding:19px;box-shadow:0 12px 35px rgba(56,35,20,.07)}.panel h3{font:720 21px "Songti SC",serif;margin-bottom:11px}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.profile-card{padding:15px;border-radius:19px;background:#f5ecdf;border:1px solid var(--line)}.profile-card b{display:block;font-size:13px}.profile-card strong{display:block;font:750 23px Georgia;margin-top:7px}.profile-card span{font-size:11px;color:var(--muted)}.list{display:grid;gap:8px}.item{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px;border-radius:16px;background:#f5ecdf;font-size:12px}.item small{display:block;color:var(--muted);margin-top:4px}.stars{color:#b7833f;letter-spacing:1px;white-space:nowrap}.empty{text-align:center;padding:28px 8px;color:var(--muted)}.toast{position:fixed;left:50%;bottom:24px;z-index:100;transform:translate(-50%,20px);opacity:0;background:#211810;color:#fff;padding:10px 15px;border-radius:13px;font-size:12px;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.footer{text-align:center;padding:24px 0 8px;color:#a08d79;font-size:10px;letter-spacing:2px}@media(max-width:760px){.books{grid-template-columns:repeat(2,1fr)}.modes,.filters{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){body{padding:7px}.brand p{display:none}.hero{border-radius:27px}.hero h2{font-size:39px}.book{min-height:150px}.start-panel{align-items:stretch;flex-direction:column}.explain-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}.result-mini:last-child{grid-column:1/-1}.profile-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="app">
-  <header class="topbar">
-    <div class="brand"><div class="seal">文枢</div><div><h1>文枢问答 3.0</h1><p>四大名著 · 沉浸式国学挑战</p></div></div>
-    <div class="top-actions">
-      <button class="icon-btn" id="homeBtn" title="首页">⌂</button>
-      <button class="icon-btn" id="statsBtn" title="学情">◫</button>
-      <button class="icon-btn" id="settingsBtn" title="设置">⚙</button>
-    </div>
-  </header>
-
-  <main>
-    <section class="screen active" id="homeScreen">
-      <div class="hero">
-        <div class="hero-kicker">WENSHU CLASSICS LAB</div>
-        <h2>一卷在手<br>万象入心</h2>
-        <p>从“做对题”升级为“读懂经典”：随机题组、即时精讲、错题复练、限时挑战、学习统计与本地隐私存储，全部集成在一个无需安装的网页中。</p>
-        <div class="hero-row">
-          <button class="primary-btn" id="heroStart">开始今日挑战</button>
-          <button class="plain-btn" id="wrongHeroBtn">复习错题</button>
-        </div>
-      </div>
-
-      <div class="stats-strip">
-        <div class="stat"><strong id="homeRounds">0</strong><span>完成卷数</span></div>
-        <div class="stat"><strong id="homeAccuracy">0%</strong><span>总正确率</span></div>
-        <div class="stat"><strong id="homeStreak">0</strong><span>连续答对</span></div>
-        <div class="stat"><strong id="homeWrong">0</strong><span>待复习错题</span></div>
-      </div>
-
-      <div class="section-title"><div><h3>选择典籍</h3><p>每部均含知识点标签与解析</p></div><p id="bankCount">题库载入中</p></div>
-      <div class="books" id="bookCards"></div>
-
-      <div class="section-title"><div><h3>选择模式</h3><p>根据时间与目标自由切换</p></div></div>
-      <div class="modes" id="modeCards"></div>
-
-      <div class="start-panel">
-        <div class="name-wrap">
-          <input class="name-input" id="nameInput" maxlength="12" placeholder="输入雅号">
-          <button class="icon-btn" id="rollBtn" title="随机雅号">🎲</button>
-        </div>
-        <button class="primary-btn" id="startBtn">执卷开答 →</button>
-      </div>
-    </section>
-
-    <section class="screen" id="quizScreen">
-      <div class="quiz-shell">
-        <div class="quiz-head">
-          <div class="progress-wrap">
-            <div class="progress-meta"><span id="quizMeta">红楼梦 · 标准卷</span><span id="qCounter">1 / 10</span></div>
-            <div class="track"><div class="fill" id="progressFill"></div></div>
-          </div>
-          <div class="timer" id="timer">∞</div>
-        </div>
-        <div class="question-card" id="questionCard" data-watermark="文">
-          <div class="q-tags" id="qTags"></div>
-          <div class="q-text" id="qText"></div>
-          <div class="options" id="options"></div>
-          <div class="explain" id="explain"></div>
-        </div>
-        <div class="quiz-actions">
-          <button class="plain-btn" id="quitBtn">暂退本卷</button>
-          <button class="primary-btn" id="nextBtn" disabled>确认答案</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="screen" id="resultScreen">
-      <div class="result-card">
-        <div class="result-top">
-          <div class="small" id="resultBook">红楼梦 · 卷终</div>
-          <div class="score-ring" id="scoreRing" style="--scoredeg:0deg"><div><strong id="scoreText">0</strong><span>/10</span></div></div>
-          <div class="result-title" id="awardTitle">初涉文海</div>
-          <div class="result-msg" id="resultMsg">每一次重读，都是新的相逢。</div>
-        </div>
-        <div class="result-grid">
-          <div class="result-mini"><b id="resultAccuracy">0%</b><span>本卷正确率</span></div>
-          <div class="result-mini"><b id="resultBestStreak">0</b><span>最佳连对</span></div>
-          <div class="result-mini"><b id="resultTime">0:00</b><span>完成用时</span></div>
-        </div>
-        <div class="result-actions">
-          <button class="plain-btn" id="reviewBtn">查看本卷</button>
-          <button class="plain-btn" id="shareBtn">复制成绩</button>
-          <button class="primary-btn" id="againBtn">再答一卷</button>
-        </div>
-      </div>
-      <div class="panel" id="reviewPanel" style="display:none"><h3>本卷回顾</h3><div class="wrong-list" id="reviewList"></div></div>
-    </section>
-
-    <section class="screen" id="statsScreen">
-      <div class="panel">
-        <h3>学情总览</h3>
-        <div class="stats-strip">
-          <div class="stat"><strong id="sRounds">0</strong><span>完成卷数</span></div>
-          <div class="stat"><strong id="sQuestions">0</strong><span>累计答题</span></div>
-          <div class="stat"><strong id="sAccuracy">0%</strong><span>累计正确率</span></div>
-          <div class="stat"><strong id="sWrong">0</strong><span>错题数量</span></div>
-        </div>
-      </div>
-      <div class="panel"><h3>最近记录</h3><div class="history-list" id="historyList"></div></div>
-      <div class="panel"><h3>错题书斋</h3><div class="wrong-list" id="wrongList"></div><div class="result-actions"><button class="primary-btn" id="practiceWrongBtn">开始错题复练</button><button class="plain-btn" id="clearWrongBtn">清空错题</button></div></div>
-    </section>
-  </main>
-
-  <div class="footer">文枢 · 匠心 · 本地存储 · V3.0</div>
-</div>
-
-<div class="modal" id="settingsModal">
-  <div class="modal-card">
-    <div class="modal-head"><h3>偏好设置</h3><button class="icon-btn" id="closeSettings">×</button></div>
-    <div class="setting-row"><div><b>答题音效</b><div style="font-size:12px;color:var(--muted);margin-top:3px">使用浏览器合成轻提示音</div></div><button class="switch" id="soundSwitch"><i></i></button></div>
-    <div class="setting-row"><div><b>自动显示解析</b><div style="font-size:12px;color:var(--muted);margin-top:3px">提交答案后展示知识精讲</div></div><button class="switch on" id="explainSwitch"><i></i></button></div>
-    <div class="setting-row"><div><b>数据备份</b><div style="font-size:12px;color:var(--muted);margin-top:3px">导出或恢复本机学习记录</div></div><div style="display:flex;gap:7px"><button class="plain-btn" id="exportBtn">导出</button><button class="plain-btn" id="importBtn">导入</button><input type="file" id="importFile" accept="application/json" hidden></div></div>
-  </div>
-</div>
-<div class="toast" id="toast"></div>
-
+<header class="topbar"><div class="brand"><div class="seal">文枢</div><div><h1>文枢问答 V3.1</h1><p>智能学习版 · Smart Learning Edition</p></div></div><div class="top-actions"><button class="icon-btn" id="homeBtn">⌂</button><button class="icon-btn" id="profileBtn">◫</button></div></header>
+<main>
+<section class="screen active" id="homeScreen">
+<div class="hero"><div class="hero-kicker">WENSHU SMART LEARNING</div><h2>不止答对<br>更要真正学会</h2><p>知识分类、难度分级、分层解析、错题星级、薄弱点分析与学习档案，组成今天完整可用的智能学习系统。</p><div class="quote"><b id="dailyQuote"></b><span id="dailySource"></span></div><div class="hero-row"><button class="btn primary" id="quickStart">开始今日挑战</button><button class="btn" id="wrongStart">复习重点错题</button></div></div>
+<div class="stats"><div class="stat"><strong id="homeLearned">0</strong><span>今日学习</span></div><div class="stat"><strong id="homeAccuracy">0%</strong><span>累计正确率</span></div><div class="stat"><strong id="homeWeak">—</strong><span>当前薄弱点</span></div><div class="stat"><strong id="homeWrong">0</strong><span>重点错题</span></div></div>
+<div class="section-title"><div><h3>选择典籍</h3><p>四部经典，分卷研习</p></div></div><div class="books" id="bookCards"></div>
+<div class="section-title"><div><h3>选择学习模式</h3><p>今天建议从标准卷开始</p></div></div><div class="modes" id="modeCards"></div>
+<div class="section-title"><div><h3>知识专项</h3><p>可按类别定向练习</p></div></div><div class="filters" id="categoryCards"></div>
+<div class="start-panel"><input class="name-input" id="nameInput" maxlength="12" placeholder="输入雅号"><button class="icon-btn" id="rollBtn">🎲</button><button class="btn primary" id="startBtn">执卷开答 →</button></div>
+</section>
+<section class="screen" id="quizScreen">
+<div class="quiz-head"><div class="progress"><div class="progress-meta"><span id="quizMeta"></span><span id="qCounter"></span></div><div class="track"><div class="fill" id="progressFill"></div></div></div><div class="timer" id="timer">∞</div></div>
+<div class="question" id="questionCard" data-mark="文"><div class="tags" id="qTags"></div><div class="qtext" id="qText"></div><div class="options" id="options"></div><div class="learning" id="learning"><div class="answer-line" id="answerLine"></div><div class="explain-grid"><div class="explain-card"><b>为什么</b><span id="whyText"></span></div><div class="explain-card"><b>易错辨析</b><span id="confuseText"></span></div></div><div class="memory" id="memoryText"></div></div></div>
+<div class="quiz-actions"><button class="btn" id="quitBtn">暂退本卷</button><button class="btn primary" id="nextBtn" disabled>确认答案</button></div>
+</section>
+<section class="screen" id="resultScreen"><div class="result-card"><div class="result-top"><div class="small" id="resultBook"></div><div class="score-ring" id="scoreRing" style="--deg:0deg"><div><strong id="scoreText">0</strong><span>/10</span></div></div><div class="result-title" id="awardTitle"></div><div class="result-msg" id="resultMsg"></div></div><div class="result-grid"><div class="result-mini"><b id="resultAcc">0%</b><span>本卷正确率</span></div><div class="result-mini"><b id="resultStrong">—</b><span>本卷最强</span></div><div class="result-mini"><b id="resultWeak">—</b><span>本卷需加强</span></div></div><div class="hero-row"><button class="btn" id="reviewBtn">查看本卷</button><button class="btn primary" id="againBtn">再答一卷</button></div></div><div class="panel" id="reviewPanel" style="display:none"><h3>本卷回顾</h3><div class="list" id="reviewList"></div></div></section>
+<section class="screen" id="profileScreen"><div class="panel"><h3>今日学习档案</h3><div class="profile-grid"><div class="profile-card"><b>今日答题</b><strong id="todayTotal">0</strong><span>道</span></div><div class="profile-card"><b>今日掌握率</b><strong id="todayAcc">0%</strong><span>正确率</span></div><div class="profile-card"><b>今日最强</b><strong id="todayStrong">—</strong><span>知识类别</span></div><div class="profile-card"><b>今日最弱</b><strong id="todayWeak">—</strong><span>优先复习</span></div></div></div><div class="panel"><h3>知识掌握地图</h3><div class="list" id="knowledgeList"></div></div><div class="panel"><h3>错题书斋</h3><div class="list" id="wrongList"></div><div class="hero-row"><button class="btn primary" id="practiceWrongBtn">开始错题复练</button><button class="btn" id="clearWrongBtn">清空错题</button></div></div></section>
+</main><div class="footer">文枢 · 匠心 · 智能学习版 V3.1</div></div><div class="toast" id="toast"></div>
 <script>
-(()=>{
-"use strict";
+(()=>{"use strict";
 const DB={
 "红楼梦":[
-["“满纸荒唐言，一把辛酸泪”出自哪部作品？",["《红楼梦》","《西游记》","《三国演义》","《水浒传》"],0,"开篇题诗","此句见于《红楼梦》第一回，是作者自述创作甘苦的重要诗句。"],
-["林黛玉在海棠诗社中的别号是？",["蘅芜君","潇湘妃子","蕉下客","枕霞旧友"],1,"人物称号","黛玉居潇湘馆，因而号“潇湘妃子”。"],
-["“花谢花飞花满天”出自？",["《秋窗风雨夕》","《葬花吟》","《桃花行》","《芙蓉女儿诔》"],1,"诗词名篇","这是林黛玉《葬花吟》的开篇。"],
-["“金玉良缘”主要指？",["宝玉与黛玉","宝玉与宝钗","贾琏与熙凤","贾芸与小红"],1,"核心情节","“金”指宝钗的金锁，“玉”指宝玉的通灵宝玉。"],
-["四春中擅长绘画的是？",["元春","迎春","探春","惜春"],3,"人物才艺","惜春擅画，曾奉命绘制大观园图景。"],
-["“世事洞明皆学问”的下句是？",["人情练达即文章","文章千古事","处处留心皆学问","人间正道是沧桑"],0,"经典联语","完整联语为“世事洞明皆学问，人情练达即文章”。"],
-["袭人的原名是？",["珍珠","鹦哥","紫鹃","金钏"],0,"人物关系","袭人原名珍珠，后由宝玉据诗句改名。"],
-["“槛外人”是谁的自称？",["妙玉","惜春","李纨","邢岫烟"],0,"人物称号","妙玉自称“槛外人”，体现其孤高清冷。"],
-["“甄士隐”常被解释为何种谐音？",["真事隐","真是隐","甄氏隐","真实引"],0,"命名寓意","“甄士隐”谐音“真事隐”，“贾雨村”谐音“假语存”。"],
-["贾府四春中年龄最小的是？",["惜春","探春","迎春","元春"],0,"人物关系","四春依次为元、迎、探、惜，惜春最小。"],
-["宝玉给黛玉取的表字是？",["颦颦","蘅芜","枕霞","潇湘"],0,"人物细节","宝玉因黛玉眉尖若蹙，为她取字“颦颦”。"],
-["贾政的妾赵姨娘所生之子是？",["贾环","贾珠","贾琏","贾兰"],0,"家族关系","赵姨娘生探春与贾环。"],
-["《红楼梦》引子“开辟鸿蒙，谁为情种”出自？",["《红楼梦曲》","《好了歌》","《葬花吟》","《桃花行》"],0,"曲词","这是《红楼梦曲》引子的开头。"],
-["贾琏偷娶尤二姐后，将她安置在哪里？",["小花枝巷","大观园","宁国府","梨香院"],0,"情节地点","贾琏在小花枝巷另置房舍安顿尤二姐。"],
-["刘姥姥一共几进荣国府？",["一次","两次","三次","四次"],2,"情节结构","全书写到刘姥姥三进荣国府，贯穿贾府盛衰。"]
+{q:"林黛玉在海棠诗社中的别号是？",o:["蘅芜君","潇湘妃子","蕉下客","枕霞旧友"],a:1,cat:"人物称号",lv:"基础",why:"黛玉居住在潇湘馆，因此诗社别号为“潇湘妃子”。",confuse:"蘅芜君是薛宝钗，蕉下客是贾探春，枕霞旧友是史湘云。",memory:"潇湘住黛玉，蘅芜属宝钗。"},
+{q:"“花谢花飞花满天”出自哪一篇？",o:["《秋窗风雨夕》","《葬花吟》","《桃花行》","《芙蓉女儿诔》"],a:1,cat:"诗词名句",lv:"基础",why:"这是林黛玉《葬花吟》的开篇名句。",confuse:"《芙蓉女儿诔》由贾宝玉祭奠晴雯而作。",memory:"花谢花飞是葬花，黛玉一吟动人心。"},
+{q:"“金玉良缘”主要指哪两个人？",o:["宝玉与黛玉","宝玉与宝钗","贾琏与熙凤","贾芸与小红"],a:1,cat:"人物关系",lv:"基础",why:"“金”指薛宝钗的金锁，“玉”指贾宝玉的通灵宝玉。",confuse:"宝玉与黛玉常被称为“木石前盟”。",memory:"金锁配宝玉，木石念黛玉。"},
+{q:"四春中擅长绘画的是？",o:["元春","迎春","探春","惜春"],a:3,cat:"人物才艺",lv:"基础",why:"惜春擅长绘画，曾奉命绘制大观园图景。",confuse:"迎春善棋，探春精于管理，元春入宫为妃。",memory:"元宫、迎棋、探理、惜画。"},
+{q:"“槛外人”是谁的自称？",o:["妙玉","惜春","李纨","邢岫烟"],a:0,cat:"人物称号",lv:"进阶",why:"妙玉自称“槛外人”，体现她孤高清冷。",confuse:"惜春最后出家，但“槛外人”不是她的称号。",memory:"妙玉自居槛外人。"},
+{q:"“甄士隐”常被解释为何种谐音？",o:["真事隐","真是隐","甄氏隐","真实引"],a:0,cat:"命名寓意",lv:"进阶",why:"“甄士隐”谐音“真事隐”，与“贾雨村”的“假语存”相呼应。",confuse:"小说常用谐音寄寓真假关系。",memory:"甄士隐，真事隐；贾雨村，假语存。"},
+{q:"宝玉给黛玉取的表字是？",o:["颦颦","蘅芜","枕霞","潇湘"],a:0,cat:"人物细节",lv:"进阶",why:"宝玉见黛玉眉尖若蹙，便取字“颦颦”。",confuse:"潇湘妃子是诗社别号，不是表字。",memory:"眉尖若蹙，所以叫颦颦。"},
+{q:"刘姥姥一共几进荣国府？",o:["一次","两次","三次","四次"],a:2,cat:"经典情节",lv:"进阶",why:"刘姥姥三进荣国府，贯穿贾府由盛到衰。",confuse:"最为人熟知的是二进荣国府，但全书合计三次。",memory:"一进求助，二进游园，三进救人。"}
 ],
 "西游记":[
-["孙悟空被压在五行山下多少年？",["三百年","五百年","六百年","一千年"],1,"经典情节","孙悟空大闹天宫后被如来压在五行山下五百年。"],
-["白龙马原来的身份是？",["东海三太子","西海三太子","南海三太子","北海三太子"],1,"人物身份","白龙马是西海龙王敖闰之子。"],
-["猪八戒使用的兵器是？",["月牙铲","降妖宝杖","九齿钉耙","方天画戟"],2,"兵器法宝","猪八戒的兵器是上宝沁金耙，俗称九齿钉耙。"],
-["下列哪一个不是孙悟空的称号？",["齐天大圣","斗战胜佛","美猴王","金蝉子"],3,"人物称号","金蝉子是唐僧的前世。"],
-["沙僧原来是天庭的？",["卷帘大将","天蓬元帅","托塔天王","巨灵神"],0,"人物身份","沙僧原为卷帘大将，因失手打碎琉璃盏被贬。"],
-["孙悟空从哪里取得金箍棒？",["东海龙宫","南海龙宫","西海龙宫","北海龙宫"],0,"经典情节","如意金箍棒原是东海龙宫的定海神珍铁。"],
-["唐僧的前世是？",["金蝉子","文殊弟子","普贤弟子","罗汉"],0,"人物身份","唐僧是如来佛祖二弟子金蝉子转世。"],
-["黄风怪最厉害的神通是？",["三昧神风","三昧真火","毒烟","冰雹"],0,"妖怪神通","黄风怪善吹三昧神风，需灵吉菩萨降伏。"],
-["通天河的灵感大王本是？",["金鱼精","鲤鱼精","鼋精","蛟精"],0,"妖怪来历","灵感大王原是观音莲花池中的金鱼。"],
-["独角兕大王最厉害的法宝是？",["金刚琢","紫金铃","芭蕉扇","阴阳二气瓶"],0,"法宝","金刚琢是太上老君之物，能套走多种兵器。"],
-["盘丝洞中有几只蜘蛛精？",["七只","六只","八只","九只"],0,"妖怪数量","盘丝洞中共有七个蜘蛛精。"],
-["唐僧取经共经历多少难？",["八十一难","七十二难","九十九难","一百难"],0,"全书结构","九九归真，因此安排八十一难。"],
-["人参果树是谁推倒的？",["孙悟空","猪八戒","沙僧","白龙马"],0,"经典情节","孙悟空因受气推倒人参果树，后请观音救活。"],
-["小雷音寺黄眉怪的重要法宝之一是？",["人种袋","紫金铃","金刚琢","芭蕉扇"],0,"法宝","黄眉怪使用金铙与人种袋困住取经团队。"],
-["取经回程中，经书因谁的缘故落水弄湿？",["白龙马","通天河老鼋","孙悟空","猪八戒"],1,"结尾情节","老鼋因唐僧未替它问寿数而将众人掀入水中。"]
+{q:"孙悟空被压在五行山下多少年？",o:["三百年","五百年","六百年","一千年"],a:1,cat:"经典情节",lv:"基础",why:"孙悟空大闹天宫后，被如来压在五行山下五百年。",confuse:"“五行山”与“五百年”可一起记忆。",memory:"五行山下五百年。"},
+{q:"白龙马原来的身份是？",o:["东海三太子","西海三太子","南海三太子","北海三太子"],a:1,cat:"人物身份",lv:"基础",why:"白龙马是西海龙王敖闰的三太子。",confuse:"孙悟空取金箍棒在东海，但白龙马来自西海。",memory:"棒取东海，马出西海。"},
+{q:"猪八戒使用的兵器是？",o:["月牙铲","降妖宝杖","九齿钉耙","方天画戟"],a:2,cat:"兵器法宝",lv:"基础",why:"猪八戒使用上宝沁金耙，俗称九齿钉耙。",confuse:"沙僧使用降妖宝杖。",memory:"八戒九齿耙，沙僧宝杖拿。"},
+{q:"沙僧原来是天庭的什么官职？",o:["卷帘大将","天蓬元帅","托塔天王","巨灵神"],a:0,cat:"人物身份",lv:"基础",why:"沙僧原为卷帘大将，因打碎琉璃盏被贬。",confuse:"天蓬元帅是猪八戒。",memory:"八戒天蓬，沙僧卷帘。"},
+{q:"通天河的灵感大王本是？",o:["金鱼精","鲤鱼精","鼋精","蛟精"],a:0,cat:"妖怪来历",lv:"进阶",why:"灵感大王原是观音莲花池中的金鱼。",confuse:"老鼋帮助唐僧过河，不是灵感大王。",memory:"灵感大王，本是莲池金鱼。"},
+{q:"独角兕大王最厉害的法宝是？",o:["金刚琢","紫金铃","芭蕉扇","阴阳二气瓶"],a:0,cat:"兵器法宝",lv:"进阶",why:"金刚琢是太上老君之物，能套走多种兵器。",confuse:"紫金铃属于赛太岁，芭蕉扇与铁扇公主相关。",memory:"独角兕，金刚琢。"},
+{q:"唐僧取经共经历多少难？",o:["八十一难","七十二难","九十九难","一百难"],a:0,cat:"全书结构",lv:"基础",why:"九九归真，所以取经过程共安排八十一难。",confuse:"七十二是孙悟空变化之数。",memory:"七十二变，八十一难。"},
+{q:"小雷音寺黄眉怪的重要法宝之一是？",o:["人种袋","紫金铃","金刚琢","芭蕉扇"],a:0,cat:"兵器法宝",lv:"进阶",why:"黄眉怪使用金铙和人种袋困住取经团队。",confuse:"金刚琢属于太上老君。",memory:"黄眉人种袋，小雷音里装豪杰。"}
 ],
 "三国演义":[
-["“宁教我负天下人，休教天下人负我”是谁说的？",["曹操","刘备","孙权","董卓"],0,"人物语言","小说中此语由曹操说出，突出其多疑与权谋性格。"],
-["关羽的标志性兵器是？",["丈八蛇矛","青釭剑","青龙偃月刀","方天画戟"],2,"兵器","青龙偃月刀又称冷艳锯。"],
-["刘备三顾茅庐请的是谁？",["诸葛亮","庞统","司马懿","周瑜"],0,"经典情节","刘备三次拜访隆中，请诸葛亮出山。"],
-["赤壁之战中献连环计的是？",["周瑜","黄盖","庞统","鲁肃"],2,"计谋","庞统建议曹军将战船以铁索相连。"],
-["长坂坡单骑救阿斗的是？",["张飞","赵云","关羽","马超"],1,"经典情节","赵云在长坂坡七进七出，救出阿斗。"],
-["下列哪位不是蜀汉五虎上将？",["赵云","马超","黄忠","魏延"],3,"人物组合","小说中的五虎将为关羽、张飞、赵云、马超、黄忠。"],
-["官渡之战中曹操击败了谁？",["袁绍","袁术","吕布","刘表"],0,"战争","官渡之战奠定曹操统一北方的基础。"],
-["失街亭后被诸葛亮斩首的是？",["马谡","王平","李严","魏延"],0,"经典情节","马谡违背部署失守街亭，诸葛亮挥泪斩马谡。"],
-["“小霸王”指的是？",["孙权","孙策","孙坚","周瑜"],1,"人物称号","孙策勇武善战，被称为“小霸王”。"],
-["诸葛亮初出茅庐后的第一场著名胜仗是？",["火烧博望坡","火烧赤壁","草船借箭","七擒孟获"],0,"经典情节","小说写诸葛亮出山后设计火烧博望坡。"],
-["司马懿的字是？",["仲达","元直","孝直","文和"],0,"人物字号","司马懿字仲达。"],
-["夷陵之战中击败刘备的是？",["陆逊","吕蒙","周瑜","鲁肃"],0,"战争","陆逊火烧连营，使蜀军大败。"],
-["刘备白帝城托孤的主要对象是？",["诸葛亮","李严","赵云","魏延"],0,"经典情节","刘备临终将刘禅托付给诸葛亮。"],
-["诸葛亮最终病逝于？",["五丈原","上方谷","祁山","定军山"],0,"人物结局","诸葛亮第六次北伐时病逝五丈原。"],
-["“乐不思蜀”的主人公是？",["刘禅","孙皓","曹奂","司马炎"],0,"典故","蜀汉灭亡后，刘禅在洛阳以“此间乐，不思蜀”作答。"]
+{q:"“宁教我负天下人”是谁说的？",o:["曹操","刘备","孙权","董卓"],a:0,cat:"人物语言",lv:"基础",why:"小说中此语由曹操说出，突出其多疑与权谋性格。",confuse:"刘备更常以仁德形象出现。",memory:"宁负天下，小说曹操。"},
+{q:"刘备三顾茅庐请的是谁？",o:["诸葛亮","庞统","司马懿","周瑜"],a:0,cat:"经典情节",lv:"基础",why:"刘备三次拜访隆中，请诸葛亮出山。",confuse:"庞统号凤雏，后来才投奔刘备。",memory:"三顾隆中，请诸葛亮。"},
+{q:"赤壁之战中献连环计的是？",o:["周瑜","黄盖","庞统","鲁肃"],a:2,cat:"计谋",lv:"进阶",why:"庞统建议曹军将战船以铁索相连。",confuse:"黄盖献苦肉计，周瑜统筹全局。",memory:"庞统连环，黄盖苦肉。"},
+{q:"长坂坡单骑救阿斗的是？",o:["张飞","赵云","关羽","马超"],a:1,cat:"经典情节",lv:"基础",why:"赵云在长坂坡七进七出，救出阿斗。",confuse:"张飞据水断桥，负责震慑曹军。",memory:"赵云救阿斗，张飞喝断桥。"},
+{q:"下列哪位不是蜀汉五虎上将？",o:["赵云","马超","黄忠","魏延"],a:3,cat:"人物组合",lv:"基础",why:"五虎上将为关羽、张飞、赵云、马超、黄忠。",confuse:"魏延是蜀汉名将，但不在五虎之列。",memory:"关张赵马黄，五虎记心上。"},
+{q:"失街亭后被诸葛亮斩首的是？",o:["马谡","王平","李严","魏延"],a:0,cat:"经典情节",lv:"基础",why:"马谡违背部署失守街亭，诸葛亮挥泪斩马谡。",confuse:"王平曾劝阻马谡。",memory:"街亭失于马谡。"},
+{q:"夷陵之战中击败刘备的是？",o:["陆逊","吕蒙","周瑜","鲁肃"],a:0,cat:"战争",lv:"进阶",why:"陆逊火烧连营，使蜀军大败。",confuse:"吕蒙与白衣渡江、夺荆州相关。",memory:"夷陵陆逊，火烧连营。"},
+{q:"“乐不思蜀”的主人公是？",o:["刘禅","孙皓","曹奂","司马炎"],a:0,cat:"人物典故",lv:"基础",why:"蜀汉灭亡后，刘禅在洛阳回答“此间乐，不思蜀”。",confuse:"此典故与刘备无关。",memory:"后主刘禅，乐不思蜀。"}
 ],
 "水浒传":[
-["林冲上梁山前的职务是？",["八十万禁军教头","提辖","都头","押司"],0,"人物身份","林冲是东京八十万禁军枪棒教头。"],
-["宋江的主要绰号是？",["及时雨","玉麒麟","智多星","豹子头"],0,"人物称号","宋江乐于周济人，被称为“及时雨”。"],
-["智取生辰纲的主要策划者是？",["晁盖","吴用","公孙胜","刘唐"],1,"经典情节","“智多星”吴用设计智取生辰纲。"],
-["鲁智深倒拔垂杨柳发生在哪里？",["五台山","大相国寺","少林寺","灵隐寺"],1,"经典情节","鲁智深看守大相国寺菜园时倒拔垂杨柳。"],
-["“鼓上蚤”是谁？",["时迁","张清","乐和","白胜"],0,"人物称号","时迁轻功高、善偷盗，绰号鼓上蚤。"],
-["李逵的标志性兵器是？",["双板斧","单鞭","长枪","大刀"],0,"兵器","李逵惯使一双板斧。"],
-["花荣的绰号是？",["小李广","金枪手","插翅虎","病关索"],0,"人物称号","花荣箭术高超，被称为“小李广”。"],
-["武松最后在何处出家？",["六和寺","相国寺","五台山","少林寺"],0,"人物结局","征方腊后，武松在杭州六和寺出家。"],
-["杨志卖刀时误杀了谁？",["牛二","镇关西","蒋门神","西门庆"],0,"经典情节","泼皮牛二强行刁难，杨志怒杀牛二。"],
-["宋江在浔阳楼题反诗后，被谁告发？",["黄文炳","蔡九","戴宗","李逵"],0,"经典情节","黄文炳发现并告发宋江题写的反诗。"],
-["晁盖中箭身亡于？",["曾头市","祝家庄","高唐州","青州"],0,"人物结局","晁盖攻打曾头市时中毒箭身亡。"],
-["梁山五虎将之首是？",["关胜","林冲","秦明","呼延灼"],0,"人物排名","大刀关胜在梁山马军五虎将中居首。"],
-["鲁智深拳打镇关西，镇关西本名是？",["郑屠","牛二","张三","李四"],0,"经典情节","镇关西是卖肉的郑屠。"],
-["扈三娘的绰号是？",["一丈青","母大虫","母夜叉","花彪"],0,"人物称号","扈三娘武艺高强，绰号“一丈青”。"],
-["征方腊时失去左臂的是？",["武松","鲁智深","杨志","李逵"],0,"人物结局","武松征方腊时失去左臂，后在六和寺出家。"]
+{q:"林冲上梁山前的职务是？",o:["八十万禁军教头","提辖","都头","押司"],a:0,cat:"人物身份",lv:"基础",why:"林冲是东京八十万禁军枪棒教头。",confuse:"鲁达做过提辖，武松做过都头，宋江做过押司。",memory:"林冲教头，鲁达提辖，武松都头，宋江押司。"},
+{q:"宋江的主要绰号是？",o:["及时雨","玉麒麟","智多星","豹子头"],a:0,cat:"人物称号",lv:"基础",why:"宋江乐于周济他人，被称为“及时雨”。",confuse:"玉麒麟是卢俊义，智多星是吴用，豹子头是林冲。",memory:"宋江及时雨，吴用智多星。"},
+{q:"智取生辰纲的主要策划者是？",o:["晁盖","吴用","公孙胜","刘唐"],a:1,cat:"经典情节",lv:"基础",why:"“智多星”吴用设计智取生辰纲。",confuse:"晁盖是行动首领，但主要计策由吴用设计。",memory:"智取生辰纲，智多星吴用。"},
+{q:"鲁智深倒拔垂杨柳发生在哪里？",o:["五台山","大相国寺","少林寺","灵隐寺"],a:1,cat:"经典情节",lv:"基础",why:"鲁智深看守大相国寺菜园时倒拔垂杨柳。",confuse:"五台山是鲁智深剃度之处。",memory:"五台剃度，相国拔柳。"},
+{q:"“鼓上蚤”是谁？",o:["时迁","张清","乐和","白胜"],a:0,cat:"人物称号",lv:"基础",why:"时迁轻功高、善偷盗，绰号鼓上蚤。",confuse:"白胜绰号白日鼠。",memory:"时迁轻巧，鼓上如蚤。"},
+{q:"杨志卖刀时误杀了谁？",o:["牛二","镇关西","蒋门神","西门庆"],a:0,cat:"经典情节",lv:"基础",why:"泼皮牛二强行刁难，杨志怒杀牛二。",confuse:"镇关西被鲁智深打死，西门庆被武松所杀。",memory:"杨志卖刀杀牛二。"},
+{q:"晁盖中箭身亡于哪里？",o:["曾头市","祝家庄","高唐州","青州"],a:0,cat:"人物结局",lv:"进阶",why:"晁盖攻打曾头市时中毒箭身亡。",confuse:"祝家庄由宋江三打而破。",memory:"晁盖命断曾头市。"},
+{q:"扈三娘的绰号是？",o:["一丈青","母大虫","母夜叉","花彪"],a:0,cat:"人物称号",lv:"进阶",why:"扈三娘武艺高强，绰号“一丈青”。",confuse:"母大虫是顾大嫂，母夜叉是孙二娘。",memory:"扈三娘一丈青，顾大嫂母大虫，孙二娘母夜叉。"}
 ]};
-
-const BOOK_META={
-"红楼梦":["梦","人情世态之镜","#7b3f52"],
-"西游记":["游","神魔奇旅与修行","#8c6635"],
-"三国演义":["义","智勇权谋与天下","#74523e"],
-"水浒传":["侠","英雄聚义与抗争","#3f6558"]
-};
-const MODES={
-standard:{name:"标准卷",desc:"随机 10 题，不限时，适合日常学习",count:10,time:0},
-speed:{name:"风云急卷",desc:"随机 10 题，每题 20 秒，训练反应",count:10,time:20},
-deep:{name:"通读长卷",desc:"随机 15 题，不限时，系统检验掌握度",count:15,time:0}
-};
-const KEY="wenshu_v3_data";
-const defaultData={history:[],wrong:{},total:0,correct:0,bestStreak:0,settings:{sound:false,explain:true},name:"翰林学士"};
-let data=load();
-let selectedBook="红楼梦",selectedMode="standard",round=[],answers=[],index=0,chosen=null,revealed=false,score=0,streak=0,bestRoundStreak=0,startAt=0,timerId=null,timeLeft=0,isWrongMode=false;
-
-const $=id=>document.getElementById(id);
-function load(){try{return Object.assign({},defaultData,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){return structuredClone(defaultData)}}
-function save(){localStorage.setItem(KEY,JSON.stringify(data))}
-function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function toast(t){$("toast").textContent=t;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1700)}
-function showScreen(id){document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));$(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-function qId(book,q){return book+"|"+q[0]}
-function randomName(){const a=["墨","云","松","竹","清","雅","玄","澹","博","明","砚","书","怀","逸"],b=["轩","斋","客","士","君","生","子","翁","友","贤"];return a[Math.floor(Math.random()*a.length)]+a[Math.floor(Math.random()*a.length)]+b[Math.floor(Math.random()*b.length)]}
-function beep(ok){if(!data.settings.sound)return;try{const ac=new(window.AudioContext||window.webkitAudioContext)(),o=ac.createOscillator(),g=ac.createGain();o.connect(g);g.connect(ac.destination);o.frequency.value=ok?660:220;g.gain.setValueAtTime(.06,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.18);o.start();o.stop(ac.currentTime+.18)}catch(e){}}
-
-function renderHome(){
- const totalBank=Object.values(DB).reduce((n,a)=>n+a.length,0);
- $("bankCount").textContent=`共 ${totalBank} 道精校题`;
- $("bookCards").innerHTML=Object.entries(BOOK_META).map(([b,m],i)=>`
- <button class="book-card ${b===selectedBook?"selected":""}" data-book="${b}">
-  <div class="num">VOLUME 0${i+1}</div><h4>${b}</h4><p>${m[1]}<br>${DB[b].length} 道题 · 含解析</p><div class="mark">${m[0]}</div>
- </button>`).join("");
- document.querySelectorAll(".book-card").forEach(el=>el.onclick=()=>{selectedBook=el.dataset.book;renderHome()});
- $("modeCards").innerHTML=Object.entries(MODES).map(([k,m])=>`
- <button class="mode-card ${k===selectedMode?"selected":""}" data-mode="${k}"><b>${m.name}</b><span>${m.desc}</span></button>`).join("");
- document.querySelectorAll(".mode-card").forEach(el=>el.onclick=()=>{selectedMode=el.dataset.mode;renderHome()});
- $("nameInput").value=data.name||"翰林学士";
- const rounds=data.history.length,acc=data.total?Math.round(data.correct/data.total*100):0;
- $("homeRounds").textContent=rounds;$("homeAccuracy").textContent=acc+"%";$("homeStreak").textContent=data.bestStreak||0;$("homeWrong").textContent=Object.keys(data.wrong||{}).length;
-}
-
-function beginRound(wrongMode=false){
- isWrongMode=wrongMode;
- data.name=$("nameInput").value.trim()||data.name||randomName();save();
- let source;
- if(wrongMode){
-  source=Object.values(data.wrong||{}).map(x=>x.qdata);
-  if(!source.length){toast("错题书斋目前是空的");return}
-  round=shuffle(source).slice(0,Math.min(15,source.length));
- }else{
-  const mode=MODES[selectedMode],sourceBook=DB[selectedBook];
-  round=shuffle(sourceBook).slice(0,Math.min(mode.count,sourceBook.length));
- }
- answers=[];index=0;chosen=null;revealed=false;score=0;streak=0;bestRoundStreak=0;startAt=Date.now();
- showScreen("quizScreen");renderQuestion();
-}
-function renderQuestion(){
- clearInterval(timerId);timerId=null;
- const q=round[index],book=isWrongMode?(q._book||selectedBook):selectedBook;
- $("quizMeta").textContent=`${isWrongMode?"错题复练":book} · ${isWrongMode?"温故卷":MODES[selectedMode].name}`;
- $("qCounter").textContent=`${index+1} / ${round.length}`;
- $("progressFill").style.width=`${index/round.length*100}%`;
- $("questionCard").dataset.watermark=BOOK_META[book]?.[0]||"文";
- $("qTags").innerHTML=`<span class="tag">${book}</span><span class="tag">${q[3]}</span><span class="tag">${isWrongMode?"重点复习":"随机抽题"}</span>`;
- $("qText").textContent=q[0];$("explain").className="explain";$("explain").innerHTML="";
- const letters=["A","B","C","D"];
- $("options").innerHTML=q[1].map((o,i)=>`<button class="option" data-i="${i}"><span class="letter">${letters[i]}</span><span>${escapeHtml(o)}</span></button>`).join("");
- document.querySelectorAll(".option").forEach(btn=>btn.onclick=()=>choose(+btn.dataset.i));
- $("nextBtn").disabled=true;$("nextBtn").textContent="确认答案";chosen=null;revealed=false;
- const t=isWrongMode?0:MODES[selectedMode].time;
- if(t){timeLeft=t;$("timer").textContent=timeLeft+"s";$("timer").classList.remove("danger");timerId=setInterval(()=>{timeLeft--;$("timer").textContent=timeLeft+"s";if(timeLeft<=5)$("timer").classList.add("danger");if(timeLeft<=0){clearInterval(timerId);chosen=-1;revealAnswer(true)}},1000)}
- else{$("timer").textContent="∞";$("timer").classList.remove("danger")}
-}
-function choose(i){
- if(revealed)return;chosen=i;
- document.querySelectorAll(".option").forEach((x,j)=>{x.style.borderColor=j===i?"#a77d45":"";x.style.background=j===i?"#fff4df":""});
- $("nextBtn").disabled=false;
-}
-function revealAnswer(timeout=false){
- if(revealed)return;if(chosen===null&&!timeout)return;
- clearInterval(timerId);revealed=true;
- const q=round[index],correct=chosen===q[2],book=isWrongMode?(q._book||selectedBook):selectedBook;
- document.querySelectorAll(".option").forEach((x,j)=>{x.disabled=true;x.style.borderColor="";x.style.background="";if(j===q[2])x.classList.add("correct");if(j===chosen&&j!==q[2])x.classList.add("wrong")});
- if(correct){score++;streak++;bestRoundStreak=Math.max(bestRoundStreak,streak);delete data.wrong[qId(book,q)];beep(true)}
- else{streak=0;const copy=[...q];copy._book=book;data.wrong[qId(book,q)]={book,qdata:copy,at:Date.now()};beep(false)}
- data.total++;if(correct)data.correct++;data.bestStreak=Math.max(data.bestStreak||0,streak);
- answers.push({q,book,chosen,correct});
- if(data.settings.explain){$("explain").innerHTML=`<b>${correct?"答对了":"正确答案："+q[1][q[2]]}</b><br>${escapeHtml(q[4])}`;$("explain").classList.add("show")}
- $("progressFill").style.width=`${(index+1)/round.length*100}%`;
- $("nextBtn").disabled=false;$("nextBtn").textContent=index===round.length-1?"阅卷结算":"下一题 →";save()
-}
-function next(){
- if(!revealed){revealAnswer();return}
- if(index<round.length-1){index++;renderQuestion()}else finish()
-}
-function finish(){
- clearInterval(timerId);
- const sec=Math.round((Date.now()-startAt)/1000),pct=Math.round(score/round.length*100);
- data.history.unshift({book:isWrongMode?"错题复练":selectedBook,mode:isWrongMode?"温故卷":MODES[selectedMode].name,score,total:round.length,pct,time:sec,date:Date.now(),name:data.name});
- data.history=data.history.slice(0,30);save();
- const award=pct===100?["文曲星下凡","十题皆明，已入化境。"]:pct>=80?["博雅学士","腹有诗书，见识不凡。"]:pct>=60?["敏思才俊","根基已成，再读更深。"]:pct>=40?["读书君子","已有所得，宜温故知新。"]:["初涉文海","经典常读常新，不妨再来。"];
- $("resultBook").textContent=`${isWrongMode?"错题复练":selectedBook} · 卷终`;
- $("scoreText").textContent=score;$("scoreText").nextElementSibling.textContent="/"+round.length;
- $("scoreRing").style.setProperty("--scoredeg",`${pct*3.6}deg`);
- $("awardTitle").textContent=award[0];$("resultMsg").textContent=award[1];
- $("resultAccuracy").textContent=pct+"%";$("resultBestStreak").textContent=bestRoundStreak;$("resultTime").textContent=`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`;
- $("reviewPanel").style.display="none";showScreen("resultScreen");renderHome()
-}
-function renderReview(){
- $("reviewList").innerHTML=answers.map((a,i)=>`<div class="wrong-item"><div><b>${i+1}. ${escapeHtml(a.q[0])}</b><div style="color:var(--muted);margin-top:4px">${a.correct?"✓ 回答正确":"✗ 你的答案："+(a.chosen>=0?escapeHtml(a.q[1][a.chosen]):"超时")+"；正确："+escapeHtml(a.q[1][a.q[2]])}</div></div><span>${a.correct?"✅":"📌"}</span></div>`).join("");
- $("reviewPanel").style.display=$("reviewPanel").style.display==="none"?"block":"none";
-}
-function renderStats(){
- const acc=data.total?Math.round(data.correct/data.total*100):0;
- $("sRounds").textContent=data.history.length;$("sQuestions").textContent=data.total;$("sAccuracy").textContent=acc+"%";$("sWrong").textContent=Object.keys(data.wrong||{}).length;
- $("historyList").innerHTML=data.history.length?data.history.slice(0,12).map((h,i)=>`<div class="history-item"><div><b>${escapeHtml(h.book)}</b><div style="color:var(--muted);margin-top:3px">${new Date(h.date).toLocaleDateString()} · ${escapeHtml(h.mode)}</div></div><div><b>${h.score}/${h.total}</b><div style="color:var(--muted);font-size:11px">${h.pct}%</div></div></div>`).join(""):`<div class="empty">尚无答题记录</div>`;
- const wrong=Object.values(data.wrong||{});
- $("wrongList").innerHTML=wrong.length?wrong.slice(0,20).map(w=>`<div class="wrong-item"><div><b>${escapeHtml(w.qdata[0])}</b><div style="color:var(--muted);margin-top:4px">${w.book} · ${w.qdata[3]}</div></div><span>待复习</span></div>`).join(""):`<div class="empty">太棒了，错题书斋空空如也</div>`;
-}
-function shareResult(){
- const h=data.history[0];if(!h)return;
- const text=`《文枢问答 3.0》${h.book}：${h.score}/${h.total}，正确率 ${h.pct}%，称号“${$("awardTitle").textContent}”。`;
- if(navigator.clipboard)navigator.clipboard.writeText(text).then(()=>toast("成绩文案已复制")).catch(()=>toast(text));else toast(text)
-}
-function toggleSetting(key,el){data.settings[key]=!data.settings[key];el.classList.toggle("on",data.settings[key]);save()}
-function openSettings(){$("soundSwitch").classList.toggle("on",!!data.settings.sound);$("explainSwitch").classList.toggle("on",!!data.settings.explain);$("settingsModal").classList.add("show")}
-function exportData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="文枢问答V3学习记录.json";a.click();URL.revokeObjectURL(a.href);toast("学习记录已导出")}
-function importData(file){const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);data=Object.assign({},defaultData,x);save();renderHome();renderStats();toast("学习记录已恢复")}catch(e){toast("文件格式不正确")}};r.readAsText(file)}
-
-$("heroStart").onclick=()=>beginRound(false);$("startBtn").onclick=()=>beginRound(false);$("wrongHeroBtn").onclick=()=>beginRound(true);
-$("rollBtn").onclick=()=>{$("nameInput").value=randomName()};$("nextBtn").onclick=next;
-$("quitBtn").onclick=()=>{clearInterval(timerId);showScreen("homeScreen")};
-$("reviewBtn").onclick=renderReview;$("shareBtn").onclick=shareResult;$("againBtn").onclick=()=>beginRound(isWrongMode);
-$("homeBtn").onclick=()=>{clearInterval(timerId);renderHome();showScreen("homeScreen")};
-$("statsBtn").onclick=()=>{renderStats();showScreen("statsScreen")};
-$("settingsBtn").onclick=openSettings;$("closeSettings").onclick=()=>$("settingsModal").classList.remove("show");
-$("settingsModal").onclick=e=>{if(e.target===$("settingsModal"))$("settingsModal").classList.remove("show")};
-$("soundSwitch").onclick=()=>toggleSetting("sound",$("soundSwitch"));$("explainSwitch").onclick=()=>toggleSetting("explain",$("explainSwitch"));
-$("practiceWrongBtn").onclick=()=>beginRound(true);
-$("clearWrongBtn").onclick=()=>{if(confirm("确定清空全部错题记录吗？")){data.wrong={};save();renderStats();renderHome();toast("错题已清空")}};
-$("exportBtn").onclick=exportData;$("importBtn").onclick=()=>$("importFile").click();$("importFile").onchange=e=>e.target.files[0]&&importData(e.target.files[0]);
-document.addEventListener("keydown",e=>{if(!$("quizScreen").classList.contains("active"))return;if(["1","2","3","4"].includes(e.key)&&!revealed)choose(+e.key-1);if(e.key==="Enter"&&!$("nextBtn").disabled)next()});
-renderHome();
+const META={"红楼梦":["梦","人情世态之镜"],"西游记":["游","神魔奇旅与修行"],"三国演义":["义","智勇权谋与天下"],"水浒传":["侠","英雄聚义与抗争"]};
+const MODES={standard:{name:"标准卷",desc:"随机10题，不限时，适合今天首轮学习",count:10,time:0},speed:{name:"风云急卷",desc:"随机10题，每题20秒，训练反应",count:10,time:20},deep:{name:"通读长卷",desc:"随机15题，不限时，检验综合掌握",count:15,time:0}};
+const CATS=["全部","人物类","情节类"],QUOTES=[["假作真时真亦假，无为有处有还无。","《红楼梦》"],["心生，种种魔生；心灭，种种魔灭。","《西游记》"],["天下大势，分久必合，合久必分。","《三国演义》"],["有缘千里来相会，无缘对面不相逢。","《水浒传》"]];
+const KEY="wenshu_v31",DEF={name:"翰林学士",total:0,correct:0,history:[],wrong:{},catStats:{},daily:{}};
+let data=load(),book="红楼梦",mode="standard",cat="全部",round=[],answers=[],idx=0,chosen=null,revealed=false,score=0,timerId=null,timeLeft=0,isWrong=false;
+const $=id=>document.getElementById(id);function load(){try{return Object.assign({},DEF,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){return JSON.parse(JSON.stringify(DEF))}}function save(){localStorage.setItem(KEY,JSON.stringify(data))}function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}function toast(t){$("toast").textContent=t;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1600)}function show(id){document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));$(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}function qid(b,q){return b+"|"+q.q}function todayKey(){return new Date().toISOString().slice(0,10)}function ensureToday(){let k=todayKey();if(!data.daily[k])data.daily[k]={total:0,correct:0,catStats:{}};return data.daily[k]}function catGroup(c){return /人物|称号|身份|关系|组合|语言|典故|才艺|细节/.test(c)?"人物类":/情节|战争|结局|结构|计谋/.test(c)?"情节类":"知识类"}function randomName(){const a=["墨","云","松","竹","清","雅","玄","澹","博","明","砚","书"],b=["轩","斋","客","士","君","生","子","翁"];return a[Math.floor(Math.random()*a.length)]+a[Math.floor(Math.random()*a.length)]+b[Math.floor(Math.random()*b.length)]}
+function renderQuote(){let q=QUOTES[new Date().getDate()%QUOTES.length];$("dailyQuote").textContent=q[0];$("dailySource").textContent="——"+q[1]}function getStrong(stats){let a=Object.entries(stats||{}).filter(([,v])=>v.total);if(!a.length)return"";a.sort((x,y)=>(y[1].correct/y[1].total)-(x[1].correct/x[1].total));return a[0][0]}function getWeak(stats){let a=Object.entries(stats||{}).filter(([,v])=>v.total);if(!a.length)return"";a.sort((x,y)=>(x[1].correct/x[1].total)-(y[1].correct/y[1].total));return a[0][0]}function addStat(t,c,ok){if(!t[c])t[c]={total:0,correct:0};t[c].total++;if(ok)t[c].correct++}
+function renderHome(){ $("bookCards").innerHTML=Object.entries(META).map(([b,m],i)=>`<button class="book ${b===book?"selected":""}" data-b="${b}"><div class="vol">VOLUME 0${i+1}</div><h4>${b}</h4><p>${m[1]}<br>${DB[b].length} 道精校题</p><div class="mark">${m[0]}</div></button>`).join("");document.querySelectorAll(".book").forEach(x=>x.onclick=()=>{book=x.dataset.b;renderHome()});$("modeCards").innerHTML=Object.entries(MODES).map(([k,m])=>`<button class="choice ${k===mode?"selected":""}" data-m="${k}"><b>${m.name}</b><span>${m.desc}</span></button>`).join("");document.querySelectorAll("[data-m]").forEach(x=>x.onclick=()=>{mode=x.dataset.m;renderHome()});$("categoryCards").innerHTML=CATS.map(c=>`<button class="choice ${c===cat?"selected":""}" data-c="${c}"><b>${c}</b><span>${c==="全部"?"综合训练全部知识点":c==="人物类"?"人物、称号、身份、关系":"情节、战争、结局、结构"}</span></button>`).join("");document.querySelectorAll("[data-c]").forEach(x=>x.onclick=()=>{cat=x.dataset.c;renderHome()});$("nameInput").value=data.name||"翰林学士";let t=ensureToday(),acc=data.total?Math.round(data.correct/data.total*100):0;$("homeLearned").textContent=t.total;$("homeAccuracy").textContent=acc+"%";$("homeWeak").textContent=getWeak(data.catStats)||"—";$("homeWrong").textContent=Object.keys(data.wrong||{}).length}
+function getPool(){let p=DB[book].map(q=>({...q,_book:book}));if(cat!=="全部")p=p.filter(q=>catGroup(q.cat)===cat);if(p.length<4)p=DB[book].map(q=>({...q,_book:book}));return p}function begin(wrong=false){isWrong=wrong;data.name=$("nameInput").value.trim()||data.name||randomName();save();if(wrong){let w=Object.values(data.wrong||{}).sort((a,b)=>b.level-a.level);if(!w.length){toast("错题书斋目前为空");return}round=w.slice(0,15).map(x=>x.q)}else{let p=getPool();round=shuffle(p).slice(0,Math.min(MODES[mode].count,p.length))}answers=[];idx=0;chosen=null;revealed=false;score=0;show("quizScreen");renderQuestion()}
+function renderQuestion(){clearInterval(timerId);let q=round[idx],b=q._book||book;$("quizMeta").textContent=`${isWrong?"错题复练":b} · ${isWrong?"重点温故":MODES[mode].name}`;$("qCounter").textContent=`${idx+1} / ${round.length}`;$("progressFill").style.width=`${idx/round.length*100}%`;$("questionCard").dataset.mark=META[b]?.[0]||"文";$("qTags").innerHTML=`<span class="tag">${b}</span><span class="tag">${q.cat}</span><span class="tag">${q.lv}</span><span class="tag">${catGroup(q.cat)}</span>`;$("qText").textContent=q.q;$("learning").className="learning";let L=["A","B","C","D"];$("options").innerHTML=q.o.map((o,i)=>`<button class="option" data-i="${i}"><span class="letter">${L[i]}</span><span>${esc(o)}</span></button>`).join("");document.querySelectorAll(".option").forEach(x=>x.onclick=()=>choose(+x.dataset.i));$("nextBtn").disabled=true;$("nextBtn").textContent="确认答案";chosen=null;revealed=false;let t=isWrong?0:MODES[mode].time;if(t){timeLeft=t;$("timer").textContent=t+"s";$("timer").classList.remove("danger");timerId=setInterval(()=>{timeLeft--;$("timer").textContent=timeLeft+"s";if(timeLeft<=5)$("timer").classList.add("danger");if(timeLeft<=0){clearInterval(timerId);chosen=-1;reveal()}},1000)}else{$("timer").textContent="∞";$("timer").classList.remove("danger")}}
+function choose(i){if(revealed)return;chosen=i;document.querySelectorAll(".option").forEach((x,j)=>{x.style.background=j===i?"#fff4df":"";x.style.borderColor=j===i?"#aa7c45":""});$("nextBtn").disabled=false}
+function reveal(){if(revealed||chosen===null)return;revealed=true;clearInterval(timerId);let q=round[idx],b=q._book||book,ok=chosen===q.a,id=qid(b,q);document.querySelectorAll(".option").forEach((x,j)=>{x.disabled=true;x.style.background="";x.style.borderColor="";if(j===q.a)x.classList.add("correct");if(j===chosen&&j!==q.a)x.classList.add("wrong")});if(ok){score++;if(data.wrong[id]){data.wrong[id].success=(data.wrong[id].success||0)+1;if(data.wrong[id].success>=2)delete data.wrong[id]}}else{let old=data.wrong[id]||{level:0,success:0,q:{...q,_book:b}};old.level=Math.min(5,(old.level||0)+1);old.success=0;old.q={...q,_book:b};old.last=Date.now();data.wrong[id]=old}data.total++;if(ok)data.correct++;addStat(data.catStats,q.cat,ok);let td=ensureToday();td.total++;if(ok)td.correct++;addStat(td.catStats,q.cat,ok);answers.push({q,b,chosen,ok});$("answerLine").innerHTML=`<b>${ok?"回答正确":"正确答案："+esc(q.o[q.a])}</b><br>${ok?"你已掌握本题核心知识。":"本题已加入错题书斋，并提升错题星级。"}`;$("whyText").textContent=q.why;$("confuseText").textContent=q.confuse;$("memoryText").textContent="记忆提示："+q.memory;$("learning").classList.add("show");$("progressFill").style.width=`${(idx+1)/round.length*100}%`;$("nextBtn").disabled=false;$("nextBtn").textContent=idx===round.length-1?"阅卷结算":"下一题 →";save()}
+function next(){if(!revealed){reveal();return}if(idx<round.length-1){idx++;renderQuestion()}else finish()}function finish(){let pct=Math.round(score/round.length*100),stat={};answers.forEach(a=>addStat(stat,a.q.cat,a.ok));let strongest=getStrong(stat)||"—",weakest=getWeak(stat)||"—";data.history.unshift({book:isWrong?"错题复练":book,score,total:round.length,pct,date:Date.now()});data.history=data.history.slice(0,30);save();let award=pct===100?["文曲星下凡","本卷全对，真正读懂了一层。"]:pct>=80?["博雅学士","掌握扎实，可进入更深层次。"]:pct>=60?["敏思才俊","基础已成，继续巩固薄弱点。"]:pct>=40?["读书君子","已有所得，错题复练会更有效。"]:["初涉文海","从错题开始，下一卷会更好。"];$("resultBook").textContent=`${isWrong?"错题复练":book} · 卷终`;$("scoreText").textContent=score;$("scoreText").nextElementSibling.textContent="/"+round.length;$("scoreRing").style.setProperty("--deg",`${pct*3.6}deg`);$("awardTitle").textContent=award[0];$("resultMsg").textContent=award[1];$("resultAcc").textContent=pct+"%";$("resultStrong").textContent=strongest;$("resultWeak").textContent=weakest;$("reviewPanel").style.display="none";renderHome();show("resultScreen")}
+function renderReview(){$("reviewList").innerHTML=answers.map((a,i)=>`<div class="item"><div><b>${i+1}. ${esc(a.q.q)}</b><small>${a.ok?"回答正确":"你的答案："+(a.chosen>=0?esc(a.q.o[a.chosen]):"超时")+"；正确："+esc(a.q.o[a.q.a])}</small></div><span>${a.ok?"✅":"📌"}</span></div>`).join("");$("reviewPanel").style.display=$("reviewPanel").style.display==="none"?"block":"none"}
+function renderProfile(){let td=ensureToday(),acc=td.total?Math.round(td.correct/td.total*100):0;$("todayTotal").textContent=td.total;$("todayAcc").textContent=acc+"%";$("todayStrong").textContent=getStrong(td.catStats)||"—";$("todayWeak").textContent=getWeak(td.catStats)||"—";let cs=Object.entries(data.catStats||{});$("knowledgeList").innerHTML=cs.length?cs.map(([c,v])=>{let p=Math.round(v.correct/v.total*100);return `<div class="item"><div><b>${esc(c)}</b><small>${v.correct}/${v.total} 题掌握</small></div><span>${p}%</span></div>`}).join(""):`<div class="empty">完成一卷后生成知识地图</div>`;let wrong=Object.values(data.wrong||{}).sort((a,b)=>b.level-a.level);$("wrongList").innerHTML=wrong.length?wrong.map(w=>`<div class="item"><div><b>${esc(w.q.q)}</b><small>${w.q._book} · ${w.q.cat}</small></div><span class="stars">${"★".repeat(w.level)}${"☆".repeat(5-w.level)}</span></div>`).join(""):`<div class="empty">太棒了，错题书斋为空</div>`}
+$("quickStart").onclick=()=>begin(false);$("startBtn").onclick=()=>begin(false);$("wrongStart").onclick=()=>begin(true);$("rollBtn").onclick=()=>{$("nameInput").value=randomName()};$("nextBtn").onclick=next;$("quitBtn").onclick=()=>{clearInterval(timerId);show("homeScreen")};$("reviewBtn").onclick=renderReview;$("againBtn").onclick=()=>begin(isWrong);$("homeBtn").onclick=()=>{clearInterval(timerId);renderHome();show("homeScreen")};$("profileBtn").onclick=()=>{renderProfile();show("profileScreen")};$("practiceWrongBtn").onclick=()=>begin(true);$("clearWrongBtn").onclick=()=>{if(confirm("确定清空全部错题吗？")){data.wrong={};save();renderProfile();renderHome();toast("错题已清空")}};document.addEventListener("keydown",e=>{if(!$("quizScreen").classList.contains("active"))return;if(["1","2","3","4"].includes(e.key)&&!revealed)choose(+e.key-1);if(e.key==="Enter"&&!$("nextBtn").disabled)next()});renderQuote();renderHome();
 })();
 </script>
-</body>
-</html>
+</body></html>
