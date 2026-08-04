@@ -1,11 +1,14 @@
-V9.3 与 V9.2 文件变化对比
+V9.4 与 V9.3 内容变化对比
 
-修改文件（2个）：
+修改文件（3个）：
 - README.md
+- data/image-questions.json
 - index.html
 
-新增文件（51个）：
-- data/image-questions.json
+新增文件（1个）：
+- ATTRIBUTION.md
+
+删除文件（50个）：
 - images/hl_01.svg
 - images/hl_02.svg
 - images/hl_03.svg
@@ -57,8 +60,10 @@ V9.3 与 V9.2 文件变化对比
 - images/xy_24.svg
 - images/xy_25.svg
 
-删除文件（0个）：
-- 无
+合计发生变化：54个文件
 
-合计发生变化：53个文件
-说明：50张SVG图片为本版本原创线索插画，data/image-questions.json为可审查题目资料；运行时题库同时内嵌在index.html中，避免本地file://读取JSON失败。
+核心内容变化：
+- 50张简易SVG全部移除。
+- 50道看图题全部改接高质量传统图像或公共馆藏图像。
+- 题目数据、来源、解析与界面同步更新。
+- 新增完整来源清单。
