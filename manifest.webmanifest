@@ -1,0 +1,26 @@
+{
+  "name": "四大名著·文枢问答",
+  "short_name": "文枢问答",
+  "description": "四大名著2000题智能学习与闯关系统",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07121a",
+  "theme_color": "#7c2d24",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
