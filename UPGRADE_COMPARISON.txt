@@ -1,64 +1,28 @@
-V10.0C.2 与 V10.0C.1 文件变化对比
+V10.1 与 V10.0C.2 文件变化对比
 
-发生变化：5个文件
-
-修改文件（4个）：
+修改文件（9个）：
 - README.md
+- data/image-questions.json
+- images/honglou/题库映射.json
+- images/sanguo/题库映射.json
+- images/shuihu/题库映射.json
+- images/xiyou/题库映射.json
 - index.html
 - manifest.webmanifest
 - service-worker.js
 
-新增文件（1个）：
-- _worker.js
+新增文件（0个）：
+- 无
 
 删除文件（0个）：
 - 无
 
-保持不变（40个）：
-- ATTRIBUTION.md
-- CHANGELOG.md
-- LICENSE
-- UPGRADE_COMPARISON.txt
-- assets/apple-touch-icon.png
-- assets/favicon-16.png
-- assets/favicon-32.png
-- assets/favicon.ico
-- assets/icon-1024.png
-- assets/icon-192.png
-- assets/icon-512.png
-- assets/splash-iphone-landscape.jpg
-- assets/splash-iphone-portrait.jpg
-- data/image-questions.json
-- images/app/background/.gitkeep
-- images/app/logo/apple-touch-icon.png
-- images/app/logo/icon-1024.png
-- images/app/splash/iphone-landscape.jpg
-- images/app/splash/iphone-portrait.jpg
-- images/app/ui/.gitkeep
-- images/honglou/人物/.gitkeep
-- images/honglou/器物/.gitkeep
-- images/honglou/建筑/.gitkeep
-- images/honglou/情节/.gitkeep
-- images/honglou/题库映射.json
-- images/sanguo/人物/.gitkeep
-- images/sanguo/兵器/.gitkeep
-- images/sanguo/地图/.gitkeep
-- images/sanguo/战役/.gitkeep
-- images/sanguo/题库映射.json
-- images/shuihu/人物/.gitkeep
-- images/shuihu/兵器/.gitkeep
-- images/shuihu/情节/.gitkeep
-- images/shuihu/梁山/.gitkeep
-- images/shuihu/题库映射.json
-- images/xiyou/人物/.gitkeep
-- images/xiyou/地点/.gitkeep
-- images/xiyou/情节/.gitkeep
-- images/xiyou/法宝/.gitkeep
-- images/xiyou/题库映射.json
+合计发生变化：9个文件
 
-
-核心变化：
-- 顶部导航取消sticky固定。
-- 新增Cloudflare Pages图片代理，改善中国大陆加载。
-- Service Worker改为预缓存本站代理图片。
-- 看图题增加加载状态、代理失败回退和友好提示。
+保持不变：
+- _worker.js 大陆图片代理
+- assets全部图标与启动画面
+- 2000道文字题核心知识库
+- 图片来源和授权说明
+- App目录结构
+- 错题、每日挑战、学习画像、等级、成就与存档机制

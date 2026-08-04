@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V10.0C.2",
+  "name": "四大名著·文枢问答 V10.1",
   "short_name": "文枢问答",
-  "description": "大陆稳定版：取消顶部吸附，馆藏图片经Cloudflare Pages本站代理加速加载。",
+  "description": "2000道文字题、每部50道多视角看图题及经典连线挑战。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
