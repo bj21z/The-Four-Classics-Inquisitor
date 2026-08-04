@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V10.0C",
+  "name": "四大名著·文枢问答 V10.0C.1",
   "short_name": "文枢问答",
-  "description": "2000道文字题与50道馆藏看图题，支持智能去重与离线缓存。",
+  "description": "V10.0C.1稳定修复版：2000道文字题、50道馆藏看图题与智能去重。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

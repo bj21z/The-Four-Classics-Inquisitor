@@ -1,49 +1,19 @@
-V10.0C 与 V9.4 文件变化对比
+V10.0C.1 与 V10.0C 对比
 
-修改文件：3个
-- README.md
+修改文件：5个
 - index.html
-- manifest.webmanifest
-
-新增文件：29个
-- CHANGELOG.md
-- LICENSE
-- images/app/background/.gitkeep
-- images/app/logo/apple-touch-icon.png
-- images/app/logo/icon-1024.png
-- images/app/splash/iphone-landscape.jpg
-- images/app/splash/iphone-portrait.jpg
-- images/app/ui/.gitkeep
-- images/honglou/人物/.gitkeep
-- images/honglou/器物/.gitkeep
-- images/honglou/建筑/.gitkeep
-- images/honglou/情节/.gitkeep
-- images/honglou/题库映射.json
-- images/sanguo/人物/.gitkeep
-- images/sanguo/兵器/.gitkeep
-- images/sanguo/地图/.gitkeep
-- images/sanguo/战役/.gitkeep
-- images/sanguo/题库映射.json
-- images/shuihu/人物/.gitkeep
-- images/shuihu/兵器/.gitkeep
-- images/shuihu/情节/.gitkeep
-- images/shuihu/梁山/.gitkeep
-- images/shuihu/题库映射.json
-- images/xiyou/人物/.gitkeep
-- images/xiyou/地点/.gitkeep
-- images/xiyou/情节/.gitkeep
-- images/xiyou/法宝/.gitkeep
-- images/xiyou/题库映射.json
 - service-worker.js
+- manifest.webmanifest
+- README.md
+- UPGRADE_COMPARISON.txt
 
+新增文件：0个
 删除文件：0个
-- 无
 
-总计发生变化：32个文件
+根本修复：
+V10.0C在替换看图题库时，误删了位于IMAGE_BANK与todayKey之间的初始化代码块，
+包括$选择器、data状态、load/save存储函数和ACHIEVEMENTS定义。
+因此脚本在绑定第一个按钮时抛出“$ is not defined”，后续初始化全部中断。
 
-功能变化：
-- 新增标准化images多级目录。
-- 新增四部名著各自的题库映射文件。
-- 新增Service Worker与50图离线缓存功能。
-- 新增CHANGELOG与LICENSE。
-- 升级PWA名称和版本。
+本版恢复完整初始化代码，并升级Service Worker缓存版本，首页HTML改为网络优先，
+避免Safari继续使用旧的损坏缓存。

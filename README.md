@@ -1,16 +1,22 @@
-# The Four Classics Inquisitor V10.0C · 终章典藏版
+# V10.0C.1 稳定修复版
 
-## 目录关系
-`honglou`、`xiyou`、`sanguo`、`shuihu` 都位于 `images` 文件夹内部，不与 `images` 平级。
+本版修复V10.0C初始化阶段缺少核心变量与工具函数的问题。该问题会导致：
+- 典籍卡片和知识专项不显示；
+- 大多数按钮没有绑定点击事件；
+- 看图题无法启动；
+- 学习统计停留在静态初始值。
 
-## 看图题
-本版保留50张馆藏或传统版画看图题。由于原图来自不同开放馆藏页面，程序首次使用看图题时需要联网。
-点击首页“缓存50张馆藏图”，浏览器会在后台保存图片；缓存成功后，同一设备可在网络不稳定时继续使用。
+## 修复文件
+1. index.html
+2. service-worker.js
+3. manifest.webmanifest
+4. README.md
+5. UPGRADE_COMPARISON.txt
 
-## 重要说明
-压缩包中的 `images/四部名著` 目录保存分类结构和题库映射文件。
-馆藏图片本体由浏览器首次联网缓存，不直接重新分发，以保留清晰的来源与许可链。
+## GitHub更新
+至少替换仓库根目录中的：
+- index.html
+- service-worker.js
+- manifest.webmanifest
 
-## GitHub
-将压缩包解压后的所有内容上传至仓库根目录，根目录必须直接看到 `index.html` 和 `service-worker.js`。
-Cloudflare Pages部署后，用Safari打开一次并点击“缓存50张馆藏图”。
+部署完成后，Safari应关闭原页面并重新打开。若仍显示旧版，可删除主屏幕旧图标后重新添加。
