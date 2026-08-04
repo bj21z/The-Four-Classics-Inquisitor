@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V10.2",
+  "name": "四大名著·文枢问答 V10.3",
   "short_name": "文枢问答",
-  "description": "2000道文字题、200道看图题、经典连线、版本历史与四部名著专属小游戏。",
+  "description": "名著博物馆、八阵图2.0、四典游戏馆、2000道文字题与200道看图题。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
