@@ -1,24 +1,39 @@
-V10.3 与 V10.2 文件变化对比
+V10.4 与 V10.3 文件变化对比
 
-修改文件：6个
+修改文件：
 - index.html
 - service-worker.js
 - manifest.webmanifest
 - README.md
 - CHANGELOG.md
 - UPGRADE_COMPARISON.txt
-
-新增文件：0个
-删除文件：0个
-
-保持不变：
-- _worker.js 中国大陆图片代理
 - data/image-questions.json
 - 四部名著题库映射.json
-- 2000道文字题和200道看图题
-- images与assets目录
-- ATTRIBUTION.md与LICENSE
-- 经典连线及另外三款小游戏
-- 错题、每日挑战、学习画像、等级、成就与存档
 
-最快升级：只需替换上述6个文件。
+新增文件：
+- data/museum.json
+- images/museum/ 下50张本地馆藏导览封面
+- docs/ARCHITECTURE.md
+- docs/ROADMAP.md
+- docs/TEST_REPORT.md
+- docs/KNOWN_ISSUES.md
+
+删除文件：
+- 无
+
+保持不变：
+- _worker.js
+- assets全部图标与启动画面
+- 2000道文字题
+- 200道看图题题量
+- 四典游戏馆
+- 八阵图2.0
+- 经典连线
+- 错题、每日挑战、学习画像、等级、成就与存档
+- ATTRIBUTION.md与LICENSE
+
+部署建议：
+本次涉及新增目录，推荐将V10.4完整项目包上传并替换旧版，而不是只传少数补丁文件。
+
+真实性说明：
+本版实际提供50张本地数字馆藏导览封面。400件独立精品馆藏未完成逐件来源与许可核验，因此未虚报为已完成。
