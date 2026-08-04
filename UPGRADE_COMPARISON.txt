@@ -1,21 +1,64 @@
-V9.2 与 V9.1 文件比较
-========================
+V9.3 与 V9.2 文件变化对比
 
-受影响文件共 3 个：
-1. index.html（修改）——新增知识点级去重抽题算法、错题去重、题量提示、版本号更新，并修正首页总题量显示为2000。
-2. README.md（修改）——更新部署与版本说明。
-3. UPGRADE_COMPARISON.txt（新增）——本比较说明。
+修改文件（2个）：
+- README.md
+- index.html
 
-完全未变化文件共 10 个：
-- manifest.webmanifest
-- assets/apple-touch-icon.png
-- assets/favicon-16.png
-- assets/favicon-32.png
-- assets/favicon.ico
-- assets/icon-1024.png
-- assets/icon-192.png
-- assets/icon-512.png
-- assets/splash-iphone-landscape.jpg
-- assets/splash-iphone-portrait.jpg
+新增文件（51个）：
+- data/image-questions.json
+- images/hl_01.svg
+- images/hl_02.svg
+- images/hl_03.svg
+- images/hl_04.svg
+- images/hl_05.svg
+- images/hl_06.svg
+- images/hl_07.svg
+- images/hl_08.svg
+- images/hl_09.svg
+- images/hl_10.svg
+- images/hl_11.svg
+- images/hl_12.svg
+- images/sg_26.svg
+- images/sg_27.svg
+- images/sg_28.svg
+- images/sg_29.svg
+- images/sg_30.svg
+- images/sg_31.svg
+- images/sg_32.svg
+- images/sg_33.svg
+- images/sg_34.svg
+- images/sg_35.svg
+- images/sg_36.svg
+- images/sg_37.svg
+- images/sg_38.svg
+- images/sh_39.svg
+- images/sh_40.svg
+- images/sh_41.svg
+- images/sh_42.svg
+- images/sh_43.svg
+- images/sh_44.svg
+- images/sh_45.svg
+- images/sh_46.svg
+- images/sh_47.svg
+- images/sh_48.svg
+- images/sh_49.svg
+- images/sh_50.svg
+- images/xy_13.svg
+- images/xy_14.svg
+- images/xy_15.svg
+- images/xy_16.svg
+- images/xy_17.svg
+- images/xy_18.svg
+- images/xy_19.svg
+- images/xy_20.svg
+- images/xy_21.svg
+- images/xy_22.svg
+- images/xy_23.svg
+- images/xy_24.svg
+- images/xy_25.svg
 
-手机最快升级方式：只替换 GitHub 仓库根目录中的 index.html 即可。
+删除文件（0个）：
+- 无
+
+合计发生变化：53个文件
+说明：50张SVG图片为本版本原创线索插画，data/image-questions.json为可审查题目资料；运行时题库同时内嵌在index.html中，避免本地file://读取JSON失败。
