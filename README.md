@@ -1,25 +1,25 @@
-# The Four Classics Inquisitor V10.1 · 图谱连线版
+# The Four Classics Inquisitor V10.2 · 四典游戏馆
 
-## 本次升级
-- 看图题扩展为每部名著50道，共200道。
-- 五种识图视角：全景、人物、器物、场景、细节。
-- 选项相似度过滤：不再把同一答案的不同表述放在同一组选项中。
-- 同一轮优先避免重复使用同一原始馆藏图。
-- 新增“经典连线”项目，支持4组、6组、8组。
-- 连线覆盖人物—称号、人物—兵器、人物—地点、事件—人物等关系。
-- 保留中国大陆Cloudflare图片代理和Safari缓存。
+## 四款新游戏
+1. 《红楼梦》大观园花笺：记忆人物花笺顺序。
+2. 《西游记》火焰山借扇：在安全区把握挥扇时机。
+3. 《三国演义》八阵图：避开疑兵，以较少步数出阵。
+4. 《水浒传》聚义点将：根据绰号、事件或关系快速识别好汉。
 
-## 从V10.0C.2升级
-替换：
-index.html
-service-worker.js
-manifest.webmanifest
-data/image-questions.json
-images/honglou/题库映射.json
-images/xiyou/题库映射.json
-images/sanguo/题库映射.json
-images/shuihu/题库映射.json
-README.md
-UPGRADE_COMPARISON.txt
+## 同步新增
+- 版本历史中心。
+- 历史版本搜索。
+- 开发路线图。
+- V10.2首次启动升级通知。
+- 小游戏最佳成绩与经验奖励。
 
-其他文件不变。
+## 从V10.1.1升级
+需要替换：
+- index.html
+- service-worker.js
+- manifest.webmanifest
+- README.md
+- CHANGELOG.md
+- UPGRADE_COMPARISON.txt
+
+其余题库、图片、代理、图标和目录均保持不变。

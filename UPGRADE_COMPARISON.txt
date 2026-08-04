@@ -1,28 +1,25 @@
-V10.1 与 V10.0C.2 文件变化对比
+V10.2 与 V10.1.1 文件变化对比
 
-修改文件（9个）：
-- README.md
-- data/image-questions.json
-- images/honglou/题库映射.json
-- images/sanguo/题库映射.json
-- images/shuihu/题库映射.json
-- images/xiyou/题库映射.json
+修改文件：6个
 - index.html
-- manifest.webmanifest
 - service-worker.js
+- manifest.webmanifest
+- README.md
+- CHANGELOG.md
+- UPGRADE_COMPARISON.txt
 
-新增文件（0个）：
-- 无
-
-删除文件（0个）：
-- 无
-
-合计发生变化：9个文件
+新增文件：0个
+删除文件：0个
 
 保持不变：
-- _worker.js 大陆图片代理
+- _worker.js 中国大陆图片代理
+- data/image-questions.json
+- 四部名著题库映射.json
+- 2000道文字题与200道看图题
+- 经典连线功能
 - assets全部图标与启动画面
-- 2000道文字题核心知识库
-- 图片来源和授权说明
-- App目录结构
-- 错题、每日挑战、学习画像、等级、成就与存档机制
+- ATTRIBUTION.md与LICENSE
+- 错题、每日挑战、学习画像、等级、成就和存档
+
+最快升级：
+只需替换上面列出的6个文件，不需要重新上传images、assets或data目录。
