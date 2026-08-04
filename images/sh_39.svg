@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t d">
-<title id="t">鲁提辖拳打镇关西</title><desc id="d">市井肉案旁挥拳的壮汉</desc>
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7e1cf"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter></defs>
-<rect width="400" height="360" rx="28" fill="url(#g)"/>
-<circle cx="52" cy="52" r="24" fill="#284f3f" opacity=".9"/><path d="M25 320Q110 280 190 315T375 315" fill="none" stroke="#9a6d3a" stroke-width="8" opacity=".45"/>
-<g filter="url(#s)"><circle cx="115" cy="160" r="42" fill="#d9aa82"/><circle cx="285" cy="160" r="42" fill="#d9aa82"/><path d="M145 190L260 150" stroke="#8d3c32" stroke-width="22"/></g>
-<path d="M36 44h328M36 316h328" stroke="#284f3f" stroke-width="3" opacity=".25"/>
-</svg>
