@@ -1,0 +1,21 @@
+V9.2 与 V9.1 文件比较
+========================
+
+受影响文件共 3 个：
+1. index.html（修改）——新增知识点级去重抽题算法、错题去重、题量提示、版本号更新，并修正首页总题量显示为2000。
+2. README.md（修改）——更新部署与版本说明。
+3. UPGRADE_COMPARISON.txt（新增）——本比较说明。
+
+完全未变化文件共 10 个：
+- manifest.webmanifest
+- assets/apple-touch-icon.png
+- assets/favicon-16.png
+- assets/favicon-32.png
+- assets/favicon.ico
+- assets/icon-1024.png
+- assets/icon-192.png
+- assets/icon-512.png
+- assets/splash-iphone-landscape.jpg
+- assets/splash-iphone-portrait.jpg
+
+手机最快升级方式：只替换 GitHub 仓库根目录中的 index.html 即可。

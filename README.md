@@ -1,18 +1,27 @@
-# The Four Classics Inquisitor V9.1 · 典藏美化版
+# The Four Classics Inquisitor V9.2 · 知识点去重版
 
-## 使用方法
-1. 解压整个文件夹。
-2. 不要改变 assets 文件夹与 index.html 的相对位置。
-3. 上传 `index.html`、`manifest.webmanifest` 和 `assets` 文件夹到 GitHub 仓库根目录。
-4. Cloudflare Pages 发布后，用 iPhone Safari 打开网址。
-5. 先删除主屏幕上的旧图标，再点“分享 → 添加到主屏幕”。
+## 核心修复
+- 同一核心知识事实虽然拥有10种训练题型，但在同一轮答题中最多出现1次。
+- 例如“刘禅—乐不思蜀”不会再因不同问法在10题中反复出现。
+- 普通练习、分类专项、每日挑战、错题复习全部使用同一套知识点级去重规则。
+- 优先在每个知识点组内选择尚未做过的题型，兼顾去重与题库覆盖。
+- 当所选专项的不同知识点少于设定题量时，系统自动按实际知识点数量出题并提示，不使用重复题凑数。
 
-## 本次美化
-- 独立 1024×1024 品牌图标及 Apple Touch Icon。
-- favicon、PWA manifest、启动画面。
-- 顶部品牌区、背景、卡片、按钮、交互反馈统一润色。
-- 安全区适配、减少动态效果设置、键盘焦点状态。
-- 不改动 V9.0 的 2000 题题库、成绩、错题、成就与存档逻辑。
+## 题库结构
+- 四部名著各500道训练题，共2000道。
+- 每部名著由50条核心知识事实生成10种多角度题型。
+- 一轮综合练习最多可提供50个不重复核心知识点。
 
-## 注意
-必须通过网站地址打开后添加到主屏幕；直接打开本地 HTML 时，部分浏览器可能不会读取 manifest。
+## iPhone Safari 上传
+本升级包相较V9.1只需要替换根目录的 `index.html`。图标、启动图、manifest均未变化。
+
+完整首次部署仍需保持：
+- `index.html`
+- `manifest.webmanifest`
+- `assets/`
+
+## 版本比较
+- 修改：`index.html`
+- 修改：`README.md`
+- 新增：`UPGRADE_COMPARISON.txt`
+- 未变化：`manifest.webmanifest` 及 assets 内9个图标/启动图文件
