@@ -1,0 +1,902 @@
+[
+  {
+    "id": "MUSEUM-001",
+    "book": "红楼梦",
+    "title": "贾宝玉",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_001.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Jia%20Baoyu%20Hongloumeng%20Tuyong.jpg?width=1400",
+    "source": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "explain": "正确答案是“贾宝玉”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "贾宝玉 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "全景识别"
+    ],
+    "museumKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+  },
+  {
+    "id": "MUSEUM-002",
+    "book": "红楼梦",
+    "title": "林黛玉",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_002.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lin%20Daiyu%20Hongloumeng%20Tuyong.jpg?width=1400",
+    "source": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "explain": "正确答案是“林黛玉”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "林黛玉 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "人物聚焦"
+    ],
+    "museumKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+  },
+  {
+    "id": "MUSEUM-003",
+    "book": "红楼梦",
+    "title": "薛宝钗",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_003.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Xue%20Baochai.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "explain": "正确答案是“薛宝钗”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "薛宝钗 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "器物线索"
+    ],
+    "museumKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+  },
+  {
+    "id": "MUSEUM-004",
+    "book": "红楼梦",
+    "title": "王熙凤",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_004.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Wang%20Xifeng.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "explain": "正确答案是“王熙凤”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "王熙凤 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "场景线索"
+    ],
+    "museumKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+  },
+  {
+    "id": "MUSEUM-005",
+    "book": "红楼梦",
+    "title": "史湘云",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_005.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Shi%20Xiangyun.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "explain": "正确答案是“史湘云”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "史湘云 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "细节挑战"
+    ],
+    "museumKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+  },
+  {
+    "id": "MUSEUM-006",
+    "book": "红楼梦",
+    "title": "贾探春",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_006.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Jia%20Tanchun.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "explain": "正确答案是“贾探春”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "贾探春 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "全景识别"
+    ],
+    "museumKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+  },
+  {
+    "id": "MUSEUM-007",
+    "book": "红楼梦",
+    "title": "贾元春",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_007.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Jia%20Yuanchun.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "explain": "正确答案是“贾元春”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "贾元春 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "人物聚焦"
+    ],
+    "museumKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+  },
+  {
+    "id": "MUSEUM-008",
+    "book": "红楼梦",
+    "title": "妙玉",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_008.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Miaoyu.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Miaoyu.jpg",
+    "explain": "正确答案是“妙玉”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "妙玉 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "器物线索"
+    ],
+    "museumKey": "Hongloumeng Tuyong Miaoyu.jpg"
+  },
+  {
+    "id": "MUSEUM-009",
+    "book": "红楼梦",
+    "title": "晴雯",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_009.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Qingwen.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Qingwen.jpg",
+    "explain": "正确答案是“晴雯”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "晴雯 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "场景线索"
+    ],
+    "museumKey": "Hongloumeng Tuyong Qingwen.jpg"
+  },
+  {
+    "id": "MUSEUM-010",
+    "book": "红楼梦",
+    "title": "香菱",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_010.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Xiangling.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Xiangling.jpg",
+    "explain": "正确答案是“香菱”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "香菱 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "细节挑战"
+    ],
+    "museumKey": "Hongloumeng Tuyong Xiangling.jpg"
+  },
+  {
+    "id": "MUSEUM-011",
+    "book": "红楼梦",
+    "title": "袭人",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_011.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Hua%20Xiren.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "explain": "正确答案是“袭人”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "袭人 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "全景识别"
+    ],
+    "museumKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+  },
+  {
+    "id": "MUSEUM-012",
+    "book": "红楼梦",
+    "title": "秦可卿",
+    "type": "人物",
+    "category": "看图识别",
+    "localImage": "images/museum/honglou/honglou_012.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hongloumeng%20Tuyong%20Qin%20Keqing.jpg?width=1400",
+    "source": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "explain": "正确答案是“秦可卿”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "秦可卿 · 《红楼梦》人物画像",
+    "tags": [
+      "红楼梦",
+      "人物",
+      "人物聚焦"
+    ],
+    "museumKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+  },
+  {
+    "id": "MUSEUM-013",
+    "book": "西游记",
+    "title": "白骨精",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_013.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bai%20Gu%20Jing.jpg?width=1400",
+    "source": "Bai Gu Jing.jpg",
+    "explain": "正确答案是“白骨精”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "白骨精 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "全景识别"
+    ],
+    "museumKey": "Bai Gu Jing.jpg"
+  },
+  {
+    "id": "MUSEUM-014",
+    "book": "西游记",
+    "title": "菩提祖师",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_014.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Li%20Zhuowu%27s%20Commentary%20on%20Journey%20to%20the%20West%2C%20Puti%20Zushi%20%281%29.jpg?width=1400",
+    "source": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg",
+    "explain": "正确答案是“菩提祖师”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "菩提祖师 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "人物聚焦"
+    ],
+    "museumKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg"
+  },
+  {
+    "id": "MUSEUM-015",
+    "book": "西游记",
+    "title": "唐僧",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_015.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xuanzang%20-%20Xiyou%20Zhenquan%20%28A%20Complete%20Narrative%20of%20Travels%20in%20the%20West%29.jpg?width=1400",
+    "source": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg",
+    "explain": "正确答案是“唐僧”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "唐僧 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "器物线索"
+    ],
+    "museumKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg"
+  },
+  {
+    "id": "MUSEUM-016",
+    "book": "西游记",
+    "title": "取经师徒与白龙马",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_016.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xuanzang%2C%20Wujing%2C%20Wuneng%2C%20Wukong%2C%20and%20White%20Horse%2C%20China%2C%20Qing%20dynasty%2C%201644-1911%20AD%2C%20cowhide%20-%20Sichuan%20Provincial%20Museum%20-%20Chengdu%2C%20China%20-%20DSC04600.jpg?width=1400",
+    "source": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg",
+    "explain": "正确答案是“取经师徒与白龙马”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "取经师徒与白龙马 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "场景线索"
+    ],
+    "museumKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg"
+  },
+  {
+    "id": "MUSEUM-017",
+    "book": "西游记",
+    "title": "观音菩萨",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_017.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj%20guanshiyin.jpg?width=1400",
+    "source": "Xyj guanshiyin.jpg",
+    "explain": "正确答案是“观音菩萨”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "观音菩萨 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "细节挑战"
+    ],
+    "museumKey": "Xyj guanshiyin.jpg"
+  },
+  {
+    "id": "MUSEUM-018",
+    "book": "西游记",
+    "title": "如来佛祖",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_018.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj-ru%20lai.jpg?width=1400",
+    "source": "Xyj-ru lai.jpg",
+    "explain": "正确答案是“如来佛祖”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "如来佛祖 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "全景识别"
+    ],
+    "museumKey": "Xyj-ru lai.jpg"
+  },
+  {
+    "id": "MUSEUM-019",
+    "book": "西游记",
+    "title": "孙悟空",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_019.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj-sunwukong.jpg?width=1400",
+    "source": "Xyj-sunwukong.jpg",
+    "explain": "正确答案是“孙悟空”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "孙悟空 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "人物聚焦"
+    ],
+    "museumKey": "Xyj-sunwukong.jpg"
+  },
+  {
+    "id": "MUSEUM-020",
+    "book": "西游记",
+    "title": "唐太宗",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_020.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj-tang%20taizong.jpg?width=1400",
+    "source": "Xyj-tang taizong.jpg",
+    "explain": "正确答案是“唐太宗”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "唐太宗 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "器物线索"
+    ],
+    "museumKey": "Xyj-tang taizong.jpg"
+  },
+  {
+    "id": "MUSEUM-021",
+    "book": "西游记",
+    "title": "魏征",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_021.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj-wei%20zheng.jpg?width=1400",
+    "source": "Xyj-wei zheng.jpg",
+    "explain": "正确答案是“魏征”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "魏征 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "场景线索"
+    ],
+    "museumKey": "Xyj-wei zheng.jpg"
+  },
+  {
+    "id": "MUSEUM-022",
+    "book": "西游记",
+    "title": "镇元大仙",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_022.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj-zheng%20yuan.jpg?width=1400",
+    "source": "Xyj-zheng yuan.jpg",
+    "explain": "正确答案是“镇元大仙”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "镇元大仙 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "细节挑战"
+    ],
+    "museumKey": "Xyj-zheng yuan.jpg"
+  },
+  {
+    "id": "MUSEUM-023",
+    "book": "西游记",
+    "title": "猪八戒",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_023.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj-zhubajie.jpg?width=1400",
+    "source": "Xyj-zhubajie.jpg",
+    "explain": "正确答案是“猪八戒”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "猪八戒 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "全景识别"
+    ],
+    "museumKey": "Xyj-zhubajie.jpg"
+  },
+  {
+    "id": "MUSEUM-024",
+    "book": "西游记",
+    "title": "猪八戒",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_024.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xyj-zhu.jpg?width=1400",
+    "source": "Xyj-zhu.jpg",
+    "explain": "正确答案是“猪八戒”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "猪八戒人物绣像 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "人物聚焦"
+    ],
+    "museumKey": "Xyj-zhu.jpg"
+  },
+  {
+    "id": "MUSEUM-025",
+    "book": "西游记",
+    "title": "西游取经故事场景",
+    "type": "人物或场景",
+    "category": "看图识别",
+    "localImage": "images/museum/xiyou/xiyou_025.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Xiyou2.PNG?width=1400",
+    "source": "Xiyou2.PNG",
+    "explain": "正确答案是“西游取经故事场景”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "西游取经故事场景 · 《西游记》",
+    "tags": [
+      "西游记",
+      "人物或场景",
+      "器物线索"
+    ],
+    "museumKey": "Xiyou2.PNG"
+  },
+  {
+    "id": "MUSEUM-026",
+    "book": "三国演义",
+    "title": "桃园结义",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_026.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Peach%20garden%20ceremony.jpg?width=1400",
+    "source": "Peach garden ceremony.jpg",
+    "explain": "正确答案是“桃园结义”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "桃园结义 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "全景识别"
+    ],
+    "museumKey": "Peach garden ceremony.jpg"
+  },
+  {
+    "id": "MUSEUM-027",
+    "book": "三国演义",
+    "title": "三顾茅庐",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_027.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dai%20Jin-Looking%20Three%20Times%20at%20the%20Thatched%20Hut.jpg?width=1400",
+    "source": "Dai Jin-Looking Three Times at the Thatched Hut.jpg",
+    "explain": "正确答案是“三顾茅庐”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "三顾茅庐 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "人物聚焦"
+    ],
+    "museumKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg"
+  },
+  {
+    "id": "MUSEUM-028",
+    "book": "三国演义",
+    "title": "曹操进兵徐州",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_028.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cao%20Cao%20departs%20to%20invade%20Xu.jpg?width=1400",
+    "source": "Cao Cao departs to invade Xu.jpg",
+    "explain": "正确答案是“曹操进兵徐州”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "曹操进兵徐州 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "器物线索"
+    ],
+    "museumKey": "Cao Cao departs to invade Xu.jpg"
+  },
+  {
+    "id": "MUSEUM-029",
+    "book": "三国演义",
+    "title": "董卓谋废少帝",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_029.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dong%20Zhuo%20plots%20to%20depose%20Emperor%20Shao%20of%20Han.jpg?width=1400",
+    "source": "Dong Zhuo plots to depose Emperor Shao of Han.jpg",
+    "explain": "正确答案是“董卓谋废少帝”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "董卓谋废少帝 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "场景线索"
+    ],
+    "museumKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg"
+  },
+  {
+    "id": "MUSEUM-030",
+    "book": "三国演义",
+    "title": "吕布击败曹操",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_030.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lu%20Bu%20defeats%20Cao%20Cao.jpg?width=1400",
+    "source": "Lu Bu defeats Cao Cao.jpg",
+    "explain": "正确答案是“吕布击败曹操”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "吕布击败曹操 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "细节挑战"
+    ],
+    "museumKey": "Lu Bu defeats Cao Cao.jpg"
+  },
+  {
+    "id": "MUSEUM-031",
+    "book": "三国演义",
+    "title": "吕布杀丁原",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_031.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lu%20Bu%20murders%20Ding%20Yuan.jpg?width=1400",
+    "source": "Lu Bu murders Ding Yuan.jpg",
+    "explain": "正确答案是“吕布杀丁原”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "吕布杀丁原 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "全景识别"
+    ],
+    "museumKey": "Lu Bu murders Ding Yuan.jpg"
+  },
+  {
+    "id": "MUSEUM-032",
+    "book": "三国演义",
+    "title": "吕布与董卓",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_032.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/L%C3%BC%20Bu%20-%20Dong%20Zhuo.png?width=1400",
+    "source": "Lü Bu - Dong Zhuo.png",
+    "explain": "正确答案是“吕布与董卓”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "吕布与董卓 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "人物聚焦"
+    ],
+    "museumKey": "Lü Bu - Dong Zhuo.png"
+  },
+  {
+    "id": "MUSEUM-033",
+    "book": "三国演义",
+    "title": "刘备、关羽、张飞",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_033.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ROTR-LiuBei-GuanYu-ZhangFei.jpg?width=1400",
+    "source": "ROTR-LiuBei-GuanYu-ZhangFei.jpg",
+    "explain": "正确答案是“刘备、关羽、张飞”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "刘备、关羽、张飞 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "器物线索"
+    ],
+    "museumKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg"
+  },
+  {
+    "id": "MUSEUM-034",
+    "book": "三国演义",
+    "title": "关羽刮骨疗毒",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_034.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Utagawa%20Kuniyoshi%20print-Guan%20Yu-bone%20scraping%20operation-LOC.png?width=1400",
+    "source": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png",
+    "explain": "正确答案是“关羽刮骨疗毒”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "关羽刮骨疗毒 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "场景线索"
+    ],
+    "museumKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png"
+  },
+  {
+    "id": "MUSEUM-035",
+    "book": "三国演义",
+    "title": "关羽刮骨疗毒",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_035.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kada%20hone%20o%20kezurite%20Kanu%20o%20naosu%20by%20Katsushika%20Taito%20II.jpg?width=1400",
+    "source": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg",
+    "explain": "正确答案是“关羽刮骨疗毒”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "关羽刮骨疗毒（异本） · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "细节挑战"
+    ],
+    "museumKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg"
+  },
+  {
+    "id": "MUSEUM-036",
+    "book": "三国演义",
+    "title": "庞德",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_036.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pang%20De%20Portrait.jpg?width=1400",
+    "source": "Pang De Portrait.jpg",
+    "explain": "正确答案是“庞德”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "庞德 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "全景识别"
+    ],
+    "museumKey": "Pang De Portrait.jpg"
+  },
+  {
+    "id": "MUSEUM-037",
+    "book": "三国演义",
+    "title": "诸葛亮与张飞",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_037.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Three%20Kingdoms%20Mao%20version%20-%20Zhuge%20Liang%20and%20Zhang%20Fei.jpg?width=1400",
+    "source": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg",
+    "explain": "正确答案是“诸葛亮与张飞”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "诸葛亮与张飞 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "人物聚焦"
+    ],
+    "museumKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg"
+  },
+  {
+    "id": "MUSEUM-038",
+    "book": "三国演义",
+    "title": "赵子龙计取桂阳",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/sanguo/sanguo_038.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E8%B5%B5%E5%AD%90%E9%BE%99%E8%AE%A1%E5%8F%96%E6%A1%82%E9%98%B3.png?width=1400",
+    "source": "赵子龙计取桂阳.png",
+    "explain": "正确答案是“赵子龙计取桂阳”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "赵子龙计取桂阳 · 《三国演义》",
+    "tags": [
+      "三国演义",
+      "人物或事件",
+      "器物线索"
+    ],
+    "museumKey": "赵子龙计取桂阳.png"
+  },
+  {
+    "id": "MUSEUM-039",
+    "book": "水浒传",
+    "title": "武松景阳冈打虎",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_039.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wusong%20on%20Jingyanggang%20%28Long%20Corridor%29.JPG?width=1400",
+    "source": "Wusong on Jingyanggang (Long Corridor).JPG",
+    "explain": "正确答案是“武松景阳冈打虎”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "武松景阳冈打虎 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "全景识别"
+    ],
+    "museumKey": "Wusong on Jingyanggang (Long Corridor).JPG"
+  },
+  {
+    "id": "MUSEUM-040",
+    "book": "水浒传",
+    "title": "武松打虎",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_040.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E6%AD%A6%E6%9D%BE%E6%89%93%E8%99%8E%28%E6%88%B2%E6%9B%B2%E5%B9%B4%E7%95%AB%29.jpg?width=1400",
+    "source": "武松打虎(戲曲年畫).jpg",
+    "explain": "正确答案是“武松打虎”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "武松打虎（戏曲年画） · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "人物聚焦"
+    ],
+    "museumKey": "武松打虎(戲曲年畫).jpg"
+  },
+  {
+    "id": "MUSEUM-041",
+    "book": "水浒传",
+    "title": "武松血溅鸳鸯楼",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_041.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E6%B8%85%E6%99%9A%E6%9C%9F%E6%A1%83%E8%8A%B1%E5%9D%9E%E6%9C%A8%E7%89%88%E5%B9%B4%E7%94%BB%20%E6%AD%A6%E6%9D%BE%E8%A1%80%E6%BA%85%E9%B8%B3%E9%B8%AF%E6%A5%BC.jpg?width=1400",
+    "source": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg",
+    "explain": "正确答案是“武松血溅鸳鸯楼”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "武松血溅鸳鸯楼 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "器物线索"
+    ],
+    "museumKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg"
+  },
+  {
+    "id": "MUSEUM-042",
+    "book": "水浒传",
+    "title": "武松十字坡遇险",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_042.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E6%AD%A6%E6%9D%BE%E6%89%93%E5%BA%97%E5%8D%81%E5%AD%97%E5%9D%A1.jpg?width=1400",
+    "source": "武松打店十字坡.jpg",
+    "explain": "正确答案是“武松十字坡遇险”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "武松十字坡遇险 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "场景线索"
+    ],
+    "museumKey": "武松打店十字坡.jpg"
+  },
+  {
+    "id": "MUSEUM-043",
+    "book": "水浒传",
+    "title": "武松杀嫂",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_043.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E6%AD%A6%E6%9D%BE%E6%9D%80%E5%AB%82%20%E4%B8%8A%E6%B5%B7%E5%B0%8F%E6%A0%A1%E5%9C%BA.jpg?width=1400",
+    "source": "武松杀嫂 上海小校场.jpg",
+    "explain": "正确答案是“武松杀嫂”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "武松杀嫂 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "细节挑战"
+    ],
+    "museumKey": "武松杀嫂 上海小校场.jpg"
+  },
+  {
+    "id": "MUSEUM-044",
+    "book": "水浒传",
+    "title": "武松",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_044.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E6%AD%A6%E6%9D%BE%EF%BC%88%E7%AC%AC%E4%BA%94%E6%89%8D%E5%AD%90%E6%9B%B8%E6%B0%B4%E6%BB%B8%E5%82%B3%EF%BC%89.jpg?width=1400",
+    "source": "武松（第五才子書水滸傳）.jpg",
+    "explain": "正确答案是“武松”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "武松人物绣像 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "全景识别"
+    ],
+    "museumKey": "武松（第五才子書水滸傳）.jpg"
+  },
+  {
+    "id": "MUSEUM-045",
+    "book": "水浒传",
+    "title": "鲁智深倒拔垂杨柳",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_045.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Daxiangguo%20Temple%20-%20Buddhist%20Priest%20from%20Outlaws%20of%20the%20Marsh%20Pulling%20out%20Tree.jpg?width=1400",
+    "source": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg",
+    "explain": "正确答案是“鲁智深倒拔垂杨柳”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "鲁智深倒拔垂杨柳 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "人物聚焦"
+    ],
+    "museumKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg"
+  },
+  {
+    "id": "MUSEUM-046",
+    "book": "水浒传",
+    "title": "鲁智深醉闹五台山",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_046.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lu%20Chi%20Shen%20in%20Drunken%20Rage%20Smashing%20Guardian%20Figure%20at%20Temple%20on%20Five-Crested%20Mountain%20LACMA%20M.84.31.75a-b.jpg?width=1400",
+    "source": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg",
+    "explain": "正确答案是“鲁智深醉闹五台山”。本题采用“器物线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "鲁智深醉闹五台山 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "器物线索"
+    ],
+    "museumKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg"
+  },
+  {
+    "id": "MUSEUM-047",
+    "book": "水浒传",
+    "title": "鲁智深",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_047.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lu%20Zhishen.jpg?width=1400",
+    "source": "Lu Zhishen.jpg",
+    "explain": "正确答案是“鲁智深”。本题采用“场景线索”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "鲁智深人物画像 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "场景线索"
+    ],
+    "museumKey": "Lu Zhishen.jpg"
+  },
+  {
+    "id": "MUSEUM-048",
+    "book": "水浒传",
+    "title": "鲁智深长廊故事画",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_048.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lu%20Zhishen%20%28Long%20Corridor%29.JPG?width=1400",
+    "source": "Lu Zhishen (Long Corridor).JPG",
+    "explain": "正确答案是“鲁智深长廊故事画”。本题采用“细节挑战”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "鲁智深长廊故事画 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "细节挑战"
+    ],
+    "museumKey": "Lu Zhishen (Long Corridor).JPG"
+  },
+  {
+    "id": "MUSEUM-049",
+    "book": "水浒传",
+    "title": "鲁智深木版画",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_049.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kaosho%20Roshishin%20%E8%8A%B1%E5%92%8C%E5%B0%9A%E9%AD%AF%E6%99%BA%E6%B7%B1%20%28Flowery%20Monk%20Lu%20Zhishen%29%20%28BM%202008%2C3037.10213%29.jpg?width=1400",
+    "source": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg",
+    "explain": "正确答案是“鲁智深木版画”。本题采用“全景识别”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "鲁智深木版画 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "全景识别"
+    ],
+    "museumKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg"
+  },
+  {
+    "id": "MUSEUM-050",
+    "book": "水浒传",
+    "title": "花和尚鲁智深",
+    "type": "人物或事件",
+    "category": "看图识别",
+    "localImage": "images/museum/shuihu/shuihu_050.jpg",
+    "remoteImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kaosho%20Rochishin%20%E8%8A%B1%E5%92%8C%E5%B0%9A%E9%AD%AF%E6%99%BA%E6%B7%B1%E9%AD%AF%E9%81%94%20%28Lu%20Zhishen%29%20%28BM%202008%2C3037.10036%29.jpg?width=1400",
+    "source": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg",
+    "explain": "正确答案是“花和尚鲁智深”。本题采用“人物聚焦”视角，判断时应同时核对人物身份、关键器物和场景线索。",
+    "memory": "花和尚鲁智深 · 《水浒传》",
+    "tags": [
+      "水浒传",
+      "人物或事件",
+      "人物聚焦"
+    ],
+    "museumKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg"
+  }
+]

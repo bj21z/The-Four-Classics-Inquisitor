@@ -22,7 +22,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -47,7 +48,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -72,7 +74,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -97,7 +100,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -122,7 +126,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -147,7 +152,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -172,7 +178,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -197,7 +204,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -222,7 +230,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -247,7 +256,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -272,7 +282,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -297,7 +308,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -322,7 +334,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -347,7 +360,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -372,7 +386,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -397,7 +412,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -422,7 +438,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -447,7 +464,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -472,7 +490,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -497,7 +516,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -522,7 +542,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -547,7 +568,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -572,7 +594,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -597,7 +620,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -622,7 +646,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -647,7 +672,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -672,7 +698,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -697,7 +724,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -722,7 +750,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -747,7 +776,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -772,7 +802,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -797,7 +828,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -822,7 +854,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -847,7 +880,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -872,7 +906,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -897,7 +932,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -922,7 +958,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -947,7 +984,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "红楼梦",
@@ -972,7 +1010,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "baseKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_003.jpg"
   },
   {
     "book": "红楼梦",
@@ -997,7 +1036,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "baseKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_004.jpg"
   },
   {
     "book": "红楼梦",
@@ -1022,7 +1062,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "baseKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_005.jpg"
   },
   {
     "book": "红楼梦",
@@ -1047,7 +1088,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_006.jpg"
   },
   {
     "book": "红楼梦",
@@ -1072,7 +1114,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "baseKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_007.jpg"
   },
   {
     "book": "红楼梦",
@@ -1097,7 +1140,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "baseKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_008.jpg"
   },
   {
     "book": "红楼梦",
@@ -1122,7 +1166,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "baseKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_009.jpg"
   },
   {
     "book": "红楼梦",
@@ -1147,7 +1192,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "baseKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_010.jpg"
   },
   {
     "book": "红楼梦",
@@ -1172,7 +1218,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "baseKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_011.jpg"
   },
   {
     "book": "红楼梦",
@@ -1197,7 +1244,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "baseKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_012.jpg"
   },
   {
     "book": "红楼梦",
@@ -1222,7 +1270,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_001.jpg"
   },
   {
     "book": "红楼梦",
@@ -1247,7 +1296,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "baseKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "localMuseumImage": "images/museum/honglou/honglou_002.jpg"
   },
   {
     "book": "西游记",
@@ -1272,7 +1322,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Bai Gu Jing.jpg"
+    "baseKey": "Bai Gu Jing.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_013.jpg"
   },
   {
     "book": "西游记",
@@ -1297,7 +1348,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg"
+    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_014.jpg"
   },
   {
     "book": "西游记",
@@ -1322,7 +1374,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg"
+    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_015.jpg"
   },
   {
     "book": "西游记",
@@ -1347,7 +1400,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg"
+    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_016.jpg"
   },
   {
     "book": "西游记",
@@ -1372,7 +1426,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xyj guanshiyin.jpg"
+    "baseKey": "Xyj guanshiyin.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_017.jpg"
   },
   {
     "book": "西游记",
@@ -1397,7 +1452,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xyj-ru lai.jpg"
+    "baseKey": "Xyj-ru lai.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_018.jpg"
   },
   {
     "book": "西游记",
@@ -1422,7 +1478,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xyj-sunwukong.jpg"
+    "baseKey": "Xyj-sunwukong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_019.jpg"
   },
   {
     "book": "西游记",
@@ -1447,7 +1504,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-tang taizong.jpg"
+    "baseKey": "Xyj-tang taizong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_020.jpg"
   },
   {
     "book": "西游记",
@@ -1472,7 +1530,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-wei zheng.jpg"
+    "baseKey": "Xyj-wei zheng.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_021.jpg"
   },
   {
     "book": "西游记",
@@ -1497,7 +1556,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zheng yuan.jpg"
+    "baseKey": "Xyj-zheng yuan.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_022.jpg"
   },
   {
     "book": "西游记",
@@ -1522,7 +1582,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xyj-zhubajie.jpg"
+    "baseKey": "Xyj-zhubajie.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_023.jpg"
   },
   {
     "book": "西游记",
@@ -1547,7 +1608,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zhu.jpg"
+    "baseKey": "Xyj-zhu.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_024.jpg"
   },
   {
     "book": "西游记",
@@ -1572,7 +1634,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xiyou2.PNG"
+    "baseKey": "Xiyou2.PNG",
+    "localMuseumImage": "images/museum/xiyou/xiyou_025.jpg"
   },
   {
     "book": "西游记",
@@ -1597,7 +1660,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Bai Gu Jing.jpg"
+    "baseKey": "Bai Gu Jing.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_013.jpg"
   },
   {
     "book": "西游记",
@@ -1622,7 +1686,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg"
+    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_014.jpg"
   },
   {
     "book": "西游记",
@@ -1647,7 +1712,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg"
+    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_015.jpg"
   },
   {
     "book": "西游记",
@@ -1672,7 +1738,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg"
+    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_016.jpg"
   },
   {
     "book": "西游记",
@@ -1697,7 +1764,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj guanshiyin.jpg"
+    "baseKey": "Xyj guanshiyin.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_017.jpg"
   },
   {
     "book": "西游记",
@@ -1722,7 +1790,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-ru lai.jpg"
+    "baseKey": "Xyj-ru lai.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_018.jpg"
   },
   {
     "book": "西游记",
@@ -1747,7 +1816,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xyj-sunwukong.jpg"
+    "baseKey": "Xyj-sunwukong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_019.jpg"
   },
   {
     "book": "西游记",
@@ -1772,7 +1842,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xyj-tang taizong.jpg"
+    "baseKey": "Xyj-tang taizong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_020.jpg"
   },
   {
     "book": "西游记",
@@ -1797,7 +1868,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xyj-wei zheng.jpg"
+    "baseKey": "Xyj-wei zheng.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_021.jpg"
   },
   {
     "book": "西游记",
@@ -1822,7 +1894,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zheng yuan.jpg"
+    "baseKey": "Xyj-zheng yuan.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_022.jpg"
   },
   {
     "book": "西游记",
@@ -1847,7 +1920,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zhubajie.jpg"
+    "baseKey": "Xyj-zhubajie.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_023.jpg"
   },
   {
     "book": "西游记",
@@ -1872,7 +1946,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zhu.jpg"
+    "baseKey": "Xyj-zhu.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_024.jpg"
   },
   {
     "book": "西游记",
@@ -1897,7 +1972,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xiyou2.PNG"
+    "baseKey": "Xiyou2.PNG",
+    "localMuseumImage": "images/museum/xiyou/xiyou_025.jpg"
   },
   {
     "book": "西游记",
@@ -1922,7 +1998,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Bai Gu Jing.jpg"
+    "baseKey": "Bai Gu Jing.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_013.jpg"
   },
   {
     "book": "西游记",
@@ -1947,7 +2024,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg"
+    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_014.jpg"
   },
   {
     "book": "西游记",
@@ -1972,7 +2050,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg"
+    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_015.jpg"
   },
   {
     "book": "西游记",
@@ -1997,7 +2076,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg"
+    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_016.jpg"
   },
   {
     "book": "西游记",
@@ -2022,7 +2102,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xyj guanshiyin.jpg"
+    "baseKey": "Xyj guanshiyin.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_017.jpg"
   },
   {
     "book": "西游记",
@@ -2047,7 +2128,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xyj-ru lai.jpg"
+    "baseKey": "Xyj-ru lai.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_018.jpg"
   },
   {
     "book": "西游记",
@@ -2072,7 +2154,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-sunwukong.jpg"
+    "baseKey": "Xyj-sunwukong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_019.jpg"
   },
   {
     "book": "西游记",
@@ -2097,7 +2180,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-tang taizong.jpg"
+    "baseKey": "Xyj-tang taizong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_020.jpg"
   },
   {
     "book": "西游记",
@@ -2122,7 +2206,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xyj-wei zheng.jpg"
+    "baseKey": "Xyj-wei zheng.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_021.jpg"
   },
   {
     "book": "西游记",
@@ -2147,7 +2232,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xyj-zheng yuan.jpg"
+    "baseKey": "Xyj-zheng yuan.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_022.jpg"
   },
   {
     "book": "西游记",
@@ -2172,7 +2258,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zhubajie.jpg"
+    "baseKey": "Xyj-zhubajie.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_023.jpg"
   },
   {
     "book": "西游记",
@@ -2197,7 +2284,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zhu.jpg"
+    "baseKey": "Xyj-zhu.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_024.jpg"
   },
   {
     "book": "西游记",
@@ -2222,7 +2310,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xiyou2.PNG"
+    "baseKey": "Xiyou2.PNG",
+    "localMuseumImage": "images/museum/xiyou/xiyou_025.jpg"
   },
   {
     "book": "西游记",
@@ -2247,7 +2336,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Bai Gu Jing.jpg"
+    "baseKey": "Bai Gu Jing.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_013.jpg"
   },
   {
     "book": "西游记",
@@ -2272,7 +2362,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg"
+    "baseKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_014.jpg"
   },
   {
     "book": "西游记",
@@ -2297,7 +2388,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg"
+    "baseKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_015.jpg"
   },
   {
     "book": "西游记",
@@ -2322,7 +2414,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg"
+    "baseKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_016.jpg"
   },
   {
     "book": "西游记",
@@ -2347,7 +2440,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj guanshiyin.jpg"
+    "baseKey": "Xyj guanshiyin.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_017.jpg"
   },
   {
     "book": "西游记",
@@ -2372,7 +2466,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xyj-ru lai.jpg"
+    "baseKey": "Xyj-ru lai.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_018.jpg"
   },
   {
     "book": "西游记",
@@ -2397,7 +2492,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Xyj-sunwukong.jpg"
+    "baseKey": "Xyj-sunwukong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_019.jpg"
   },
   {
     "book": "西游记",
@@ -2422,7 +2518,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Xyj-tang taizong.jpg"
+    "baseKey": "Xyj-tang taizong.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_020.jpg"
   },
   {
     "book": "西游记",
@@ -2447,7 +2544,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-wei zheng.jpg"
+    "baseKey": "Xyj-wei zheng.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_021.jpg"
   },
   {
     "book": "西游记",
@@ -2472,7 +2570,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zheng yuan.jpg"
+    "baseKey": "Xyj-zheng yuan.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_022.jpg"
   },
   {
     "book": "西游记",
@@ -2497,7 +2596,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Xyj-zhubajie.jpg"
+    "baseKey": "Xyj-zhubajie.jpg",
+    "localMuseumImage": "images/museum/xiyou/xiyou_023.jpg"
   },
   {
     "book": "三国演义",
@@ -2522,7 +2622,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Peach garden ceremony.jpg"
+    "baseKey": "Peach garden ceremony.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_026.jpg"
   },
   {
     "book": "三国演义",
@@ -2547,7 +2648,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg"
+    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_027.jpg"
   },
   {
     "book": "三国演义",
@@ -2572,7 +2674,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Cao Cao departs to invade Xu.jpg"
+    "baseKey": "Cao Cao departs to invade Xu.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_028.jpg"
   },
   {
     "book": "三国演义",
@@ -2597,7 +2700,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg"
+    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_029.jpg"
   },
   {
     "book": "三国演义",
@@ -2622,7 +2726,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lu Bu defeats Cao Cao.jpg"
+    "baseKey": "Lu Bu defeats Cao Cao.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_030.jpg"
   },
   {
     "book": "三国演义",
@@ -2647,7 +2752,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Lu Bu murders Ding Yuan.jpg"
+    "baseKey": "Lu Bu murders Ding Yuan.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_031.jpg"
   },
   {
     "book": "三国演义",
@@ -2672,7 +2778,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Lü Bu - Dong Zhuo.png"
+    "baseKey": "Lü Bu - Dong Zhuo.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_032.jpg"
   },
   {
     "book": "三国演义",
@@ -2697,7 +2804,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg"
+    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_033.jpg"
   },
   {
     "book": "三国演义",
@@ -2722,7 +2830,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png"
+    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_034.jpg"
   },
   {
     "book": "三国演义",
@@ -2747,7 +2856,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg"
+    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_035.jpg"
   },
   {
     "book": "三国演义",
@@ -2772,7 +2882,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Pang De Portrait.jpg"
+    "baseKey": "Pang De Portrait.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_036.jpg"
   },
   {
     "book": "三国演义",
@@ -2797,7 +2908,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg"
+    "baseKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_037.jpg"
   },
   {
     "book": "三国演义",
@@ -2822,7 +2934,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "赵子龙计取桂阳.png"
+    "baseKey": "赵子龙计取桂阳.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_038.jpg"
   },
   {
     "book": "三国演义",
@@ -2847,7 +2960,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Peach garden ceremony.jpg"
+    "baseKey": "Peach garden ceremony.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_026.jpg"
   },
   {
     "book": "三国演义",
@@ -2872,7 +2986,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg"
+    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_027.jpg"
   },
   {
     "book": "三国演义",
@@ -2897,7 +3012,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Cao Cao departs to invade Xu.jpg"
+    "baseKey": "Cao Cao departs to invade Xu.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_028.jpg"
   },
   {
     "book": "三国演义",
@@ -2922,7 +3038,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg"
+    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_029.jpg"
   },
   {
     "book": "三国演义",
@@ -2947,7 +3064,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Bu defeats Cao Cao.jpg"
+    "baseKey": "Lu Bu defeats Cao Cao.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_030.jpg"
   },
   {
     "book": "三国演义",
@@ -2972,7 +3090,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Bu murders Ding Yuan.jpg"
+    "baseKey": "Lu Bu murders Ding Yuan.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_031.jpg"
   },
   {
     "book": "三国演义",
@@ -2997,7 +3116,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lü Bu - Dong Zhuo.png"
+    "baseKey": "Lü Bu - Dong Zhuo.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_032.jpg"
   },
   {
     "book": "三国演义",
@@ -3022,7 +3142,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg"
+    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_033.jpg"
   },
   {
     "book": "三国演义",
@@ -3047,7 +3168,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png"
+    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_034.jpg"
   },
   {
     "book": "三国演义",
@@ -3072,7 +3194,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg"
+    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_035.jpg"
   },
   {
     "book": "三国演义",
@@ -3097,7 +3220,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Pang De Portrait.jpg"
+    "baseKey": "Pang De Portrait.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_036.jpg"
   },
   {
     "book": "三国演义",
@@ -3122,7 +3246,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg"
+    "baseKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_037.jpg"
   },
   {
     "book": "三国演义",
@@ -3147,7 +3272,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "赵子龙计取桂阳.png"
+    "baseKey": "赵子龙计取桂阳.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_038.jpg"
   },
   {
     "book": "三国演义",
@@ -3172,7 +3298,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Peach garden ceremony.jpg"
+    "baseKey": "Peach garden ceremony.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_026.jpg"
   },
   {
     "book": "三国演义",
@@ -3197,7 +3324,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg"
+    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_027.jpg"
   },
   {
     "book": "三国演义",
@@ -3222,7 +3350,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Cao Cao departs to invade Xu.jpg"
+    "baseKey": "Cao Cao departs to invade Xu.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_028.jpg"
   },
   {
     "book": "三国演义",
@@ -3247,7 +3376,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg"
+    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_029.jpg"
   },
   {
     "book": "三国演义",
@@ -3272,7 +3402,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Lu Bu defeats Cao Cao.jpg"
+    "baseKey": "Lu Bu defeats Cao Cao.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_030.jpg"
   },
   {
     "book": "三国演义",
@@ -3297,7 +3428,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Lu Bu murders Ding Yuan.jpg"
+    "baseKey": "Lu Bu murders Ding Yuan.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_031.jpg"
   },
   {
     "book": "三国演义",
@@ -3322,7 +3454,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Lü Bu - Dong Zhuo.png"
+    "baseKey": "Lü Bu - Dong Zhuo.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_032.jpg"
   },
   {
     "book": "三国演义",
@@ -3347,7 +3480,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg"
+    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_033.jpg"
   },
   {
     "book": "三国演义",
@@ -3372,7 +3506,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png"
+    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_034.jpg"
   },
   {
     "book": "三国演义",
@@ -3397,7 +3532,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg"
+    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_035.jpg"
   },
   {
     "book": "三国演义",
@@ -3422,7 +3558,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Pang De Portrait.jpg"
+    "baseKey": "Pang De Portrait.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_036.jpg"
   },
   {
     "book": "三国演义",
@@ -3447,7 +3584,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg"
+    "baseKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_037.jpg"
   },
   {
     "book": "三国演义",
@@ -3472,7 +3610,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "赵子龙计取桂阳.png"
+    "baseKey": "赵子龙计取桂阳.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_038.jpg"
   },
   {
     "book": "三国演义",
@@ -3497,7 +3636,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Peach garden ceremony.jpg"
+    "baseKey": "Peach garden ceremony.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_026.jpg"
   },
   {
     "book": "三国演义",
@@ -3522,7 +3662,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg"
+    "baseKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_027.jpg"
   },
   {
     "book": "三国演义",
@@ -3547,7 +3688,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Cao Cao departs to invade Xu.jpg"
+    "baseKey": "Cao Cao departs to invade Xu.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_028.jpg"
   },
   {
     "book": "三国演义",
@@ -3572,7 +3714,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg"
+    "baseKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_029.jpg"
   },
   {
     "book": "三国演义",
@@ -3597,7 +3740,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Bu defeats Cao Cao.jpg"
+    "baseKey": "Lu Bu defeats Cao Cao.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_030.jpg"
   },
   {
     "book": "三国演义",
@@ -3622,7 +3766,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lu Bu murders Ding Yuan.jpg"
+    "baseKey": "Lu Bu murders Ding Yuan.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_031.jpg"
   },
   {
     "book": "三国演义",
@@ -3647,7 +3792,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Lü Bu - Dong Zhuo.png"
+    "baseKey": "Lü Bu - Dong Zhuo.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_032.jpg"
   },
   {
     "book": "三国演义",
@@ -3672,7 +3818,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg"
+    "baseKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_033.jpg"
   },
   {
     "book": "三国演义",
@@ -3697,7 +3844,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png"
+    "baseKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png",
+    "localMuseumImage": "images/museum/sanguo/sanguo_034.jpg"
   },
   {
     "book": "三国演义",
@@ -3722,7 +3870,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg"
+    "baseKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_035.jpg"
   },
   {
     "book": "三国演义",
@@ -3747,7 +3896,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Pang De Portrait.jpg"
+    "baseKey": "Pang De Portrait.jpg",
+    "localMuseumImage": "images/museum/sanguo/sanguo_036.jpg"
   },
   {
     "book": "水浒传",
@@ -3772,7 +3922,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG"
+    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_039.jpg"
   },
   {
     "book": "水浒传",
@@ -3797,7 +3948,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "武松打虎(戲曲年畫).jpg"
+    "baseKey": "武松打虎(戲曲年畫).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_040.jpg"
   },
   {
     "book": "水浒传",
@@ -3822,7 +3974,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg"
+    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_041.jpg"
   },
   {
     "book": "水浒传",
@@ -3847,7 +4000,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "武松打店十字坡.jpg"
+    "baseKey": "武松打店十字坡.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_042.jpg"
   },
   {
     "book": "水浒传",
@@ -3872,7 +4026,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "武松杀嫂 上海小校场.jpg"
+    "baseKey": "武松杀嫂 上海小校场.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_043.jpg"
   },
   {
     "book": "水浒传",
@@ -3897,7 +4052,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "武松（第五才子書水滸傳）.jpg"
+    "baseKey": "武松（第五才子書水滸傳）.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_044.jpg"
   },
   {
     "book": "水浒传",
@@ -3922,7 +4078,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg"
+    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_045.jpg"
   },
   {
     "book": "水浒传",
@@ -3947,7 +4104,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg"
+    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_046.jpg"
   },
   {
     "book": "水浒传",
@@ -3972,7 +4130,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Zhishen.jpg"
+    "baseKey": "Lu Zhishen.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_047.jpg"
   },
   {
     "book": "水浒传",
@@ -3997,7 +4156,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lu Zhishen (Long Corridor).JPG"
+    "baseKey": "Lu Zhishen (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_048.jpg"
   },
   {
     "book": "水浒传",
@@ -4022,7 +4182,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg"
+    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_049.jpg"
   },
   {
     "book": "水浒传",
@@ -4047,7 +4208,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg"
+    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_050.jpg"
   },
   {
     "book": "水浒传",
@@ -4072,7 +4234,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG"
+    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_039.jpg"
   },
   {
     "book": "水浒传",
@@ -4097,7 +4260,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "武松打虎(戲曲年畫).jpg"
+    "baseKey": "武松打虎(戲曲年畫).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_040.jpg"
   },
   {
     "book": "水浒传",
@@ -4122,7 +4286,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg"
+    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_041.jpg"
   },
   {
     "book": "水浒传",
@@ -4147,7 +4312,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "武松打店十字坡.jpg"
+    "baseKey": "武松打店十字坡.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_042.jpg"
   },
   {
     "book": "水浒传",
@@ -4172,7 +4338,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "武松杀嫂 上海小校场.jpg"
+    "baseKey": "武松杀嫂 上海小校场.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_043.jpg"
   },
   {
     "book": "水浒传",
@@ -4197,7 +4364,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "武松（第五才子書水滸傳）.jpg"
+    "baseKey": "武松（第五才子書水滸傳）.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_044.jpg"
   },
   {
     "book": "水浒传",
@@ -4222,7 +4390,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg"
+    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_045.jpg"
   },
   {
     "book": "水浒传",
@@ -4247,7 +4416,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg"
+    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_046.jpg"
   },
   {
     "book": "水浒传",
@@ -4272,7 +4442,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Lu Zhishen.jpg"
+    "baseKey": "Lu Zhishen.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_047.jpg"
   },
   {
     "book": "水浒传",
@@ -4297,7 +4468,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Lu Zhishen (Long Corridor).JPG"
+    "baseKey": "Lu Zhishen (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_048.jpg"
   },
   {
     "book": "水浒传",
@@ -4322,7 +4494,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg"
+    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_049.jpg"
   },
   {
     "book": "水浒传",
@@ -4347,7 +4520,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg"
+    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_050.jpg"
   },
   {
     "book": "水浒传",
@@ -4372,7 +4546,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG"
+    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_039.jpg"
   },
   {
     "book": "水浒传",
@@ -4397,7 +4572,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "武松打虎(戲曲年畫).jpg"
+    "baseKey": "武松打虎(戲曲年畫).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_040.jpg"
   },
   {
     "book": "水浒传",
@@ -4422,7 +4598,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg"
+    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_041.jpg"
   },
   {
     "book": "水浒传",
@@ -4447,7 +4624,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "武松打店十字坡.jpg"
+    "baseKey": "武松打店十字坡.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_042.jpg"
   },
   {
     "book": "水浒传",
@@ -4472,7 +4650,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "武松杀嫂 上海小校场.jpg"
+    "baseKey": "武松杀嫂 上海小校场.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_043.jpg"
   },
   {
     "book": "水浒传",
@@ -4497,7 +4676,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "武松（第五才子書水滸傳）.jpg"
+    "baseKey": "武松（第五才子書水滸傳）.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_044.jpg"
   },
   {
     "book": "水浒传",
@@ -4522,7 +4702,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg"
+    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_045.jpg"
   },
   {
     "book": "水浒传",
@@ -4547,7 +4728,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg"
+    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_046.jpg"
   },
   {
     "book": "水浒传",
@@ -4572,7 +4754,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Zhishen.jpg"
+    "baseKey": "Lu Zhishen.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_047.jpg"
   },
   {
     "book": "水浒传",
@@ -4597,7 +4780,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Zhishen (Long Corridor).JPG"
+    "baseKey": "Lu Zhishen (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_048.jpg"
   },
   {
     "book": "水浒传",
@@ -4622,7 +4806,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg"
+    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_049.jpg"
   },
   {
     "book": "水浒传",
@@ -4647,7 +4832,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg"
+    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_050.jpg"
   },
   {
     "book": "水浒传",
@@ -4672,7 +4858,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG"
+    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_039.jpg"
   },
   {
     "book": "水浒传",
@@ -4697,7 +4884,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "武松打虎(戲曲年畫).jpg"
+    "baseKey": "武松打虎(戲曲年畫).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_040.jpg"
   },
   {
     "book": "水浒传",
@@ -4722,7 +4910,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg"
+    "baseKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_041.jpg"
   },
   {
     "book": "水浒传",
@@ -4747,7 +4936,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "武松打店十字坡.jpg"
+    "baseKey": "武松打店十字坡.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_042.jpg"
   },
   {
     "book": "水浒传",
@@ -4772,7 +4962,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "武松杀嫂 上海小校场.jpg"
+    "baseKey": "武松杀嫂 上海小校场.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_043.jpg"
   },
   {
     "book": "水浒传",
@@ -4797,7 +4988,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "武松（第五才子書水滸傳）.jpg"
+    "baseKey": "武松（第五才子書水滸傳）.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_044.jpg"
   },
   {
     "book": "水浒传",
@@ -4822,7 +5014,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg"
+    "baseKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_045.jpg"
   },
   {
     "book": "水浒传",
@@ -4847,7 +5040,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg"
+    "baseKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_046.jpg"
   },
   {
     "book": "水浒传",
@@ -4872,7 +5066,8 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "Lu Zhishen.jpg"
+    "baseKey": "Lu Zhishen.jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_047.jpg"
   },
   {
     "book": "水浒传",
@@ -4897,7 +5092,8 @@
     "viewLabel": "全景识别",
     "objectPosition": "50% 50%",
     "objectFit": "contain",
-    "baseKey": "Lu Zhishen (Long Corridor).JPG"
+    "baseKey": "Lu Zhishen (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_048.jpg"
   },
   {
     "book": "水浒传",
@@ -4922,7 +5118,8 @@
     "viewLabel": "人物聚焦",
     "objectPosition": "50% 35%",
     "objectFit": "cover",
-    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg"
+    "baseKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_049.jpg"
   },
   {
     "book": "水浒传",
@@ -4947,7 +5144,8 @@
     "viewLabel": "器物线索",
     "objectPosition": "35% 55%",
     "objectFit": "cover",
-    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg"
+    "baseKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_050.jpg"
   },
   {
     "book": "水浒传",
@@ -4972,7 +5170,8 @@
     "viewLabel": "场景线索",
     "objectPosition": "65% 55%",
     "objectFit": "cover",
-    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG"
+    "baseKey": "Wusong on Jingyanggang (Long Corridor).JPG",
+    "localMuseumImage": "images/museum/shuihu/shuihu_039.jpg"
   },
   {
     "book": "水浒传",
@@ -4997,6 +5196,7 @@
     "viewLabel": "细节挑战",
     "objectPosition": "50% 70%",
     "objectFit": "cover",
-    "baseKey": "武松打虎(戲曲年畫).jpg"
+    "baseKey": "武松打虎(戲曲年畫).jpg",
+    "localMuseumImage": "images/museum/shuihu/shuihu_040.jpg"
   }
 ]
