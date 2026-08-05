@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V11.1",
+  "name": "四大名著·文枢问答 V11.1.1",
   "short_name": "文枢问答",
-  "description": "权威馆藏接入版：连接中国大陆官方古籍数字资源，保留学者版学习系统。",
+  "description": "初始化修复版：恢复全部按钮、典籍卡片、知识专项及权威馆藏入口。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

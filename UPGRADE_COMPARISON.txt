@@ -1,4 +1,4 @@
-V11.1 与 V11.0 文件变化对比
+V11.1.1 与 V11.1 文件变化对比
 
 修改文件：
 - index.html
@@ -9,26 +9,18 @@ V11.1 与 V11.0 文件变化对比
 - UPGRADE_COMPARISON.txt
 - docs/TEST_REPORT.md
 
-新增文件：
-- data/official-collections.json
-- docs/OFFICIAL_COLLECTIONS.md
-
-删除文件：
-- 无
+新增文件：无
+删除文件：无
 
 保持不变：
-- 目录结构
+- data全部数据
+- images全部图片
+- assets全部资源
 - _worker.js
-- data/museum.json
-- data/image-questions.json
-- images全部文件
-- assets全部图标与启动画面
-- 2000道文字题
-- 200道看图题
-- 四典游戏馆与八阵图2.0
-- 三国剧情时间轴
-- 红楼人物关系图
+- 2000道文字题和200道看图题
+- 四典游戏馆、八阵图2.0、时间轴、关系图
+- 权威馆藏40个入口
 - 经典连线、错题、每日挑战、等级、成就和存档
 
-上传建议：
-只需替换修改文件并新增2个文件；无需重新上传images和assets目录。
+最快升级：
+只替换上述7个文件。
