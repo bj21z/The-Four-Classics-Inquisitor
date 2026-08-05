@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V10.4",
+  "name": "四大名著·文枢问答 V10.4.1",
   "short_name": "文枢问答",
-  "description": "本地馆藏核心版：名著博物馆、八阵图2.0、四典游戏馆及完整学习系统。",
+  "description": "博物馆视觉修复版：50张独立国风展品画面、本地稳定加载及完整学习系统。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -1,4 +1,4 @@
-V10.4 与 V10.3 文件变化对比
+V10.4.1 与 V10.4 文件变化对比
 
 修改文件：
 - index.html
@@ -7,33 +7,31 @@ V10.4 与 V10.3 文件变化对比
 - README.md
 - CHANGELOG.md
 - UPGRADE_COMPARISON.txt
-- data/image-questions.json
-- 四部名著题库映射.json
+- data/museum.json
+- docs/TEST_REPORT.md
+- images/museum/下50张图片
 
 新增文件：
-- data/museum.json
-- images/museum/ 下50张本地馆藏导览封面
-- docs/ARCHITECTURE.md
-- docs/ROADMAP.md
-- docs/TEST_REPORT.md
-- docs/KNOWN_ISSUES.md
+- 无
 
 删除文件：
 - 无
 
 保持不变：
 - _worker.js
-- assets全部图标与启动画面
+- data/image-questions.json
+- 四部名著题库映射.json
+- assets全部图标与启动页
 - 2000道文字题
-- 200道看图题题量
-- 四典游戏馆
+- 200道看图题
 - 八阵图2.0
+- 四典游戏馆
 - 经典连线
-- 错题、每日挑战、学习画像、等级、成就与存档
+- 错题、每日挑战、等级、成就、版本历史与本地存档
 - ATTRIBUTION.md与LICENSE
 
-部署建议：
-本次涉及新增目录，推荐将V10.4完整项目包上传并替换旧版，而不是只传少数补丁文件。
+核心变化：
+V10.4的50张文字导览封面已全部被独立国风人物或场景画面替换，博物馆不再以文字卡片充当展品。
 
-真实性说明：
-本版实际提供50张本地数字馆藏导览封面。400件独立精品馆藏未完成逐件来源与许可核验，因此未虚报为已完成。
+部署建议：
+由于50张图片全部更新，推荐完整替换V10.4.1项目。
