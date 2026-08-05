@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V11.0",
+  "name": "四大名著·文枢问答 V11.1",
   "short_name": "文枢问答",
-  "description": "Scholar Edition：剧情时间轴、人物关系图、名著博物馆、游戏馆和完整学习系统。",
+  "description": "权威馆藏接入版：连接中国大陆官方古籍数字资源，保留学者版学习系统。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

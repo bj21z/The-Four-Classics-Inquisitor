@@ -1,4 +1,4 @@
-V11.0 与 V10.4.1 文件变化对比
+V11.1 与 V11.0 文件变化对比
 
 修改文件：
 - index.html
@@ -10,24 +10,25 @@ V11.0 与 V10.4.1 文件变化对比
 - docs/TEST_REPORT.md
 
 新增文件：
-- docs/SCHOLAR_EDITION.md
+- data/official-collections.json
+- docs/OFFICIAL_COLLECTIONS.md
 
 删除文件：
 - 无
 
 保持不变：
+- 目录结构
 - _worker.js
 - data/museum.json
 - data/image-questions.json
-- images全部图片
-- assets全部图标和启动画面
-- 四部名著题库映射.json
+- images全部文件
+- assets全部图标与启动画面
 - 2000道文字题
 - 200道看图题
-- 四典游戏馆
-- 八阵图2.0
-- 经典连线
-- 错题、每日挑战、等级、成就、博物馆收藏和本地存档
+- 四典游戏馆与八阵图2.0
+- 三国剧情时间轴
+- 红楼人物关系图
+- 经典连线、错题、每日挑战、等级、成就和存档
 
-升级方式：
-只需替换修改文件并新增docs/SCHOLAR_EDITION.md；也可直接使用完整包覆盖。
+上传建议：
+只需替换修改文件并新增2个文件；无需重新上传images和assets目录。
