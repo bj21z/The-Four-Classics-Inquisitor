@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V11.2",
+  "name": "四大名著·文枢问答 V12.0",
   "short_name": "文枢问答",
-  "description": "信息架构优化版：首页分为学习、探索、游戏与学者研究四条清晰路径。",
+  "description": "8款名著游戏、4000道文字题、1000道看图题。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -1,7 +1,6 @@
-V11.2 与 V11.1.1 对比
+V12.0 与 V11.2 对比
 
-修改：index.html、service-worker.js、manifest.webmanifest、README.md、CHANGELOG.md、UPGRADE_COMPARISON.txt、docs/TEST_REPORT.md
-新增：无
-删除：无
-保持不变：data、images、assets、_worker.js及全部题库、游戏、馆藏、时间轴、关系图和存档。
-最快升级：只替换上述7个文件。
+修改：index.html、service-worker.js、manifest.webmanifest、README.md、CHANGELOG.md、docs/TEST_REPORT.md、data/image-questions.json。
+新增：data/content-audit-v12.json。
+删除：无。
+不变：images、assets、_worker.js、馆藏、时间轴、关系图和存档。
