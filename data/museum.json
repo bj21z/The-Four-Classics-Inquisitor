@@ -15,7 +15,9 @@
       "人物",
       "全景识别"
     ],
-    "museumKey": "Jia Baoyu Hongloumeng Tuyong.jpg"
+    "museumKey": "Jia Baoyu Hongloumeng Tuyong.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-002",
@@ -33,7 +35,9 @@
       "人物",
       "人物聚焦"
     ],
-    "museumKey": "Lin Daiyu Hongloumeng Tuyong.jpg"
+    "museumKey": "Lin Daiyu Hongloumeng Tuyong.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-003",
@@ -51,7 +55,9 @@
       "人物",
       "器物线索"
     ],
-    "museumKey": "Hongloumeng Tuyong Xue Baochai.jpg"
+    "museumKey": "Hongloumeng Tuyong Xue Baochai.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-004",
@@ -69,7 +75,9 @@
       "人物",
       "场景线索"
     ],
-    "museumKey": "Hongloumeng Tuyong Wang Xifeng.jpg"
+    "museumKey": "Hongloumeng Tuyong Wang Xifeng.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-005",
@@ -87,7 +95,9 @@
       "人物",
       "细节挑战"
     ],
-    "museumKey": "Hongloumeng Tuyong Shi Xiangyun.jpg"
+    "museumKey": "Hongloumeng Tuyong Shi Xiangyun.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-006",
@@ -105,7 +115,9 @@
       "人物",
       "全景识别"
     ],
-    "museumKey": "Hongloumeng Tuyong Jia Tanchun.jpg"
+    "museumKey": "Hongloumeng Tuyong Jia Tanchun.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-007",
@@ -123,7 +135,9 @@
       "人物",
       "人物聚焦"
     ],
-    "museumKey": "Hongloumeng Tuyong Jia Yuanchun.jpg"
+    "museumKey": "Hongloumeng Tuyong Jia Yuanchun.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-008",
@@ -141,7 +155,9 @@
       "人物",
       "器物线索"
     ],
-    "museumKey": "Hongloumeng Tuyong Miaoyu.jpg"
+    "museumKey": "Hongloumeng Tuyong Miaoyu.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-009",
@@ -159,7 +175,9 @@
       "人物",
       "场景线索"
     ],
-    "museumKey": "Hongloumeng Tuyong Qingwen.jpg"
+    "museumKey": "Hongloumeng Tuyong Qingwen.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-010",
@@ -177,7 +195,9 @@
       "人物",
       "细节挑战"
     ],
-    "museumKey": "Hongloumeng Tuyong Xiangling.jpg"
+    "museumKey": "Hongloumeng Tuyong Xiangling.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-011",
@@ -195,7 +215,9 @@
       "人物",
       "全景识别"
     ],
-    "museumKey": "Hongloumeng Tuyong Hua Xiren.jpg"
+    "museumKey": "Hongloumeng Tuyong Hua Xiren.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-012",
@@ -213,7 +235,9 @@
       "人物",
       "人物聚焦"
     ],
-    "museumKey": "Hongloumeng Tuyong Qin Keqing.jpg"
+    "museumKey": "Hongloumeng Tuyong Qin Keqing.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-013",
@@ -231,7 +255,9 @@
       "人物或场景",
       "全景识别"
     ],
-    "museumKey": "Bai Gu Jing.jpg"
+    "museumKey": "Bai Gu Jing.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-014",
@@ -249,7 +275,9 @@
       "人物或场景",
       "人物聚焦"
     ],
-    "museumKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg"
+    "museumKey": "Li Zhuowu's Commentary on Journey to the West, Puti Zushi (1).jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-015",
@@ -267,7 +295,9 @@
       "人物或场景",
       "器物线索"
     ],
-    "museumKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg"
+    "museumKey": "Xuanzang - Xiyou Zhenquan (A Complete Narrative of Travels in the West).jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-016",
@@ -285,7 +315,9 @@
       "人物或场景",
       "场景线索"
     ],
-    "museumKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg"
+    "museumKey": "Xuanzang, Wujing, Wuneng, Wukong, and White Horse, China, Qing dynasty, 1644-1911 AD, cowhide - Sichuan Provincial Museum - Chengdu, China - DSC04600.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-017",
@@ -303,7 +335,9 @@
       "人物或场景",
       "细节挑战"
     ],
-    "museumKey": "Xyj guanshiyin.jpg"
+    "museumKey": "Xyj guanshiyin.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-018",
@@ -321,7 +355,9 @@
       "人物或场景",
       "全景识别"
     ],
-    "museumKey": "Xyj-ru lai.jpg"
+    "museumKey": "Xyj-ru lai.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-019",
@@ -339,7 +375,9 @@
       "人物或场景",
       "人物聚焦"
     ],
-    "museumKey": "Xyj-sunwukong.jpg"
+    "museumKey": "Xyj-sunwukong.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-020",
@@ -357,7 +395,9 @@
       "人物或场景",
       "器物线索"
     ],
-    "museumKey": "Xyj-tang taizong.jpg"
+    "museumKey": "Xyj-tang taizong.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-021",
@@ -375,7 +415,9 @@
       "人物或场景",
       "场景线索"
     ],
-    "museumKey": "Xyj-wei zheng.jpg"
+    "museumKey": "Xyj-wei zheng.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-022",
@@ -393,7 +435,9 @@
       "人物或场景",
       "细节挑战"
     ],
-    "museumKey": "Xyj-zheng yuan.jpg"
+    "museumKey": "Xyj-zheng yuan.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-023",
@@ -411,7 +455,9 @@
       "人物或场景",
       "全景识别"
     ],
-    "museumKey": "Xyj-zhubajie.jpg"
+    "museumKey": "Xyj-zhubajie.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-024",
@@ -429,7 +475,9 @@
       "人物或场景",
       "人物聚焦"
     ],
-    "museumKey": "Xyj-zhu.jpg"
+    "museumKey": "Xyj-zhu.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-025",
@@ -447,7 +495,9 @@
       "人物或场景",
       "器物线索"
     ],
-    "museumKey": "Xiyou2.PNG"
+    "museumKey": "Xiyou2.PNG",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-026",
@@ -465,7 +515,9 @@
       "人物或事件",
       "全景识别"
     ],
-    "museumKey": "Peach garden ceremony.jpg"
+    "museumKey": "Peach garden ceremony.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-027",
@@ -483,7 +535,9 @@
       "人物或事件",
       "人物聚焦"
     ],
-    "museumKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg"
+    "museumKey": "Dai Jin-Looking Three Times at the Thatched Hut.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-028",
@@ -501,7 +555,9 @@
       "人物或事件",
       "器物线索"
     ],
-    "museumKey": "Cao Cao departs to invade Xu.jpg"
+    "museumKey": "Cao Cao departs to invade Xu.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-029",
@@ -519,7 +575,9 @@
       "人物或事件",
       "场景线索"
     ],
-    "museumKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg"
+    "museumKey": "Dong Zhuo plots to depose Emperor Shao of Han.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-030",
@@ -537,7 +595,9 @@
       "人物或事件",
       "细节挑战"
     ],
-    "museumKey": "Lu Bu defeats Cao Cao.jpg"
+    "museumKey": "Lu Bu defeats Cao Cao.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-031",
@@ -555,7 +615,9 @@
       "人物或事件",
       "全景识别"
     ],
-    "museumKey": "Lu Bu murders Ding Yuan.jpg"
+    "museumKey": "Lu Bu murders Ding Yuan.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-032",
@@ -573,7 +635,9 @@
       "人物或事件",
       "人物聚焦"
     ],
-    "museumKey": "Lü Bu - Dong Zhuo.png"
+    "museumKey": "Lü Bu - Dong Zhuo.png",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-033",
@@ -591,7 +655,9 @@
       "人物或事件",
       "器物线索"
     ],
-    "museumKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg"
+    "museumKey": "ROTR-LiuBei-GuanYu-ZhangFei.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-034",
@@ -609,7 +675,9 @@
       "人物或事件",
       "场景线索"
     ],
-    "museumKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png"
+    "museumKey": "Utagawa Kuniyoshi print-Guan Yu-bone scraping operation-LOC.png",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-035",
@@ -627,7 +695,9 @@
       "人物或事件",
       "细节挑战"
     ],
-    "museumKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg"
+    "museumKey": "Kada hone o kezurite Kanu o naosu by Katsushika Taito II.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-036",
@@ -645,7 +715,9 @@
       "人物或事件",
       "全景识别"
     ],
-    "museumKey": "Pang De Portrait.jpg"
+    "museumKey": "Pang De Portrait.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-037",
@@ -663,7 +735,9 @@
       "人物或事件",
       "人物聚焦"
     ],
-    "museumKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg"
+    "museumKey": "Three Kingdoms Mao version - Zhuge Liang and Zhang Fei.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-038",
@@ -681,7 +755,9 @@
       "人物或事件",
       "器物线索"
     ],
-    "museumKey": "赵子龙计取桂阳.png"
+    "museumKey": "赵子龙计取桂阳.png",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-039",
@@ -699,7 +775,9 @@
       "人物或事件",
       "全景识别"
     ],
-    "museumKey": "Wusong on Jingyanggang (Long Corridor).JPG"
+    "museumKey": "Wusong on Jingyanggang (Long Corridor).JPG",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-040",
@@ -717,7 +795,9 @@
       "人物或事件",
       "人物聚焦"
     ],
-    "museumKey": "武松打虎(戲曲年畫).jpg"
+    "museumKey": "武松打虎(戲曲年畫).jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-041",
@@ -735,7 +815,9 @@
       "人物或事件",
       "器物线索"
     ],
-    "museumKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg"
+    "museumKey": "清晚期桃花坞木版年画 武松血溅鸳鸯楼.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-042",
@@ -753,7 +835,9 @@
       "人物或事件",
       "场景线索"
     ],
-    "museumKey": "武松打店十字坡.jpg"
+    "museumKey": "武松打店十字坡.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-043",
@@ -771,7 +855,9 @@
       "人物或事件",
       "细节挑战"
     ],
-    "museumKey": "武松杀嫂 上海小校场.jpg"
+    "museumKey": "武松杀嫂 上海小校场.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-044",
@@ -789,7 +875,9 @@
       "人物或事件",
       "全景识别"
     ],
-    "museumKey": "武松（第五才子書水滸傳）.jpg"
+    "museumKey": "武松（第五才子書水滸傳）.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-045",
@@ -807,7 +895,9 @@
       "人物或事件",
       "人物聚焦"
     ],
-    "museumKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg"
+    "museumKey": "Daxiangguo Temple - Buddhist Priest from Outlaws of the Marsh Pulling out Tree.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-046",
@@ -825,7 +915,9 @@
       "人物或事件",
       "器物线索"
     ],
-    "museumKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg"
+    "museumKey": "Lu Chi Shen in Drunken Rage Smashing Guardian Figure at Temple on Five-Crested Mountain LACMA M.84.31.75a-b.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-047",
@@ -843,7 +935,9 @@
       "人物或事件",
       "场景线索"
     ],
-    "museumKey": "Lu Zhishen.jpg"
+    "museumKey": "Lu Zhishen.jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-048",
@@ -861,7 +955,9 @@
       "人物或事件",
       "细节挑战"
     ],
-    "museumKey": "Lu Zhishen (Long Corridor).JPG"
+    "museumKey": "Lu Zhishen (Long Corridor).JPG",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-049",
@@ -879,7 +975,9 @@
       "人物或事件",
       "全景识别"
     ],
-    "museumKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg"
+    "museumKey": "Kaosho Roshishin 花和尚魯智深 (Flowery Monk Lu Zhishen) (BM 2008,3037.10213).jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   },
   {
     "id": "MUSEUM-050",
@@ -897,6 +995,8 @@
       "人物或事件",
       "人物聚焦"
     ],
-    "museumKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg"
+    "museumKey": "Kaosho Rochishin 花和尚魯智深魯達 (Lu Zhishen) (BM 2008,3037.10036).jpg",
+    "visualType": "原创国风叙事插画",
+    "displayNote": "本地独立场景画面，不含题目文字卡片"
   }
 ]
