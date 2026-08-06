@@ -23,7 +23,7 @@ async function handleImageProxy(request, ctx) {
   if (cached) return cached;
   try {
     const upstream = await fetch(target.toString(), {
-      headers:{'User-Agent':'The-Four-Classics-Inquisitor/10.0C.2','Accept':'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'},
+      headers:{'User-Agent':'The-Four-Classics-Inquisitor/13.1','Accept':'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'},
       redirect:'follow', cf:{cacheTtl:2592000,cacheEverything:true}
     });
     if (!upstream.ok) return new Response('Upstream image unavailable', {status:upstream.status});
