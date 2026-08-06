@@ -1,0 +1,36 @@
+{
+  "version": "13.2",
+  "date": "2026-08-06",
+  "textFactsPerBook": {
+    "红楼梦": 50,
+    "西游记": 50,
+    "三国演义": 50,
+    "水浒传": 50
+  },
+  "questionTemplatesPerFact": 20,
+  "textQuestionsPerBook": {
+    "红楼梦": 1000,
+    "西游记": 1000,
+    "三国演义": 1000,
+    "水浒传": 1000
+  },
+  "textQuestionsTotal": 4000,
+  "imageQuestionsPerBook": {
+    "红楼梦": 250,
+    "西游记": 250,
+    "三国演义": 250,
+    "水浒传": 250
+  },
+  "imageQuestionsTotal": 1000,
+  "uniqueSourceImages": 50,
+  "imageViewConcepts": 200,
+  "visualFamilies": 200,
+  "variantsPerConcept": 5,
+  "criticalFix": {
+    "template": "T03",
+    "before": "关于人物的宽泛提问，干扰项可能也是该人物的真实信息",
+    "after": "题干限定人物与关系，选项统一为同一关系的不同值",
+    "status": "fixed"
+  },
+  "disclosure": "1000 refers to question count, not 1000 unique images"
+}

@@ -1,0 +1,35 @@
+{
+  "version": "14.0",
+  "targetTotal": 1000,
+  "perBook": 250,
+  "source": "Wikimedia Commons category API via Cloudflare Worker",
+  "chinaAccess": "Images and metadata are fetched server-side and served through the deployed Cloudflare domain",
+  "deduplication": [
+    "Wikimedia pageid",
+    "file title"
+  ],
+  "truthRule": "UI may show 1000 only when each book returns 250 unique file records",
+  "categories": {
+    "红楼梦": [
+      "Dream of the Red Chamber",
+      "Portraits by Gai Qi",
+      "增評補圖大觀瑣錄",
+      "金陵十二釵正冊"
+    ],
+    "西游记": [
+      "Journey to the West and recursively discovered subcategories"
+    ],
+    "三国演义": [
+      "Romance of the Three Kingdoms",
+      "三國志通俗演義",
+      "三國演義",
+      "三國志傳"
+    ],
+    "水浒传": [
+      "Water Margin",
+      "忠義水滸傳",
+      "忠義水滸全書",
+      "Water Margin in art"
+    ]
+  }
+}
