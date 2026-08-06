@@ -1,13 +1,5 @@
-# V12.1 课标名著·教材衔接版
-
-- 新增“课标名著”一级入口。
-- 收录经核验的小学、初中、高中统编语文教材四大名著相关课文、名著导读与整本书阅读。
-- 支持按学段、作品、年级、册次和关键词检索。
-- 增加教育部、人民教育出版社公开来源及教材分批修订提示。
-
-V12.0 与 V11.2 对比
-
-修改：index.html、service-worker.js、manifest.webmanifest、README.md、CHANGELOG.md、docs/TEST_REPORT.md、data/image-questions.json。
-新增：data/content-audit-v12.json。
-删除：无。
-不变：images、assets、_worker.js、馆藏、时间轴、关系图和存档。
+V13.0 相对 V12.1
+1. 学者研究由两项工具扩展为四大名著完整研究中心。
+2. 新增水浒人物与势力结构研究。
+3. 新增西游取经路线与代表性劫难研究。
+4. 四类工具统一视觉风格并可跳转专项训练。
