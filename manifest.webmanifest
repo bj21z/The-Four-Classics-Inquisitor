@@ -1,7 +1,7 @@
 {
-  "name": "四大名著·文枢问答 V14.0",
-  "short_name": "四典 V14.0",
-  "description": "四大名著阅读、4000道文字训练、1000道看图训练、8款游戏与研究工具；V14.0完成题库唯一答案与资源真实性审计。",
+  "name": "四大名著·文枢问答 V12.1",
+  "short_name": "文枢问答",
+  "description": "新增课标名著与教材衔接地图，保留4000题、1000图题和8款游戏。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

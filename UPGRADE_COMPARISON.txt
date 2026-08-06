@@ -1,15 +1,7 @@
-V13.1 → V14.0 版本对比
+V12.1 与 V12.0 对比
 
-保持不变：
-- 四典AI阅读馆及书签、护眼、夜间、读练联动
-- 4000道文字训练题总体规模
-- 1000道看图训练题总体规模
-- 8款游戏、教材衔接、研究中心、馆藏与学习画像
-
-本次修复：
-- T03题型从宽泛“关于某人物”改为限定“人物+具体关系”，消除多项同时正确。
-- 看图识典界面从旧文案“各50道、共200道”更正为真实的“各250道、共1000道”。
-- 明确1000是题数；实际为50幅来源图、200个视角组合、每组5种题法。
-- 更新版本、PWA缓存、Worker、历史记录和测试报告。
-
-需要全量替换：是。
+修改：index.html、service-worker.js、manifest.webmanifest、README.md、CHANGELOG.md、UPGRADE_COMPARISON.txt、docs/TEST_REPORT.md。
+新增：data/curriculum-textbook-links.json。
+删除：无。
+不变：images、assets、题库、8款游戏、权威馆藏、时间轴、关系图及本地存档。
+最快升级：替换7个修改文件并新增1个JSON文件，无需上传images和assets。
